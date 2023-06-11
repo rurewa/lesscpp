@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Варианты доступа к элементам перечислений enum по выбору пользователя
-// ifInputEnum.cpp /Enum
+// justEnum.cpp /Enum
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -11,17 +11,46 @@ using namespace std;
 Все перечислители enum находятся в едином пространстве имён
 */
 
-enum {
+/* enum { // Эта группа никак не обозначена
     YELLOW,
     WHITE,
     ORANGE,
     GREEN
-};
+}; */
 
-enum Animal { dog, cat, bird, human };
+enum { DOG, CAT, BIRD, CAPYBARA }; // Без переменной перечисляемого типа
+
+enum { ELEPHANT, HIPPO, WHALE };
+
+//enum SmallAnimals { DOG = 10, CAT = 3, BIRD = 1, CAPYBARA = 10 }; // С переменной перечисляемого типа
+
+//enum BigAnimals { ELEPHANT = 7000, HIPPO = 1600, WHALE = 150000}; // Вес сразу не пиши!
 
 int main() {
-    cout << YELLOW << WHITE << ORANGE << GREEN << '\n';
+    cout << "Собака " << DOG << " Кошка " << CAT << endl;
+    cout << "Выберите животное - собака 0, кошка - 1, птица - 2, капибара 3\n";
+    int userInput = 0;
+    cin >> ws >> userInput;
+    switch (userInput)
+    {
+    case 0:
+        cout << "Собака\n";
+        break;
+    case 1:
+        cout << "Кошка\n";
+        break;
+    case 2:
+        cout << "Птица\n";
+        break;
+    case 3:
+        cout << "Кабибара\n";
+        break;
+    default:
+        cout << "Что?\n";
+        break;
+    }
+
+    /* cout << YELLOW << WHITE << ORANGE << GREEN << '\n';
     cout << "Enter your num: ";
     int userInput = 0;
     cin >> ws >> userInput;
@@ -39,17 +68,13 @@ int main() {
     }
     else {
         cout << "?\n";
-    }
+    } */
     return 0;
 }
 /* Output:
-Нужно выбрать цвет:
- желтый  - 0,
- белый   - 1,
- оранжевый       - 2,
- зелёный         - 3
-Введите ваше число:
-4
+Собака 0 Кошка 1
+Выберите животное - собака 0, кошка - 1, птица - 2, капибара 3
+9
 Что?
 */
 // Задание

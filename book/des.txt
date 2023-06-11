@@ -1,0 +1,4 @@
+echo 'Hello, World!' | xxd  -b
+xxd -b main.bin
+objdump -d sizeLL.bin
+
