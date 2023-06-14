@@ -15,7 +15,8 @@ int main() {
     cout << "Какой редактор кода вы желаете? 0 - CB, 1 - ECL, 2 - VSCode, 3 - QTCreator\n";
     int choose = 0;
     cin >> ws >> choose;
-    CppEditors vs = static_cast<CppEditors>(choose);
+    //CppEditors vs = static_cast<CppEditors>(choose);
+    CppEditors vs = (CppEditors)choose;
     switch (vs)
     {
     case CppEditors::CODE_BLOCKS:
