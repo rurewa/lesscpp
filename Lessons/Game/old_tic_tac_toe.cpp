@@ -5,10 +5,12 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 char square[10];
 void board();
-int setCell(int choice, char mark);
-int checkwin();
+int  setCell(int choice, char mark);
+int  checkwin();
+
 int main(){
     int player = 1, i, choice;
     char mark; // Метка

@@ -81,10 +81,10 @@ int checkwin() { // Определение победителя
             return -1;
         }
     }
-    return 2;
+    return 0;
 }
 
-int setCell(int choice, char mark) {
+int setCell(int choice, char mark) { // Ход по ячейкам
     if (square[choice] == '0' + choice) {
         square[choice] = mark;
         return 1;

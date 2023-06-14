@@ -8,7 +8,7 @@ using namespace std;
 
 char square[10]; // На 9 клеток доски
 void board();
-//int  setCell(int choice, char mark);
+int  setCell(int choice, char mark);
 int  checkwin();
 
 int main() {
@@ -27,33 +27,21 @@ int main() {
         // set the cell of square array
         //int setRet = setCell(choice, mark); // Выбор клетки
         int setRet = 0;
-        if (square[choice] == '0' + choice) {
-        square[choice] = mark;
+        if (square[choice] == '0' + choice) {  // Ход по ячейкам
+            square[choice] = mark;
             setRet = 1;
         }
         else {
             setRet = -1;
         }
-
         if (setRet == -1) { // Защита от некорректного ввода
             //cout << "Неверный ход!";
             ++player; // Смена игрока
             cin.clear();
-            cin.ignore(32767, '\n');
-            //cin.get();
+            //cin.ignore(32767, '\n');
+            cin.get();
         }
-        //step = checkwin(); // Записываем ход игрока
-        for (int i = 1; i < 10; ++i) {
-            if ((i % 3 == 1 && (square[i] == square[i + 1] && square[i + 1] == square[i + 2])) ||
-                (i <= 3 && (square[i] == square[i + 3] && square[i + 3] == square[i + 6])) ||
-                (i == 1 && (square[1] == square[5] && square[5] == square[9])) ||
-                (i == 3 && (square[3] == square[5] && square[5] == square[7]))) {
-                    step = 1;
-                }
-            if (square[i] == '0' + i) {
-                step = -1;
-            }
-        }
+        step = checkwin(); // Записываем ход игрока
         ++player;
     } while (step == -1);
     board();
@@ -104,7 +92,7 @@ int checkwin() { // Определение победителя
     return 0;
 }
 
-/* int setCell(int choice, char mark) {
+int setCell(int choice, char mark) {
     if (square[choice] == '0' + choice) {
         square[choice] = mark;
         return 1;
@@ -112,7 +100,7 @@ int checkwin() { // Определение победителя
     else {
         return -1;
     }
-} */
+}
 // Output:
 /*
         Tic Tac Toe
