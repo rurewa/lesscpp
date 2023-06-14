@@ -1,52 +1,53 @@
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Варианты доступа к элементам перечислений enum по выбору пользователя
-// seasonsEnum.cpp
+// /EnumClass simplyEnumClassInput.cpp
 // V 1.0
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include <iostream>
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#include<iostream>
 using namespace std;
 
-enum Seasons { AUTUMN, WINTER, SPRING, SUMMER };
+enum class Colors { YELLOW = 1, WHITE, ORANGE, GREEN };
 
 int main() {
-    bool exit = true; // Выбор пользователя: продолжить или выйти
-    do {
-        cout << "Нужно выбрать время года: осень - 0, зима - 1, весна - 2, лето - 3\n";
-        int yourSeason = 0;
-        cin >> ws >> yourSeason;
-        //Seasons season = static_cast<Seasons>(yourSeason);
-        Seasons season = Seasons(yourSeason);
-        switch (season)
-        {
-            case AUTUMN:
-                cout << "Листья падают\n";
-                break;
-            case WINTER:
-                cout << "Можно кататься на коньках\n";
-                break;
-            case SPRING:
-                cout << "Природа оживает\n";
-                break;
-            case SUMMER:
-                cout << "Душа радуется\n";
-                break;
-            default:
-                cout << "Других времён года нет!\n";
-                break;
-        }
-        cout << "Чтобы снова смотреть времена года нажмите 1\n";
-        cin >> ws >> exit;
-    } while(exit);
+    cout << "Введите номер цвета: желтый - 1, белый - 2, оранжевый = 3, зелёный - 4\n";
+    int userInput = 0;
+    cin >> ws >> userInput;
+    Colors color = static_cast<Colors>(userInput);
+    if (color == Colors::YELLOW) {
+        puts("Yellow");
+    }
+    else if (color == Colors::WHITE) {
+        puts("White");
+    }
+    else if (color == Colors::ORANGE) {
+        puts("Orange");
+    }
+    else if (color == Colors::GREEN) {
+        puts("Green");
+    }
+    else {
+        puts("Unknown!");
+    }
     return 0;
 }
-/* Output:
-
-
+// Output
+/*
+Введите номер цвета: желтый - 1, белый - 2, оранжевый = 3, зелёный - 4
+0
+Unknown!
+[user@host-251 JustEnum]$ ./main.bin
+Введите номер цвета: желтый - 1, белый - 2, оранжевый = 3, зелёный - 4
+1
+Yellow
+[user@host-251 JustEnum]$ ./main.bin
+Введите номер цвета: желтый - 1, белый - 2, оранжевый = 3, зелёный - 4
+2
+White
 */
 // Задание
 /*
-То же самое, но с while
- */
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+
+*/
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // END FILE
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

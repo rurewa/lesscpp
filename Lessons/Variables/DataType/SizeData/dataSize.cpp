@@ -12,33 +12,20 @@ int main() {
     // short - маленький целочисленный тип
     // int - средний целочисленный тип
     // long - большой целочисленный тип
-    // 0 1 2 35 66 100
-    /* cout << "Целочисленные типы:\n";
-    cout << "Тип short: \t" << sizeof(short) << " байта" << '\n';
-    cout << "Тип int: \t" << sizeof(int) << " байта" << '\n';
-    cout << "Тип long: \t" << sizeof(long) << " байта\n";
-    cout << "Тип long long: \t" << sizeof(long long) << " байта\n";
-    cout << "\nВещественные типы:\n";
-    cout << "Тип float: \t" << sizeof(float) << " байта" << '\n';
-    cout << "Тип double: \t" << sizeof(double) << " байта" << '\n';
-    cout << "Тип long double: " << sizeof(long double) << " байта" << '\n';
-    cout << "\nСимвольный тип:\n";
-    cout << "Тип char: \t" << sizeof(char) << " байта" << '\n';
-    cout << "\nСтрока:\n";
-    cout << "Тип string: \t" << sizeof(string) << " байта" << '\n'; */
+    // 0 1 2 35 66 100 / 2.345, 23.7 / a,b,c,d etc / string
     cout << "Целочисленные типы:\n";
-    cout << "Тип short: \t" << sizeof(short) << " байта" << " -32'768 до 32'767\n";
-    cout << "Тип int: \t" << sizeof(int) << " байта" << " -2'147'483'648 до 2'147'483'647\n";
-    cout << "Тип long: \t" << sizeof(long) << " байта" << " -9'223'372'036'854'775'808 до 9'223'372'036'854'775'807\n";
+    cout << "Тип short: \t" << sizeof(short) << " байта " << " -32'768 до 32'767\n";
+    cout << "Тип int: \t" << sizeof(int) << " байта " << "-2'147'483'648 до 2'147'483'647\n";
+    cout << "Тип long: \t" << sizeof(long) << " байта " << "-9'223'372'036'854'775'808 до 9'223'372'036'854'775'807\n";
     cout << "Тип long long: \t" << sizeof(long long) << " байта\n";
-    cout << "\nВещественные типы:\n";
-    cout << "Тип float: \t" << sizeof(float) << " байта" << '\n';
-    cout << "Тип double: \t" << sizeof(double) << " байта" << '\n';
-    cout << "Тип long double: " << sizeof(long double) << " байта" << '\n';
-    cout << "\nСимвольный тип:\n";
-    cout << "Тип char: \t" << sizeof(char) << " байта" << '\n';
-    cout << "\nСтрока:\n";
-    cout << "Тип string: \t" << sizeof(string) << " байта" << '\n';
+    cout << "\nВещественные числа\n";
+    cout << "Тип float: \t" << sizeof(float) << " байта\n";
+    cout << "Тип double: \t" << sizeof(double) << " байта\n";
+    cout << "Тип long double: " << sizeof(long double) << " байта\n";
+    cout << "\nСимвольный тип\n";
+    cout << "Тип char: \t" << sizeof(char) << " байта " << "-128 до 127\n";
+    cout << "\nСтрока\n";
+    cout << "Строковый тип: \t" << sizeof(string) << " байта\n";
     return 0;
 }
 // OUTPUT
