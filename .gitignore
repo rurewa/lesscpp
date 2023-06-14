@@ -31,6 +31,7 @@
 *.out
 *.app
 *.bin
+*.bin
 
 # VS Code files for those working on multiple tools
 .vscode/*
@@ -39,3 +40,4 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+.kate-swp
