@@ -4,10 +4,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 
-struct Employe {
+struct Employe { // Работник
     short id;
     int age;
-    double salary;
+    double salary; // Зарплата
 };
 
 struct Company {
