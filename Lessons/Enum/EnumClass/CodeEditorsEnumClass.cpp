@@ -19,7 +19,7 @@ int main() {
     CppEditors vs = (CppEditors)choose;
     switch (vs)
     {
-    case CppEditors::CODE_BLOCKS:
+    case CppEditors::CODE_BLOCKS: // Можно CppEditor(4)
         puts("Code Blocks"); // \n добавляется автоматически
         break;
     case CppEditors::ECLIPSE:

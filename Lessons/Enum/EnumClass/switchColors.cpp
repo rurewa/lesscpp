@@ -23,8 +23,8 @@ enum class Colors {
     WHITE, // 1
     YELLOW, // 2
     BLUE, // 3
-    MAGENTA, // 4
-    CYAN // 5
+    MAGENTA, // 4 Пурпурный
+    CYAN // 5 Голубой
 };
 
 int main() {

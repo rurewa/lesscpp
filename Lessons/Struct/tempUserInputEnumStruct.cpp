@@ -29,7 +29,7 @@ int main() {
     getline(cin, userName);
     cout << "Enter age: ";
     int age;
-    cin >> age;
+    cin >> ws >> age;
     cin.ignore(32767, '\n');
     tempUserInputEnumStruct alex = {id, userName, age};
     cout << "id: "<< alex.id << " name: " << alex.userName << ", age: " << alex.age << endl;
