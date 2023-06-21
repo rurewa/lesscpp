@@ -6,22 +6,25 @@
 #include <iostream>
 using namespace std;
 
-struct AxisesOne // Сначала делаем это
+// Структура - произвольный тип данных.
+// Под структуру, так же как и по enum, не выделяется память
+
+struct AxisesOne
 {
     double x;
     double y;
     double z;
+    // x, y, z - это члены (поля) структуры
 };
 
-// Затем это
-struct AxisesTwo // Инициализация членов структур
+struct AxisesTwo
 {
     double x = 2.4;
     double y = 3.1;
     double z = 4.8;
 };
 
-struct AxisesThree
+struct AxiesThree
 {
     double x;
     double y;
@@ -35,43 +38,26 @@ struct Person
     double growth;
 };
 
-struct Worker
-{
-    int id;
-    string name;
-    string position;
-    double salary;
-};
-
-
-
 int main() {
     cout << "Виды инициализации структур\nИнициализация с помощью списка\n";
-    AxisesOne axOne {35.13, 1.39, 83.3}; // Инициализация с помощью списка
-    cout << axOne.x << ' ' << axOne.y << ' ' << axOne.z << endl;
-    cout << "Инициализация членов структур\n";
+    AxisesOne axOne {35.13, 1.39, 83.3};
+    cout << axOne.x << ' ' << axOne.y << ' ' << axOne.z << '\n';
+    cout << "Статическая инициализация структуры\n";
     AxisesTwo axTwo;
-    cout << axTwo.x << ' ' << axTwo.y << ' ' << axTwo.z << endl;
+    cout << axTwo.x << ' ' << axTwo.y << ' ' << axTwo.z << '\n';
     cout << "Инициализация пользовательским вводом\n";
     double numX, numY, numZ;
-    cout << "Введите 3 значения - x, y и z \n";
+    cout << "Введите 3-и значения для x, y, z\n";
     cin >> numX >> numY >> numZ;
-    AxisesThree axThree {numX, numY, numZ};
-    cout << axThree.x << ' ' << axThree.y << ' ' << axThree.z << endl;
-    cout << "Структура с разными типами даннх внутри\n";
-    Person man {"Alex", 46, 170.5}, women {"Mary", 12, 140.36};
+    AxiesThree axThree {numX, numY, numZ};
+    cout << axThree.x << ' ' << axThree.y << ' ' << axThree.z << '\n';
+    cout << "Повторное использовение имеющейся структуры\n";
+    AxisesOne axRepl {numX, numY, numZ};
+    cout << "Содержимое AxisesOne " << axRepl.x << ' ' << axRepl.y << ' ' << axRepl.z << '\n';
+    cout << "Структура с разными типами переменных внутри\n";
+    Person man {"Alex", 46, 165.5}, woman {"Mary", 12, 140.36};
     cout << man.name << ' ' << man.age << ' ' << man.growth << '\n';
-    cout << women.name << ' ' << women.age << ' ' << women.growth << '\n';
-    cout << "Введите id работника\n";
-    Worker person;
-    cin >> ws >> person.id;
-    cout << "Введите имя работника\n";
-    getline(cin >> ws, person.name);
-    cout << "Введите должность работника\n";
-    getline(cin >> ws, person.position);
-    cout << "Введите зарплату работника\n";
-    cin >> ws >> person.salary;
-    cout << person.id << ' ' << person.name << ' ' << person.position << ' ' << person.salary << '\n';
+    cout << woman.name << ' ' << woman.age << ' ' << woman.growth << '\n';
     return 0;
 }
 // Output
@@ -79,21 +65,19 @@ int main() {
 Виды инициализации структур
 Инициализация с помощью списка
 35.13 1.39 83.3
-Инициализация членов структур
+Статическая инициализация структуры
 2.4 3.1 4.8
 Инициализация пользовательским вводом
-Введите 3 значения - x, y и z
-2
+Введите 3-и значения для x, y, z
+3
 5
 7
-2 5 7
-Введите имя работника
-Alex
-Введите должность работника
-am programmer
-Введите зарплату работника
-120000
-111 Alex am programmer 120000
+3 5 7
+Повторное использовение имеющейся структуры
+Содержимое AxisesOne 3 5 7
+Структура с разными типами переменных внутри
+Alex 46 165.5
+Mary 12 140.36
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE

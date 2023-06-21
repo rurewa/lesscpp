@@ -6,11 +6,14 @@
 #include <iostream>
 using namespace std;
 
+// Структура - произвольный тип данных. Под неё, как и enum не выделяется память
+
 struct AxisesOne // Сначала делаем это
 {
     double x;
     double y;
     double z;
+    // x, y, z - члены (поля) структуры
 };
 
 // Затем это
@@ -58,7 +61,11 @@ int main() {
     cin >> numX >> numY >> numZ;
     AxisesThree axThree {numX, numY, numZ};
     cout << axThree.x << ' ' << axThree.y << ' ' << axThree.z << endl;
-    cout << "Структура с разными типами даннх внутри\n";
+    cout << "Повторное использование структуры\n";
+    AxisesOne axRepl {numX, numY, numZ};
+    cin >> numX >> numY >> numZ;
+    cout << "Содержимое структуры AxisesTwo - " << axRepl.x << ' ' << axRepl.y << ' ' << axRepl.z << '\n';
+    cout << "Структура с разными типами данных внутри\n";
     Person man {"Alex", 46, 170.5}, women {"Mary", 12, 140.36};
     cout << man.name << ' ' << man.age << ' ' << man.growth << '\n';
     cout << women.name << ' ' << women.age << ' ' << women.growth << '\n';
