@@ -1,26 +1,28 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простые примеры с переменными
+// vars.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
-#include<iostream>
 using namespace std;
 
+// Глобальные переменные - это зло!
+int var = 10;
+
 int main() {
-	auto n = 9'223'372'036'854'775'807;
-	auto w = 446'744'073'709'551'615;
-	//auto ar = "Hello"; // Нелья так делать!
-	char a = 'a';
-	char b = 'b';
-	char str1[] = {"Привет!"};
-	char str2[] = {" Алекс!"};
-	string str3 = " Новый год!";
-	string str4 = " Счастливый";
-	cout << str1 << str2 << str3 + str4 << endl;
-	cout << a + b << endl;
-	cout << "Auto type: " << n << w << endl;
-	cout << "Auto type: " << w << endl;
-	cout << typeid(n).name() << '\n'; // Определение типа объекта
+	//int var = 10;
+	//int var = 15; // Не должно быть в программе одноимённых переменных!
+	int someVar = 3;
+	cout << var << '\t' << someVar << endl;
+	int num = someVar + 7;
+	cout << num << endl;
+	int num1 = 2, num2 = 1;
+	cout << num1 << '\t' << num2 << endl;
+	cout << "Поменяем значения переменных местами\n";
+	num1 = num1 + num2; // 3
+	num2 = num1 - num2; // 2
+	num1 = num1 - num2; //1
+	cout << num1 << '\t' << num2 << endl;
 	return 0;
 }
 // Output:
