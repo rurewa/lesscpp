@@ -1,83 +1,37 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Простая структура и виды инициализации
-// Struct justStruct.cpp
+// Операции с членами структуры
+// Struct ariCom.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-// Структура - произвольный тип данных.
-// Под структуру, так же как и по enum, не выделяется память
-
-struct AxisesOne
-{
-    double x;
-    double y;
-    double z;
-    // x, y, z - это члены (поля) структуры
-};
-
-struct AxisesTwo
-{
-    double x = 2.4;
-    double y = 3.1;
-    double z = 4.8;
-};
-
-struct AxiesThree
-{
-    double x;
-    double y;
-    double z;
-};
-
-struct Person
+struct Employee // Сотрудник
 {
     string name;
-    short age;
-    double growth;
+    short id;
+    int age;
+    double salary;
 };
 
 int main() {
-    cout << "Виды инициализации структур\nИнициализация с помощью списка\n";
-    AxisesOne axOne {35.13, 1.39, 83.3};
-    cout << axOne.x << ' ' << axOne.y << ' ' << axOne.z << '\n';
-    cout << "Статическая инициализация структуры\n";
-    AxisesTwo axTwo;
-    cout << axTwo.x << ' ' << axTwo.y << ' ' << axTwo.z << '\n';
-    cout << "Инициализация пользовательским вводом\n";
-    double numX, numY, numZ;
-    cout << "Введите 3-и значения для x, y, z\n";
-    cin >> numX >> numY >> numZ;
-    AxiesThree axThree {numX, numY, numZ};
-    cout << axThree.x << ' ' << axThree.y << ' ' << axThree.z << '\n';
-    cout << "Повторное использовение имеющейся структуры\n";
-    AxisesOne axRepl {numX, numY, numZ};
-    cout << "Содержимое AxisesOne " << axRepl.x << ' ' << axRepl.y << ' ' << axRepl.z << '\n';
-    cout << "Структура с разными типами переменных внутри\n";
-    Person man {"Alex", 46, 165.5}, woman {"Mary", 12, 140.36};
-    cout << man.name << ' ' << man.age << ' ' << man.growth << '\n';
-    cout << woman.name << ' ' << woman.age << ' ' << woman.growth << '\n';
+    // Инициализируем члены структуры
+    Employee ivan {"Ivan", 0, 27, 75353.17};
+    Employee petr {"Petr", 1, 30, 64464.35};
+    Employee igor {"Igor", 2, 30, 61456.92};
+    // Выводим значения структурных объектов
+    cout << "Имя: " << ivan.name << endl;
+    cout << "ID: " << ivan.id << endl;
+    cout << "Возраст: " << ivan.age << endl;
+    cout << "Зарплата: " << ivan.salary << endl;
     return 0;
 }
-// Output
+// Задание
 /*
-Виды инициализации структур
-Инициализация с помощью списка
-35.13 1.39 83.3
-Статическая инициализация структуры
-2.4 3.1 4.8
-Инициализация пользовательским вводом
-Введите 3-и значения для x, y, z
-3
-5
-7
-3 5 7
-Повторное использовение имеющейся структуры
-Содержимое AxisesOne 3 5 7
-Структура с разными типами переменных внутри
-Alex 46 165.5
-Mary 12 140.36
+Имя: Ivan
+ID: 0
+Возраст: 27
+Зарплата: 75353.2
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE

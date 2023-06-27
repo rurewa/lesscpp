@@ -66,9 +66,9 @@ int main() {
     cin >> numX >> numY >> numZ;
     cout << "Содержимое структуры AxisesTwo - " << axRepl.x << ' ' << axRepl.y << ' ' << axRepl.z << '\n';
     cout << "Структура с разными типами данных внутри\n";
-    Person man {"Alex", 46, 170.5}, women {"Mary", 12, 140.36};
+    Person man {"Alex", 46, 170.5}, woman {"Mary", 12, 140.36};
     cout << man.name << ' ' << man.age << ' ' << man.growth << '\n';
-    cout << women.name << ' ' << women.age << ' ' << women.growth << '\n';
+    cout << woman.name << ' ' << woman.age << ' ' << woman.growth << '\n';
     cout << "Введите id работника\n";
     Worker person;
     cin >> ws >> person.id;

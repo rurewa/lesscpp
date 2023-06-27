@@ -6,10 +6,20 @@
 #include<iostream>
 using namespace std;
 
+// Имена переменных не должны начинаться с цифры.
 // Глобальные переменные - это зло!
-int var = 10;
+//int var = 10;
+/* void rav() {
+    int var = 10;
+} */
 
 int main() {
+	{
+        int var = 10; // Инициализируйтся
+        cout << var << endl; // Вызывается
+        // Тут уничтожается
+    }
+    //cout << var << endl;
 	//int var = 10;
 	//int var = 15; // Не должно быть в программе одноимённых переменных!
 	int someVar = 3;

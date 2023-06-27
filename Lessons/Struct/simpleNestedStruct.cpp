@@ -1,11 +1,12 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример вложенной структуры
+// Struct nestedStruct.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-struct Employe { // Сотрудник
+struct Employee { // Сотрудник
     short id;
     string name;
     int age;
@@ -13,20 +14,42 @@ struct Employe { // Сотрудник
 };
 
 struct Company {
-    Employe CEO; // Исполнительный директор
+    Employee CEO; // Исполнительный директор
     string сompany;
     int numberOfEmployees; // Количество сотрудников
 };
 
 int main() {
     // Инициализируем члены структуры
-    Company jfc {{ 3, "Ivan", 35, 155000.0f }, "JFC",7};
-    cout << "Компания: " << jfc.сompany << endl;
-    cout << "Количество сотрудников: " << jfc.numberOfEmployees << endl;
-    cout << "id исполнительного директора: " << jfc.CEO.id << endl;
-    cout << "Имя исполнительного директора: " << jfc.CEO.name << endl;
-    cout << "Возраст исполнительного директора: " << jfc.CEO.age << endl;
-    cout << "Зарплата исполнительного директора: " << jfc.CEO.salary << endl;
+    Company compName {{ 3, "Ivan", 35, 155000.0f }, "JFC", 7};
+    cout << "Компания: " << compName.сompany << endl;
+    cout << "Количество сотрудников: " << compName.numberOfEmployees << endl;
+    cout << "id исполнительного директора: " << compName.CEO.id << endl;
+    cout << "Имя исполнительного директора: " << compName.CEO.name << endl;
+    cout << "Возраст исполнительного директора: " << compName.CEO.age << endl;
+    cout << "Зарплата исполнительного директора: " << compName.CEO.salary << endl;
+    /*
+    cout << "Введите название компании\n";
+    string companyName;
+    getline(cin >> ws, companyName);
+    cout << "Введите кол.сотрудников\n";
+    short numEmp = 0;
+    cin >> ws >> numEmp;
+    cout << "Введите имя исполнительного директора\n";
+    string ceoName;
+    getline(cin >> ws, ceoName);
+    cout << "Введите id исполнительного директора\n";
+    short id = 0;
+    cin >> ws >> id;
+    cout << "Введите возраст исполнительного директора\n";
+    int age = 0;
+    cin >> ws >> age;
+    cout << "Введите зарплату исполнительного директора\n";
+    double salary = 0.0;
+    cin >> ws >> salary;
+    Company nameComp {{ id, ceoName, age, salary }, companyName, numEmp};
+    cout << nameComp.сompany << ' ' << nameComp.numberOfEmployees << ' ' << nameComp.CEO.id
+         << ' ' << nameComp.CEO.name << ' ' << nameComp.CEO.age << nameComp.CEO.salary << endl; */
     return 0;
 }
 /* Output:
