@@ -3,7 +3,7 @@ using namespace std; // std - standart стандарт
 
 int main() {
     // Беззнаковые типы данных
-    cout << "Знаковые типы данны" << endl;
+    cout << "Знаковые типы данных" << endl;
     short varShort = -32; // Тип short - для очень небольших целых чисел
     int varInteger = 2147; // Тип int - для небольших целых чисел
     long varLong = 9'223; // Тип long - для больших целых чисел

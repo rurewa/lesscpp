@@ -15,7 +15,7 @@ using namespace std;
 
 int main() {
 	{
-        int var = 10; // Инициализируйтся
+        int var = 10; // Инициализируется
         cout << var << endl; // Вызывается
         // Тут уничтожается
     }

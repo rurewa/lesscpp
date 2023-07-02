@@ -1,32 +1,34 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Структура и перечисление
+// Перечисление b 2-е вложенные структуры
 // V 2.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-/* struct Date {
+enum class Type { secretary, manager, laborer };
+
+struct Date {
     int day;
     int month;
     int year;
-}; */
-
-enum class Type { secretary, manager, laborer };
+};
 
 struct Emploee {
     int id;
     float salary; // Зарплата
     Type worker;
-    //Date date;
+    Date date;
 };
 
 int main() {
     Emploee job1; // Переменные структурного типа Emploee
     cout << "Введите id работника ";
-    cin >>job1.id;
+    cin >> ws >> job1.id;
     cout << "Введите 1-ю букву должности работника ";
     char typeJob;
     cin >> typeJob;
+    /* cout << "Введите дату приёма на работу\n";
+    cin >> job1.date.day >> job1.date.month >> job1.date.year; */
     string post;
     switch (typeJob)
     {
@@ -36,7 +38,7 @@ int main() {
     case 'm':
         job1.worker = Type::manager;
         break;
-    case 'w':
+    case 'l':
         job1.worker = Type::laborer;
         break;
     default:
@@ -59,16 +61,20 @@ int main() {
     }
 
     cout << "Введите зарплату работника ";
-    cin >> job1.salary;
-    cout << "id работника: " << job1.id << ", Должность: " << post  << ", Зарплата: " << job1.salary << endl;
+    cin >> ws >> job1.salary;
+    cout << "id работника: " << job1.id     << ", Должность: " << post
+         << ", Зарплата: "   << job1.salary << endl;
+    /* cout << "id работника: " << job1.id << " Дата приёма на работу "
+         << job1.date.day << '.' << job1.date.month << '.' << job1.date.year << ", Должность: " << post
+         << ", Зарплата: " << job1.salary << endl; */
     return 0;
 }
 // Output:
 /*
 Введите id работника 1
-Введите 1-ю букву должности работника s
-Введите зарплату работника 50000
-id работника 1 Должность Секретарь Зарплата 50000
+Введите 1-ю букву должности работника p
+Введите зарплату работника 200000
+id работника: 1, Должность: , Зарплата: 200000
 */
 // Задание
 /*Дописать эту программ, чтобы можно было вводить даты принятия на работу*/
