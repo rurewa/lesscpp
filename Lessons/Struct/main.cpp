@@ -1,51 +1,105 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Вложенные структуры
-// Struct nestedStruct.cpp
+// Структура и перечисление. Поиск по id
+// Struct searchById.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-struct Employee // Сотрудник
-{
-    short id;
-    string name;
-    int age;
-    double salary;
+enum class Position
+{ // Список должностей в компании
+    manager, programmer, director
 };
 
-struct Company
-{
-    Employee CEO; // Исполнительный директор
-    string company;
-    int numberOfEmployees; // Количество сотрудников
+struct Person
+{ // Свойства каждого работника в компании
+    int id;
+    string name;
+    short age;
+    Position pos;
 };
 
 int main() {
-    // Инициализируем члены структуры
-    Company compName {{3, "Ivan", 35, 155'000.33}, "JFC", 7};
-    cout << "Компания: " << compName.company << endl;
-    cout << "Количество сотрудников: " << compName.numberOfEmployees << endl;
-    cout << "id исполнительного директора: " << compName.CEO.id << endl;
-    cout << "Имя исполнительного директора: " << compName.CEO.name << endl;
-    cout << "Возраст исполнительного директора: " << compName.CEO.age << endl;
-    cout << "Зарплата исполнительного директора: " << compName.CEO.salary << endl;
+    cout << "Введите id для поиска работника\n";
+    //Person alex {0, "Alex", 23, Position::manager};
+    Person alex {0, "Alex", 23, Position::manager};
+    Person gleb {1, "Gleb", 20, Position::programmer};
+    Person andry {2, "Andry", 21, Position::director};
+    int idPerson = 0;
+    string personPosition;
+    cin >> ws >> idPerson;
+    if (idPerson == alex.id) {
+        personPosition = "Manager";
+        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' ' << personPosition << ' ' << (int)alex.pos << endl;
+    }
+    else if (idPerson == gleb.id) {
+        personPosition = "Programmer";
+        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << ' ' << (int)gleb.pos << endl;
+    }
+    else if (idPerson == andry.id) {
+        personPosition = "Director";
+        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << ' ' << (int)andry.pos << endl;
+    }
+    else {
+        personPosition = "Unknow";
+        cout << personPosition << '\n';
+    }
+    /* if (idPerson == Position::manager) {
+        personPosition = "Manager";
+        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' '
+             << personPosition << '\n';
+    }
+    else if (idPerson == Position::programmer) {
+        personPosition = "Programmer";
+        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << '\n';
+    }
+    else if (idPerson == Position::director) {
+        personPosition = "Director";
+        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << '\n';
+    }
+    else {
+        personPosition = "Unknow";
+        cout << personPosition << '\n';
+    } */
+    /* cin >> ws >> idPerson;
+    if (idPerson == 0) {
+        personPosition = "Manager";
+        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' '
+             << personPosition << '\n';
+    }
+    else if (idPerson == 1) {
+        personPosition = "Programmer";
+        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << '\n';
+    }
+    else if (idPerson == 2) {
+        personPosition = "Director";
+        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << '\n';
+    }cin >> ws >> idPerson;
+    if (idPerson == 0) {
+        personPosition = "Manager";
+        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' '
+             << personPosition << '\n';
+    }
+    else if (idPerson == 1) {
+        personPosition = "Programmer";
+        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << '\n';
+    }
+    else {
+        personPosition = "Unknow";
+        cout << personPosition << '\n';
+    } */
     return 0;
 }
 // OUTPUT
 /*
-Компания: JFC
-Количество сотрудников: 7
-id исполнительного директора: 3
-Имя исполнительного директора: Ivan
-Возраст исполнительного директора: 35
-Зарплата исполнительного директора: 155000
+Введите id для поиска работника
+0
+0 Alex 23 Manager
 */
 // Задание 1
-/* Добавить в эту программу ещё одну компанию с любым названием и похожими данными, что и JFC*/
-// Задание 2
-/*Ввести в программу пользовательский ввод всех данных: Компания, Количество сотрудников, id исполнительного директора,
-Имя исполнительного директора, Возраст исполнительного директора, Зарплата исполнительного директора
+/*
+В новом файле переписать эту программу с использованием Switch case
+*/
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //

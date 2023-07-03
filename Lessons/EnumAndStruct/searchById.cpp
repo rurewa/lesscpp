@@ -22,30 +22,28 @@ struct Person
 };
 
 int main() {
-    /* cout << "Введите id для поиска: ";
-    int idPosition;
-    cin >> ws >> idPosition;
+    /* cout << "Введите id для поиска работника\n";
+    //Person alex {0, "Alex", 23, Position::manager};
+    Person alex {0, "Alex", 23, Position::manager};
+    Person gleb {1, "Gleb", 20, Position::programmer};
+    Person andry {2, "Andry", 21, Position::director};
+    int idPerson = 0;
     string personPosition;
-    Person alex {0, "Alex", 46, Position::manager};
-    Person gleb {1, "Gleb", 26, Position::programmer};
-    Person andry {2, "Andry", 36, Position::director}; */
-    /* if (idPosition == 0) {
+    cin >> ws >> idPerson;
+    if (idPerson == alex.id) {
         personPosition = "Manager";
-        cout << alex.id << ' ' << alex.name << ' ' << alex.age
-             << ' ' << personPosition << '\n';
+        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' ' << personPosition << ' ' << (int)alex.pos << endl;
     }
-    else if (idPosition == 1) {
+    else if (idPerson == gleb.id) {
         personPosition = "Programmer";
-        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age
-             << ' ' << personPosition << '\n';
+        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << ' ' << (int)gleb.pos << endl;
     }
-    else if (idPosition == 2) {
+    else if (idPerson == andry.id) {
         personPosition = "Director";
-        cout << andry.id << ' ' << andry.name << ' ' << andry.age
-             << ' ' << personPosition << '\n';
+        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << ' ' << (int)andry.pos << endl;
     }
     else {
-        personPosition = "Unknown";
+        personPosition = "Unknow";
         cout << personPosition << '\n';
     } */
     bool exit = false;
