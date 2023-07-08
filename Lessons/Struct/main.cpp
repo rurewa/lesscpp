@@ -1,104 +1,53 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Структура и перечисление. Поиск по id
-// Struct searchById.cpp
+// Структура и перечисление. Ввод показаний погодных условий
+// Struct weather.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-enum class Position
-{ // Список должностей в компании
-    manager, programmer, director
+enum class Month {
+    JAN = 1, FEB, MAR
 };
 
-struct Person
-{ // Свойства каждого работника в компании
-    int id;
-    string name;
-    short age;
-    Position pos;
+struct Weather {
+    short avgHiTepm;
+    short avgLoTepm;
+    float actualRainfall;
+    float recordRainfall;
 };
 
 int main() {
-    cout << "Введите id для поиска работника\n";
-    //Person alex {0, "Alex", 23, Position::manager};
-    Person alex {0, "Alex", 23, Position::manager};
-    Person gleb {1, "Gleb", 20, Position::programmer};
-    Person andry {2, "Andry", 21, Position::director};
-    int idPerson = 0;
-    string personPosition;
-    cin >> ws >> idPerson;
-    if (idPerson == alex.id) {
-        personPosition = "Manager";
-        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' ' << personPosition << ' ' << (int)alex.pos << endl;
+    Weather weatherListType[12];
+    for (Month i = Month::JAN; i <= Month::MAR; ++(int&)i) {
+        cout << (int&)i << " месяц " << "Высокая температура: ";
+        cin >> weatherListType[(int&)i].avgHiTepm;
+        cout << "Низкая температура: ";
+        cin >> weatherListType[(int&)i].avgLoTepm;
+        cout << "Актуальные осадки: ";
+        cin >> weatherListType[(int&)i].actualRainfall;
+        cout << "Рекордные осадки: ";
+        cin >> weatherListType[(int&)i].recordRainfall;
     }
-    else if (idPerson == gleb.id) {
-        personPosition = "Programmer";
-        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << ' ' << (int)gleb.pos << endl;
+    cout << "\nMonth \tHiTemp \t LoHi\t ActualRain \tRecordRain\n";
+    for (Month i = Month::JAN; i <= Month::MAR; ++(int&)i) {
+        cout << (int&)i << '\t' << weatherListType[(int&)i].avgHiTepm;
+        cout << '\t' << weatherListType[(int&)i].avgLoTepm;
+        cout << "\t\t" << weatherListType[(int&)i].actualRainfall;
+        cout << "\t\t" << weatherListType[(int&)i].recordRainfall << '\n';
     }
-    else if (idPerson == andry.id) {
-        personPosition = "Director";
-        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << ' ' << (int)andry.pos << endl;
-    }
-    else {
-        personPosition = "Unknow";
-        cout << personPosition << '\n';
-    }
-    /* if (idPerson == Position::manager) {
-        personPosition = "Manager";
-        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' '
-             << personPosition << '\n';
-    }
-    else if (idPerson == Position::programmer) {
-        personPosition = "Programmer";
-        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << '\n';
-    }
-    else if (idPerson == Position::director) {
-        personPosition = "Director";
-        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << '\n';
-    }
-    else {
-        personPosition = "Unknow";
-        cout << personPosition << '\n';
-    } */
-    /* cin >> ws >> idPerson;
-    if (idPerson == 0) {
-        personPosition = "Manager";
-        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' '
-             << personPosition << '\n';
-    }
-    else if (idPerson == 1) {
-        personPosition = "Programmer";
-        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << '\n';
-    }
-    else if (idPerson == 2) {
-        personPosition = "Director";
-        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << '\n';
-    }cin >> ws >> idPerson;
-    if (idPerson == 0) {
-        personPosition = "Manager";
-        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' '
-             << personPosition << '\n';
-    }
-    else if (idPerson == 1) {
-        personPosition = "Programmer";
-        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << '\n';
-    }
-    else {
-        personPosition = "Unknow";
-        cout << personPosition << '\n';
-    } */
     return 0;
 }
 // OUTPUT
 /*
-Введите id для поиска работника
-0
-0 Alex 23 Manager
+ Month   HiTemp          ActualRain      RecordRain
+1       1       2               1               2
+2       1       2               1               2
+3       1       2               1               2
 */
-// Задание 1
+// Задание
 /*
-В новом файле переписать эту программу с использованием Switch case
+Дописать эту программу в 12 месяцев
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE
