@@ -3,56 +3,45 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
-double average(double a, double b, double c);
-double firstGetInput();
-double secondGetInput();
-double thirdGetInput();
+//double getInputAvarage();
 
-int main() {
-    using namespace std;
-    double firstNum = firstGetInput();
-    double secondNum = secondGetInput();
-    double thirdNum = thirdGetInput();
-    cout << "Результат: " << average(firstNum, secondNum, thirdNum) << endl;
-    return 0;
+int printInput() {
+    cout << "Введите число\n";
+    int num = 0;
+    cin >> ws >> num;
+    return num;
 }
 
-double average(double a, double b, double c) {
+int average(int a, int b , int c) {
     return (a + b + c) / 3;
 }
 
-double firstGetInput() {
-    using namespace std;
-    cout << "Пример простой функции нахождения среднего значения" << endl;
-    cout << "Введите первое число: ";
-    double firstNumber = 0.0;
-    cin >> firstNumber; // Принимает значение от пользователя
-    return firstNumber; // Возвращает значение в caller
+int main() {
+    int a = printInput();
+    int b = printInput();
+    int c = printInput();
+    int averageResult = average(a, b, c);
+    cout << averageResult << endl;
+    return 0;
 }
 
-double secondGetInput() {
-    using namespace std;
-    cout << "Введите второе число: ";
-    double secondNumber = 0.0;
-    cin >> secondNumber;
-    return secondNumber;
-}
-
-double thirdGetInput() {
-    using namespace std;
-    cout << "Введите третье число: ";
-    double thirdNumber = 0.0;
-    cin >> thirdNumber;
-    return thirdNumber;
-}
+/* double getInputAvarage() {
+    cout << "Введите числа: ";
+    double a = 0.0, b = 0.0, c = 0.0;
+    cin >> a >> b >> c; // Принимает значение от пользователя
+    return (a + b + c) / 3; // Возвращает значение в caller
+} */
 // Output:
 /*
-Пример простой функции нахождения среднего значения
-Введите первое число: 25
-Введите второе число: 30
-Введите третье число: 45
-Результат: 33.3333
+Введите число
+1
+Введите число
+2
+Введите число
+3
+2
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

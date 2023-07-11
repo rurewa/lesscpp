@@ -7,7 +7,7 @@
 using namespace std;
 
 int getValueFromUser() {
-  cout << "Enter an intenger: ";
+  cout << "Введите любое натуральное число: ";
   int x = 0;
   cin >> x;
   return x;

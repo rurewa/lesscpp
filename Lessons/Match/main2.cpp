@@ -1,48 +1,42 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
 // Арифметика
-// ari.cpp
+// a.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-= -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
 #include <iostream>
-#include <unistd.h>
 using namespace std;
 
 int main() {
-    // Массив типа char (символьный массив)
-    // Массив - коллекция (множество) однотипных элементов
-    char strAlex[] = {"Alex"};
-    char strProg[] = {"Prorammer"};
-    cout << strAlex << '\t' << strProg << endl;
-    int sizeArr = (sizeof(strAlex) / sizeof(*strAlex) -1);
-    cout << "Размер массива: " << sizeArr << endl;
-    string alexStr = "Алекс";
-    string alexProg = "Программист";
-    string total = alexStr + alexProg;
+    cout << "Среднее арифметическое\n";
+    int average = 0, firstNum = 0, secondNum = 0, thirdNum = 0;
+    cout << "Введите три натуральных числа: ";
+    cin >> firstNum >> secondNum >> thirdNum;
+    average = (firstNum + secondNum + thirdNum) / 3;
+    cout << average << endl;
+    cout << "Нахождение общего сопротивления в последовательной цепи\n";
+    cout << "Введите 2-а значения: ";
+    float total = 0, firstResistance = 0, secondResistance = 0;
+    cin >> firstResistance >> secondResistance;
+    total = firstResistance + secondResistance;
     cout << total << endl;
-    cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n";
-    int a = 5, b = 6;
-    int result = a + (b - 3);
-    cout << result << endl;
-    cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n";
-    a = 7, b = 9; // Переинициализация переменных
-    result = a * b;
-    cout << "Результат вычисления a * b: " << result << endl;
-    a = 12, b = 2;
-    int division = a / b; //
-    cout << "Результат вычисления a / b: " << division << endl;
-    cout << "Правило ассоциации\n";
-    double val = 3 + 5 - (1 * (5 / 3));
-    cout << "Значение val: " << val << endl;
-    cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n";
-    int a1 = 5, a2 = 6;
-    cout << (a1 += a2) << endl; // Сложение с присваиванием
-    // a1 = a1 + a2;
-    cout << (a1 -= a2) << endl; // Вычитание с присваиванием
-    // a1 = a1 - a2;
-    cout << (a1 *= a2) << endl; // Произведение с присваиванием
-    cout << (a1 /= a2) << endl; // Деление с присваиванием
-    sleep(2);
-    cout << "Сигнал " << '\7' << '\n';
+    cout << "Нахождение общего сопротивления в параллельной цепи\n";
+    cout << "Введите 2-а значения: ";
+    cin >> firstResistance >> secondResistance;
+    total = (firstResistance * secondResistance) / (firstResistance + secondResistance);
+    cout << total << endl;
+    cout << "Закон Ома\n";
+    double current = 0, volt = 0, resistance = 0;
+    cout << "Введите 2-а значения: ";
+    cin >> volt >> resistance;
+    current = volt / resistance;
+    cout << current << endl;
+    cout << "Площадь прямоугольника\n";
+    double square = 0, aSide = 0, bSide = 0;
+    cout << "Введите 2-а значения: ";
+    cin >> aSide >> bSide;
+    square = aSide * bSide;
+    cout << square << endl;
+    // ДЗ - найти периметр прямоугольника
     return 0;
 }
 // OUTPUT
