@@ -17,7 +17,7 @@ int returnNum() {
     return 35;
 }
 
-int inputNum(int num) {
+int inputNum(int num) { // int num - это параметр функции
     return num;
 }
 
@@ -67,7 +67,7 @@ int main() {
     printOk();
     printWorld();
     cout << returnNum() << endl;
-    cout << inputNum(45) << endl;
+    cout << inputNum(45) << endl; // 45 - это аргумент функции
     cout << inputNum(45) + 10 << endl;
     cout << function() << endl;
     cout << function() << endl;
