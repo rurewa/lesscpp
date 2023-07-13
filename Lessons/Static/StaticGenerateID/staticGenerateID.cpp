@@ -7,6 +7,7 @@ using namespace std;
 
 int generateID() {
   static int s_itemID = 0;
+  // Если не указать static, то переменная не будет работать в called (main())
   return ++s_itemID;
 }
 

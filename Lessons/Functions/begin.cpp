@@ -63,6 +63,11 @@ bool comp(bool x, bool y) {
     //return (x = y) ? true : false;
 }
 
+int secret(int r) {
+    srand(time(0));
+    return 0 + (rand() % r);
+}
+
 int main() {
     printOk();
     printWorld();
