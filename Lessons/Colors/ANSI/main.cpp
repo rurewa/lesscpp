@@ -50,7 +50,7 @@ int main(){
             break;
             
         case '*':
-            system("lear");
+            system("clear");
             result = num1 * num2;
             num1 = result;
             cout << "\e[1;37mрезультат: \e[0m"<< result << "\n";

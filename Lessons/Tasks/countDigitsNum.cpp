@@ -8,16 +8,10 @@
 using namespace std;
 
 int main() {
-    int digits = 0, i = 1123403;
-    /* do {
+    int digits = 0, i = 112;
+    do {
         ++digits;
-    } while (i /= 10); */
-    /* while (i /= 10) {
-        ++digits;
-    } */
-    for (int a = 0; i /= 10; ++a) {
-        ++digits;
-    }
+    } while (i /= 10);
     cout << digits << '\n';
     return 0;
 }

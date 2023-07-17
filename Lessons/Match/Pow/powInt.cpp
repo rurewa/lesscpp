@@ -13,7 +13,7 @@ int main() {
     cin >> baseNum >> exp;
     result = baseNum;
     if (exp == 0) { // При 0-й степени возвращает 1
-       puts("1");
+        puts("1");
         return 0;
     }
     for(int i = 1; i != exp; ++i) {

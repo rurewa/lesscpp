@@ -3,7 +3,6 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #include <iostream>
-#include <ctime> // Библиотека времени
 using namespace std;
 
 int main() {

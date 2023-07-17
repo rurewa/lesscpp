@@ -49,7 +49,7 @@ bool logic() {
     return true;
 }
 
-void printLogoc(bool l) {
+void printLogic(bool l) {
     cout << boolalpha << l << endl;
 }
 
@@ -60,7 +60,7 @@ bool comp(bool x, bool y) {
     else {
         return false;
     }
-    //return (x = y) ? true : false;
+    //return (x == y) ? true : false;
 }
 
 int secret(int r) {
@@ -68,7 +68,12 @@ int secret(int r) {
     return 0 + (rand() % r);
 }
 
+int module(int mod) { // ????
+    return mod % 2;
+}
+
 int main() {
+    cout << module(15) << endl;
     printOk();
     printWorld();
     cout << returnNum() << endl;
@@ -80,7 +85,7 @@ int main() {
     printResult(division(35, 45));
     bool l = logic();
     cout << l << endl;
-    printLogoc(logic());
+    printLogic(logic());
     cout << comp(true, false) << endl;
     return 0;
 }

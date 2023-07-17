@@ -3,13 +3,12 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-= -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
 #include<iostream>
-#include<limits.h>
 using namespace std;
 
 int main() {
     char c = 'A';
     c += 25;  // увеличиваем ASCII-код символа на 25
-    std::cout << c << "\n";  // Z
+    cout << c << '\n';  // Z
 
     return 0;
 }

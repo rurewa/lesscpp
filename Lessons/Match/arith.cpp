@@ -37,22 +37,12 @@ int main() {
     cin >> aSide >> bSide;
     area = aSide * bSide;
     cout << "Площадь прямоугольника: " << area << " см./2" << endl;
-    cout << "Нахождение периметра прямоугольника\n";
-    float perimeter = (aSide + bSide) * 2;
-    cout << "Периметр прямоугольника: " << perimeter << endl;
+
     cout << "Вычисление суммы натуральных чисел\n";
     int num = 0, sum = 0;
     cin >> num;
     sum = num * (num + 1) / 2;
     cout << "Сумма натуральных чисел: " << sum << "\n";
-
-    cout << "Подсчёт количества цифр в натуральном числе\n";
-    auto n = 0; // лучше использовать auto
-    cout << "Введите любое натуральное число: ";
-    cin >> n;
-    int digitalCount = floor(log10(n)) + 1;
-    cout << "Size num: " << digitalCount << endl;
-
     cout << "Преобразовать время в секундах в часы минуты и секунды\n";
     int sec = 0, hour = 0, min = 0;
     cin >> sec;

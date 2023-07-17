@@ -6,8 +6,8 @@
 #include <iostream>
 using namespace std;
 
-int getNum() {
-    int num = 0;
+double getNum() {
+    double num = 0;
     while (true) {
       cout << "Введите число\n";
       cin >> ws >> num;
@@ -65,9 +65,9 @@ int main() {
     //double num1 = 0, num2 = 0;
     //char op;
     while (again == 'y') {
-      int num1 = getNum();
+      double num1 = getNum();
       char op = operarot();
-      int num2 = getNum();
+      double num2 = getNum();
       calc(num1, op, num2);
       cout << "Нажмите y для повтора или любую клавишу для выхода" << endl;
       cin >> ws >> again;

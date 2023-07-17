@@ -14,7 +14,7 @@ int main() {
     cout << min << endl; */
     /* int a = 5, b = 4, c = 7, d = 1;
     int min = a;
-    if( b < min) min = b;
+    if(b < min) min = b;
     if(c < min) min = c;
     if(d < min) min = d;
     cout << min << endl; */
