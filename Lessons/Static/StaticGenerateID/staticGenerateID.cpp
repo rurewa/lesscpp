@@ -6,21 +6,23 @@
 using namespace std;
 
 int generateID() {
-  static int s_itemID = 0;
-  // Если не указать static, то переменная не будет работать в called (main())
-  return ++s_itemID;
+    static int s_itemID = 0; // s в имени переменной указывают на статичную переменную
+    // Если не указать static, то переменная не будет работать в called (main())
+    return ++s_itemID;
 }
 
-int main()
-{
-  static int i = 0;
-  while (i < 10) {
-    ++i;
-    cout << generateID() << endl;
-  }
-
-  return 0;
+int main() {
+    static int i = 0;
+    while (i < 10) {
+      ++i;
+      cout << generateID() << endl;
+    }
+    return 0;
 }
+// Output:
+/*
+
+*/
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//

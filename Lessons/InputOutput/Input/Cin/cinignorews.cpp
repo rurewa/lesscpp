@@ -15,12 +15,15 @@ int main() {
     string str;
     getline(cin >> ws, str);
     cout << num << '\t' << str << endl;
-
     return 0;
 }
 // Output:
 /*
-
+Введите ваш возраст
+2
+Введите ваше имя
+Alex
+2       Alex
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

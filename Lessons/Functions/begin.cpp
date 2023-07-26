@@ -68,7 +68,7 @@ int secret(int r) {
     return 0 + (rand() % r);
 }
 
-int module(int mod) { // ????
+int module(int mod) { // Деление по модулю
     return mod % 2;
 }
 

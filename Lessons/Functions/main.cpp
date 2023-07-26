@@ -1,116 +1,31 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Простые функции
-// Funcions justFunc.cpp
+// Функция с счётчиком
+// Вычисление суммы натуральных чисел
+// Functions natSum.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void printOk() {
-    cout << "Ok!" << endl;
-}
+// 5 1+2+3+4+5 = 15
 
-void printHello() {
-    cout << "Hello, World!\n";
-}
-
-int returnNum() { // Функция без параметра
-    return 35;
-}
-
-short inputNum(short num) { // Функция с параметром
-    return num;
-}
-
-short sum() {
-    return 25 + 10;
-}
-
-int total(int a, int b) {
-    return a + b;
-}
-
-double division(double a, double b) {
-    return a / b;
-}
-
-void printResult(double reuslt) {
-    cout << "Результат вычисления: " << reuslt << endl;
-}
-
-string function() {
-    return "Функция - именованный блок операторов. Это подпрограмма, которая содержит инструкции для выполнения задачи. Имеет вид name();";
-}
-
-string str(string s) {
-    return s;
-}
-
-char ch(char c) {
-    return c;
-}
-
-bool logic() {
-    return true;
-}
-
-void printLogic(bool x) {
-    cout << boolalpha << x << endl;
-}
-
-bool comp(bool x, bool y) {
-    /* if (x == y) {
-        return true;
+int sumTo(int a) {
+    int total = 0;
+    for (int count = 1; count <= a; ++count) {
+        total += count;
     }
-    else {
-        return false;
-    } */
-    return (x == y) ? true : false;
+    return total;
 }
 
-int main() { // Главная функция
-    cout << boolalpha << comp(true, false) << endl;
-    printLogic(false);
-    cout << boolalpha << logic() << endl;
-    cout << ch('U') << endl;
-    cout << str("Something") << endl;
-    cout << function() << endl;
-    printResult(division(5, 7));
-    cout << division(25, 15) << endl;
-    cout << total(100, 200) << endl;
-    cout << sum() << endl;
-    cout << inputNum(200) << endl;
-    cout << returnNum() << '\n';
-    printHello();
-    printOk();
-    printOk();
-    printOk();
-    printOk();
-    printHello();
-
+int main() {
+    int sum = sumTo(3); // 1+2+3
+    cout << sum << endl;
     return 0;
 }
-
+// ДЗ. Сделать эту программу интерактивной.
 // Output
 /*
-false
-false
-true
-U
-Something
-Функция - именованный блок операторов. Это подпрограмма, которая содержит инструкции для выполнения задачи. Имеет вид name();
-Результат вычисления: 0.714286
-1.66667
-300
-35
-200
-35
-Hello, World!
-Ok!
-Ok!
-Ok!
-Ok!
-Hello, World!
+15
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

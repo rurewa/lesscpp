@@ -10,14 +10,14 @@ bool isEqual(int x, int y) {
 }
 
 int main() {
-    cout << "Enter 1 num: ";
+    cout << "Введите 1-е число: ";
     int firstNum = 0;
     cin >> firstNum;
-    cout << "Enter 2 num: ";
+    cout << "Введите 2-е число: ";
     int secondNum = 0;
     cin >> secondNum;
     cout << boolalpha;
-    isEqual(firstNum, secondNum) ? cout << "is Equal" : cout << "is not Equal";
+    isEqual(firstNum, secondNum) ? cout << "Равны" : cout << "Не равны";
 
     return 0;
 }

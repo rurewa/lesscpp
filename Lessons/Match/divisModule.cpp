@@ -35,8 +35,9 @@ int main() {
     // Программа для нахождения последнего цифры в числе
     int num = 123456460;
     cout << num % 10 << '\n';
-    int x = 5, y = 5;
-    cout << boolalpha <<((x == y) ? true : false) << endl;
+    int x = 6, y = 5;
+    cout << boolalpha << ((x == y) ? true : false) << endl;
+    cout << boolalpha << ((x % 2 == 0) ? true : false) << endl;
     srand(time(0));
     int secret = 1 + (rand() % 5);
     cout << secret << endl;
