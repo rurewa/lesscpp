@@ -1,23 +1,28 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Пример проверки чётности введённого числа
+// Функция проверки чётности числа
+// even.cpp
+// V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 bool isEven(int x) {
-  bool isEven = (x % 2) == 0;
-  return isEven;
+    return (x % 2) == 0;
 }
 
 int main() {
-  cout.setf(ios::boolalpha);
-  cout << "Введите целое число: " << endl;
-  int num;
-  cin >> num;
-  cout <<isEven(num) << endl;
-
-  return 0;
+    cout << "Введите целое число: \n";
+    int num;
+    cin >> ws >> num;
+    cout << boolalpha << isEven(num) << endl;
+    return 0;
 }
+// Output
+/*
+Введите целое число:
+5
+false
+*/
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//

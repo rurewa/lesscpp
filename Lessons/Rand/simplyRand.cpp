@@ -10,9 +10,22 @@ using namespace std;
 
 int main() {
     srand(time(0));                   // Инициализация генератора
-    cout << 1 + (rand() % 5) << endl; // 1 и 5 - это диапазон генерируемых чисел
+    /* cout << 1 + (rand() % 5) << endl; // 1 и 5 - это диапазон генерируемых чисел
+    // Начальное число в диапазоне 0 или 1
     int secretNum = 1 + (rand() % 5);
-    cout << secretNum << endl;
+    cout << secretNum << endl; */
+    int min = 3, max = 5;
+    int secret = 0;
+    secret = rand() % (max - min + 1) + min;
+    cout << secret << endl;
+    /* while (true) {
+        secret = rand() % (max - min + 1) + min;
+        cout << secret << endl;
+        if (secret < min || secret > max) {
+            cout << '\7';
+            return 0;
+        }
+    } */
     return 0;
 }
 // Output:

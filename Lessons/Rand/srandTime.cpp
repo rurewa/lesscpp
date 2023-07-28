@@ -3,11 +3,9 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+using namespace std;
 
 int main() {
-    using namespace std;
     // устанавливаем значение системных часов в качестве стартового числа
     srand(static_cast<unsigned int>(time(0)));
     for (int count = 0; count < 100; ++count) {
