@@ -3,6 +3,7 @@
 // Пример проверки входных чисел, являются ли они
 // больше чисел, умноженных на 2 (т.е. 1, 2, 4, 8, 16
 // 32, 64, 128)
+// convDecToBin.cpp
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
@@ -11,8 +12,8 @@ using namespace std;
 // pow - это множитель 2 (например, 128, 64, 32 и т.д.)
 int printandDecrementBit(int x, int pow) {
 // Проверяем, является ли x больше определённого числа, умноженного на 2 и выводим бит
-  if (x >= pow) { cout << "1"; }
-  else { cout << "0"; }
+  if (x >= pow) { cout << '1'; }
+  else { cout << '0'; }
   // Если x больше, чем число, умноженное на 2, то вычитаем его из значения
   if (x >= pow) { return x - pow; }
   else { return x; }
@@ -32,6 +33,7 @@ int main() {
   x = printandDecrementBit(x, 4);
   x = printandDecrementBit(x, 2);
   x = printandDecrementBit(x, 1);
+  cout << endl;
 
   return 0;
 }

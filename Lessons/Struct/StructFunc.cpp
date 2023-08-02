@@ -5,29 +5,31 @@
 #include <iostream>
 using namespace std;
 
-struct FractionalNun { // Объявили структуру
+// Вычисление (a1 * a2) / (b1 * b2)
+
+struct FractionalNum { // Объявили структуру. Дробное число
   int integerNumerator; // Числитель
   int integerDenominator; // Знаменатель
 };
 
-void multiPly(FractionalNun a, FractionalNun b) {
+void multiPly(FractionalNum a, FractionalNum b) {
   // Печать с вычислением (a1 * a2) / (b1 * b2)
-  // На забываем static_cast, иначе компилятор выполнит целочисленное  деление!
-  cout << static_cast<float>(a.integerNumerator * a.integerDenominator) /
-  (b.integerNumerator * b.integerDenominator);
+  // На забываем static_cast или (float), иначе компилятор выполнит целочисленное  деление!
+  cout << (float)(a.integerNumerator * a.integerDenominator) /
+  (b.integerNumerator * b.integerDenominator) << endl;
 }
 
 int main() {
-  FractionalNun a; // Инициализировали объект структуры
-  cout << "Enter first Numerator: " << endl;
+  FractionalNum a; // Инициализировали объект структуры
+  cout << "Введите 1-й числитель: " << endl;
   cin >> a.integerNumerator;
-  cout << "Enter first Denominator: " << endl;
+  cout << "Введите 1-й значенатель " << endl;
   cin >> a.integerDenominator;
 
-  FractionalNun b; // Инициализировали объект структуры
-  cout << "Enter second Numerator: " << endl;
+  FractionalNum b; // Инициализировали объект структуры
+  cout << "Введите 2-й числитель: " << endl;
   cin >> b.integerNumerator;
-  cout << "Enter second Denominator: " << endl;
+  cout << "Введите 2-й знаменатель: " << endl;
   cin >> b.integerDenominator;
 
   multiPly(a, b); // Печать результата
@@ -35,15 +37,15 @@ int main() {
   return 0;
 }
 /* Output:
-Enter first Numerator:
-1
-Enter first Denominator:
+Введите 1-й числитель:
 2
-Enter second Numerator:
-3
-Enter second Denominator:
-3
-0.222222
+Введите 1-й значенатель
+5
+Введите 2-й числитель:
+8
+Введите 2-й знаменатель:
+5
+0.25
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

@@ -1,9 +1,11 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Пример применения функции, которая может возвращать структуру из нескольких
 // членов одновременно
+// structFunc.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 struct Point3d {
     double x;
@@ -18,13 +20,11 @@ Point3d getZeroPoint(double x, double y, double z) {
 
 double userInput() {
     double temp;
-    std::cin >> temp;
-    std::cin.ignore(32767, '\n');
+    cin >> ws >> temp;
     return temp;
 }
 
 int main() {
-    using namespace std;
     cout << "Enter value X: " << endl;
     double valueX = userInput();
     cout << "Enter value Y: " << endl;
@@ -33,10 +33,10 @@ int main() {
     double valueZ = userInput();
     Point3d zero = getZeroPoint(valueX, valueY, valueZ);
     if (zero.x == 0.0 && zero.y == 0.0 && zero.z == 0.0) {
-        cout << "The point is zero" << endl;
+        cout << "Точка равна нулю" << endl;
     }
     else {
-        cout << "The point is not zero" << endl;
+        cout << "Точка не равна нулю" << endl;
     }
     return 0;
 }
