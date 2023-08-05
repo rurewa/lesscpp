@@ -1,8 +1,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример определения отрицательного числа с помощью перечисления
+// eNegativeCheck.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
+using namespace std;
 
 enum class ErrorCode {
     ERROR_SUCCESS = 0,
@@ -19,19 +21,24 @@ ErrorCode doSomething(int value) {
 }
 
 int main() {
-    using namespace std;
-    cout << "Enter a positive number: " << endl;
+    cout << "Введите неотрицательное число: " << endl;
     int a;
-    cin >> a;
-    cin.ignore(32767, '\n');
+    cin >> ws >> a;
+    //cin.ignore(32767, '\n');
     if (doSomething(a) == ErrorCode::ERROR_NEGATIVE_NUMBER) {
-        cout << "You entered a negative number" << endl;
+        cout << "Вы ввели отрицательное число" << endl;
     }
     else {
-        cout << "It worked!" << endl;
+        cout << "Это сработало!" << endl;
     }
     return 0;
 }
+// Output:
+/*
+Введите неотрицательное число:
+3
+Это сработало!
+*/
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//

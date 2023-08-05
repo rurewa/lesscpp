@@ -1,8 +1,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Простой пример связки перечисления с функцией. Интересна конструкция switch
+// Простой пример связки перечисления с функцией.
+// enumFunc.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
+using namespace std;
 
 enum class Animals {
     PIG,
@@ -13,64 +15,65 @@ enum class Animals {
     OSTRICH
 };
 
-std::string getAnimalName(Animals animal) {
+string getAnimalName(Animals animal) {
     switch (animal)
     {
     case Animals::PIG:
-        return "Pig";
+        return "Свинья";
         break;
     case Animals::CHICKEN:
-        return "Chicken";
+        return "Курица";
         break;
     case Animals::GOAT:
-        return "Goat";
+        return "Коза";
         break;
     case Animals::CAT:
-        return "Cat";
+        return "Кошка";
         break;
     case Animals::DOG:
-        return "Dot";
+        return "Собака";
         break;
     case Animals::OSTRICH:
-        return "Ostrich";
+        return "Страус";
         break;
     default:
-        return "printNumberLegs(): Unhandled enumerator";
+        return "Что?";
         break;
     }
 }
 
 void printNumberLegs(Animals legs) {
-    std::cout << "A " << getAnimalName(legs) << " has ";
+    cout << getAnimalName(legs) << " имеет ";
     switch (legs)
     {
     case Animals::OSTRICH:
     case Animals::CHICKEN:
-        std::cout << "2";
+        cout << '2';
         break;
 
     case Animals::PIG:
     case Animals::GOAT:
     case Animals::CAT:
     case Animals::DOG:
-        std::cout << "4";
+        cout << '4';
         break;
-
     default:
-        std::cout << "printNumberLegs(): Unhandled enumerator";
+        cout << "Что?";
         break;
     }
-    std::cout << " legs. \n";
+    cout << " Ноги. \n";
 }
 
 int main() {
-    using namespace std;
-
     printNumberLegs(Animals::CHICKEN);
     printNumberLegs(Animals::CAT);
-
     return 0;
 }
+// Output:
+/*
+Курица имеет 2 Ноги.
+Кошка имеет 4 Ноги.
+*/
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//

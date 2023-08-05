@@ -1,42 +1,43 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Функция перевода числа из десятичного в двоичное
-// convDecToBin.cpp
+// Структура с функцией для печати на дисплей
+// personFunc.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-// 128, 64, 32, 16, 8, 4, 2, 1
+struct Person {
+    short id;
+    int age;
+    double salary;
+};
 
-int decToBin(int x, int pow) {
-    /*
-    x - десятичное число, введённое пользователем
-    pow - это число множитель 2 (например, 128, 64, 32 и т.д.)
-    */
-    if (x >= pow) { cout << '1'; }
-    // Проверяем, если х больше определённого числа, умноженного на 2
-    else { cout << '0'; }
-    // Если х больше, чем число, умноженное на 2, то вычитаем
-    if (x >= pow) { return x - pow; }
-    else { return x; }
+void printInfo(Person person) {
+    cout << "ID: " << person.id << endl;
+    cout << "Age: " << person.age << endl;
+    cout << "Salary: " << person.salary << endl;
 }
 
 int main() {
-    cout << "Введите натуральное число от 0 до 255: ";
-    int x = 0;
-    cin >> ws >> x;
-    x = decToBin(x, 128);
-    x = decToBin(x, 64);
-    x = decToBin(x, 32);
-    x = decToBin(x, 16);
-    x = decToBin(x, 8);
-    x = decToBin(x, 4);
-    x = decToBin(x, 2);
-    x = decToBin(x, 1);
+    Person alex = {1, 43, 300'000};
+    Person inna = {2, 19, 50'000};
+    cout << "Alex: " << endl;
+    printInfo(alex);
+    cout << "\n";
+    cout << "Inna: " << endl;
+    printInfo(inna);
     return 0;
 }
 /* Output:
-Введите натуральное число от 0 до 255: 4
+Alex:
+ID: 1
+Age: 43
+Salary: 300000
+
+Inna:
+ID: 2
+Age: 19
+Salary: 50000
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

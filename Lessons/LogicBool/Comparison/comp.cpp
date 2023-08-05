@@ -25,11 +25,13 @@ int main() {
     // Сравненние символов
     char chA = 'a', chB = 'b';
     cout << "chA != chB:\t" << ((chA != chB) ? true : false) << '\n';
+    // Сравненние строк
     string str1 = "Ivan", str2 = "Ivan";
     cout << "str1 == str2:\t" << ((str1 == str2) ? true : false) << '\n';
     return 0;
 }
-/* result = (5 ^ 7); // Побитовое ИЛИ
+/* 
+result = (5 ^ 7); // Побитовое ИЛИ
 cout << "5 ^ 7:\t" << result << '\n';
 result = (5 xor 5); // Исключающее ИЛИ
 cout << "5 xor 5:\t" << result << '\n';
