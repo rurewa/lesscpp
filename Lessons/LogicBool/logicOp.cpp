@@ -30,7 +30,20 @@ int main() {
 }
 // Outut
 /*
-
+a == b: true
+a and b: true
+a && b: true
+a or b: true
+a || b: true
+a not_eq b: false
+a != b: false
+!a false !b false
+!a && !b false
+a xor b 0
+a ^ b 0
+(a == b) && (a != b): false
+((a == b) || (a != b)): true
+((a == b) != (a != b)): true
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

@@ -81,3 +81,5 @@ make
 ```
 ./SampleProject
 ```
+
+### [Уроки по Qt]<https://zetcode.com/gui/qt5/>
