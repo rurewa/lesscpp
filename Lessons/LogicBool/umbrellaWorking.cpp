@@ -1,13 +1,16 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример использования логических значений для определения результата.
 // При каких условиях человек попадёт на работу?
+// umbrellIsWorking.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
 int main() {
-    cout.setf(ios::boolalpha);
+    cout << boolalpha;
+    // Человек может попасть на работу, если при дожде он взял зонт И приехал автобус,
+    //
     cout << "Попадёт ли человек на работу, если:" << endl;
     bool working;
     cout << "На улице идёт дождь? ";
@@ -20,7 +23,19 @@ int main() {
     bool bus; //
     cin >> bus;
     working = bus && (!rain || umbrella); // Проверка условий
-    cout << working << endl;
+    cout << "Человек попадёт на работу? " << working << endl;
+    /*
+    1) Дождь, 2) Зонт, 3) Автобус
+    111 = 1
+    110 = 0
+    100 = 0
+    101 = 0
+    011 = 1
+    001 = 1
+    000 = 0
+    101 = 0
+    */
+   return 0;
 }
 // Output
 /*
@@ -30,45 +45,6 @@ int main() {
 Автобус приехал? 1
 Попадёт ли человек на работу? false
 */
-/*
-1) Дождь
-2) Зонт
-3) Автобус
-1+1+1 = 1
-1+1+0= 0
-1+0+0= 0
-1+0+1= 0
-0+1+1= 1
-0+0+1= 1
-0+0+0= 0
-1+0+1= 1
-*/
-/*
-    if (rain == true && umbrella == true && bus == true) { // 111 = 1
-        working = true;
-    }
-    else if (rain == true && umbrella == true && bus == false) { // 110 = 0
-        working = false;
-    }
-    else if (rain == true && umbrella == false && bus == false) { // 100 = 0
-        working = false;
-    }
-    else if (rain == false && umbrella == false && bus == false) { // 000 = 0
-        working = false;
-    }
-    else if (rain == false && umbrella == false && bus == true) { // 001 = 1
-        working = true;
-    }
-    else if (rain == false && umbrella == true && bus == true) { // 011 = 1
-        working = true;
-    }
-    else if (rain == false && umbrella == true && bus == false) { // 010 = 0
-        working = false;
-    }
-    else { //101 = 0
-        working = false;
-    }
-    */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//

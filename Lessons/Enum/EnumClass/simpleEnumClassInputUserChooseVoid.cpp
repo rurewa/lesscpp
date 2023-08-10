@@ -30,7 +30,6 @@ int main() {
 }
 
 void printColor(Colors color) {
-    using namespace std;
     if (color == Colors::RED) {
         cout << "Red" << endl;
     }

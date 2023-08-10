@@ -6,6 +6,8 @@
 #include<iostream>
 using namespace std;
 
+ // Логические вентили - (англ. Gate) базовый элемент программной и цифровой логики
+
 int main() {
     cout << boolalpha;
     bool a = true;
@@ -21,8 +23,8 @@ int main() {
     cout << "!a " << !a << " !b " << !b << endl; // то же самое Логическое НЕ
     cout << "not a && not b " << (not a && not b) << endl;
     cout << "!a && !b " << (!a && !b) << endl;
-    cout << "a xor b " << (a xor b) << endl; // Логическое ИСКЛЮЧАЮЩЕЕ ИЛИ
-    cout << "a ^ b " << (a ^ b) << endl; // то же саоме ИСКЛЮЧАЮЩЕЕ ИЛИ
+    /* cout << "a xor b " << (a xor b) << endl; // Логическое ИСКЛЮЧАЮЩЕЕ ИЛИ
+    cout << "a ^ b " << (a ^ b) << endl; // то же самое ИСКЛЮЧАЮЩЕЕ ИЛИ */
     cout << "(a == b) && (a != b): " << ((a == b) && (a != b)) << endl;
     cout << "((a == b) || (a != b)): " << ((a == b) || (a != b)) << endl;
     cout << "((a == b) != (a != b)): " << ((a == b) != (a != b)) << endl;

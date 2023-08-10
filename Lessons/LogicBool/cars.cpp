@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Программа определения возможности езды на автомобиле
-// Нужно ещё исключить габарит
+// allowedToWork.cpp
 // V 2.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #include<iostream>
@@ -8,6 +8,7 @@ using namespace std;
 
 int main() {
     cout << boolalpha;
+    // Машина поедет И ей разрешено, если исправны мотор И трансмиссия И исправна лампа габарита
     cout << "Исправен ли мотор? ";
     bool motor;
     cin >> motor;
@@ -17,7 +18,17 @@ int main() {
     cout << "Исправна ли лампа левого габарита? ";
     bool ligh;
     cin >> ligh;
-    cout << "Машина поедет: " << ((motor && trans) && (motor || ligh) && (!trans || ligh)) << endl;
+    cout << "Разрешено ли ехать машине?: " << ((motor && trans) && (motor || ligh) && (!trans || ligh)) << endl;
+    /*
+    000 - false
+    100 - false
+    110 - false
+    111 - true
+    001 - false
+    011 - false
+    101 - false
+    010 - false
+    */
     return 0;
 }
 // Output

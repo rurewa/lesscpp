@@ -1,29 +1,38 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример использования логических значений для определения результата.
 // При каких условиях курьер доставит заказ вовремя?
+// courier.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
 int main() {
-    cout.setf(ios::boolalpha);
+    cout << boolalpha;
     cout << "Доставка заказа курьером" << endl;
-    bool delivered = false;
+    bool delivered;
     cout << "Есть ли пробки? ";
-    bool trafficJams = false;
+    bool trafficJams;
     cin >> trafficJams;
     cout << "Сломался ли автомобиль курьера? ";
-    bool drive = false;
-    cin >> drive;
+    bool car;
+    cin >> car;
     cout << "Попал ли курьер в дтп? ";
-    bool crash = false;
+    bool crash;
     cin >> crash;
-    delivered = !(trafficJams || (drive || crash)); // Проверка условий
-    //delivered = !trafficJams && !(drive || crash); // Проверка условий
+    delivered = !(trafficJams || (car || crash)); // Проверка условий
+    //delivered = !trafficJams && !(car || crash); // Проверка условий
     cout << delivered << endl;
     return 0;
 }
+// Output
+/*
+Доставка заказа курьером
+Есть ли пробки? 0
+Сломался ли автомобиль курьера? 0
+Попал ли курьер в дтп? 0
+true
+*/
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//

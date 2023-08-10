@@ -1,43 +1,64 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Структура с функцией для печати на дисплей
-// personFunc.cpp
+// Интерактивный пример связки перечисления с функциями.
+// eFunc.cpp Functions
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-struct Person {
-    short id;
-    int age;
-    double salary;
+enum class Colors {
+    RED, BROWN, GRAY, WHITE, PINK, BLUE, PURPLE
 };
 
-void printInfo(Person person) {
-    cout << "ID: " << person.id << endl;
-    cout << "Age: " << person.age << endl;
-    cout << "Salary: " << person.salary << endl;
-}
+// Прототипы функций
+void printColor(Colors color);
+int userInput();
 
 int main() {
-    Person alex = {1, 43, 300'000};
-    Person inna = {2, 19, 50'000};
-    cout << "Alex: " << endl;
-    printInfo(alex);
-    cout << "\n";
-    cout << "Inna: " << endl;
-    printInfo(inna);
+    cout << "Введите номер цвета\n";
+    int userInputNum = userInput();
+    Colors color (static_cast<Colors>(userInputNum));
+    printColor(color);
     return 0;
 }
-/* Output:
-Alex:
-ID: 1
-Age: 43
-Salary: 300000
 
-Inna:
-ID: 2
-Age: 19
-Salary: 50000
+void printColor(Colors color) {
+    if (color == Colors::RED) {
+        puts("Red");
+    }
+    else if (color == Colors::BROWN) {
+        puts("Brown");
+    }
+    else if (color == Colors::GRAY) {
+        puts("Gray");
+    }
+    else if (color == Colors::WHITE) {
+        puts("White");
+    }
+    else if (color == Colors::PINK) {
+        puts("Pink");
+    }
+    else if (color == Colors::BLUE) {
+        puts("Blue");
+    }
+    else if (color == Colors::PURPLE) {
+        puts("Purple");
+    }
+    else {
+        puts("Что?");
+    }
+}
+
+int userInput() {
+    int userNum;
+    cin >> userNum;
+    return userNum;
+}
+
+/* Output:
+Введите номер цвета
+10
+Что?
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

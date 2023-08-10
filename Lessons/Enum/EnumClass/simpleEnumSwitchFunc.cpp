@@ -1,39 +1,34 @@
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример связки перечисления с функцией.
-// enumFunc.cpp
+// enumFunc.cpp Functions
 // V 1.0
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+#include <iostream>
 using namespace std;
 
-enum class Animals {
-    PIG,
-    CHICKEN,
-    GOAT,
-    CAT,
-    DOG,
-    OSTRICH
+enum class Animal {
+    PIG, CHICKEN, GOAT, CAT, DOG, OSTRICH
 };
 
-string getAnimalName(Animals animal) {
+string getAnimalName(Animal animal) {
     switch (animal)
     {
-    case Animals::PIG:
+    case Animal::PIG:
         return "Свинья";
         break;
-    case Animals::CHICKEN:
+    case Animal::CHICKEN:
         return "Курица";
         break;
-    case Animals::GOAT:
+    case Animal::GOAT:
         return "Коза";
         break;
-    case Animals::CAT:
+    case Animal::CAT:
         return "Кошка";
         break;
-    case Animals::DOG:
+    case Animal::DOG:
         return "Собака";
         break;
-    case Animals::OSTRICH:
+    case Animal::OSTRICH:
         return "Страус";
         break;
     default:
@@ -42,38 +37,41 @@ string getAnimalName(Animals animal) {
     }
 }
 
-void printNumberLegs(Animals legs) {
-    cout << getAnimalName(legs) << " имеет ";
-    switch (legs)
+void printNumberPaws(Animal paws) {
+    cout << getAnimalName(paws) << " имеет ";
+    switch (paws)
     {
-    case Animals::OSTRICH:
-    case Animals::CHICKEN:
+    case Animal::OSTRICH:
+    case Animal::CHICKEN:
         cout << '2';
         break;
-
-    case Animals::PIG:
-    case Animals::GOAT:
-    case Animals::CAT:
-    case Animals::DOG:
+    case Animal::CAT:
+    case Animal::DOG:
+    case Animal::GOAT:
+    case Animal::PIG:
         cout << '4';
         break;
     default:
         cout << "Что?";
         break;
     }
-    cout << " Ноги. \n";
+    cout << " Лапы\n";
 }
 
 int main() {
-    printNumberLegs(Animals::CHICKEN);
-    printNumberLegs(Animals::CAT);
+    int choose = 0;
+    cout << "Введите животное\n";
+    cin >> choose;
+    Animal vs = (Animal)choose;
+    //printNumberPaws(Animal::CHICKEN);
+    //printNumberPaws(Animal::CAT);
+    printNumberPaws(vs);
     return 0;
 }
-// Output:
-/*
-Курица имеет 2 Ноги.
-Кошка имеет 4 Ноги.
+/* Output:
+Курица имеет 2 Лапы
+Кошка имеет 4 Лапы
 */
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
