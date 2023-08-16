@@ -64,3 +64,8 @@ g++ main.o -o main.bin -lsfml-graphics -lsfml-window -lsfml-system
 <https://kychka-pc.ru/>
 
 <https://kychka-pc.ru/category/sfml/page/5>
+
+**Другие примеры**
+
+*Фракталы*
+<https://github.com/BojanV03/SFML_Fractals/tree/master/Source>

@@ -5,16 +5,15 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
 #include <unistd.h> // Библиотека для вызова задержки в сек.
-
 using namespace std;
 
 void countOut(int count) {
     sleep(1); // Задержка в сек.
-    std::cout << "push " << count << '\n';
+    cout << "push " << count << '\n';
     if (count > 1) { // Условие завершения
         countOut(--count); // функция countOut() вызывает рекурсивно сама себя и заполняет стек визовов
     }
-    std::cout << "push" << endl; // Очистка стека вызовов
+    //puts("push"); // Очистка стека вызовов
 }
 
 int main() { // Стек вызовов
@@ -23,7 +22,10 @@ int main() { // Стек вызовов
 }
 // Output:
 /*
-
+push 4
+push 3
+push 2
+push 1
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

@@ -60,7 +60,6 @@ void printColor(Colors color) {
 }
 
 int userInput() {
-    using namespace std;
     cout << "Enter num: " << endl;
     int userNum;
     cin >> ws >> userNum;
