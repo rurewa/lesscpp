@@ -1,49 +1,32 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Пользовательский выбор фруктов
-// fruitUserChoice
+// Рекурсия. Это функция, которая вызывает саму себя.
+// Все рекурсии должны иметь условия для завершения!
+// Рекурсия позволяет выполнять повторы без циклов.
+// simpleRecursion.cpp Function
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
-
-enum class Fruit { LEMON, APPLE, CHERRY };
-
-void printFruit(Fruit fruit) {
-    switch (fruit)
-    {
-       case Fruit::LEMON:
-           puts("🍋");
-           break;
-       case Fruit::APPLE:
-           puts("🍏");
-           break;
-       case Fruit::CHERRY:
-           puts("🍒");
-           break;
-       default:
-           puts("?");
-           break;
+void countOut(int count) {
+    sleep(1);
+    cout << "push " << count << '\n';
+    if (count > 1) { // Условие завершнения рекурсии
+        countOut(--count); // Функция вызывает саму себя
     }
-}
-int userChoice() {
-    int inputNum = 0;
-    cin >> ws >> inputNum;
-    return inputNum;
 }
 
 int main() {
-    cout << "Выбрать фрукт лимон - 0, яблоко - 1, вишня - 2\n";
-    int userInput = userChoice();
-    //Fruit fruit = static_cast<Fruit>(userInput);
-    Fruit fruit = (Fruit)(userInput);
-    printFruit(fruit);
+    countOut(4);
     return 0;
 }
+
 /* Output:
-Выбрать фрукт лимон - 0, яблоко - 1, вишня - 2
-2
-🍒
+push 4
+push 3
+push 2
+push 1
 */
 // Задание
 /*

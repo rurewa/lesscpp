@@ -12,7 +12,7 @@ int fact(int n) {
     cout << "Шаги: " << n << endl;
     sleep(1);
     if (n > 1) {
-        f = n * fact(n - 1);
+        f = n * fact(n - 1); // 6*(6*5*4*3*2*1) = 720, 6=6*(6–1)
     }
     cout << "Результат вычсления: " << f << endl;
     sleep(1);
