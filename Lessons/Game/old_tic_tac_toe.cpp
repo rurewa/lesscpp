@@ -1,15 +1,16 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // Крестики-нолики. Пример многомерного массива
+// tic-tac_toe.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <iostream>
-#include <string>
+//#include <string>
 using namespace std;
 
-char square[10];
+char square[10]; // Площадь доски
 void board();
-int  setCell(int choice, char mark);
-int  checkwin();
+int  setCell(int choice, char mark); // Ячейка
+int  checkwin(); // Определение победителя
 
 int main(){
     int player = 1, i, choice;
