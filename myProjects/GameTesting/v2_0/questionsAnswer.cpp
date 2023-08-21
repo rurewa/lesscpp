@@ -1,12 +1,14 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Простой Калькулятор v 2.0 alpha (refactoring) The Simply Calculator
+// Викторина функциями и хедерами
+// vict.cpp
+// V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 #include "function.h"
 
 int main() {
     using namespace std;
-    cout.setf(ios::boolalpha); // Чтобы вывод был true/false
+    cout << boolalpha; // Чтобы вывод был true/false
     char userInput = 'y';
     int answer;
     bool userAnswer;

@@ -22,6 +22,7 @@ int main() {
     int answer = 0;
     cin >> answer;
     cout << (result == answer ? true : false ) << endl;
+    cout << (result == answer ? "✅" : "❌" ) << endl;
     return 0;
 }
 // Output:
