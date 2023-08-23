@@ -6,6 +6,10 @@
 #include <iostream>
 using namespace std;
 
+/* string str(string str) {
+    return str;
+} */
+
 string inputStr() {
     string inStr;
     getline(cin, inStr);
@@ -21,7 +25,7 @@ void printLengthStr(string str) {
 }
 
 int main() {
-    //cout << lengthStr("word") << endl;
+    //cout << str("word") << endl;
     cout << "Введите любое слово: " ;
     string userStr = inputStr();
     printLengthStr(userStr);
