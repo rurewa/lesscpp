@@ -8,16 +8,18 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    cout << "Введите число от 0 до 255: ";
-    int n = 2;
-    cin >> n;
-    if (n / 2 != 0) {
-        cout << n / 2;
+int main() {
+    int decimal, binary = 0, remainder, product = 1;
+    // Поскольку тип данных - int, он может принимать значения только до 1023, прежде чем переключаться на long.
+    cout << "Введите натуральное число: ";
+    cin >> decimal;
+    while (decimal != 0) {
+        remainder = decimal % 2;
+        binary = binary + (remainder * product);
+        decimal = decimal / 2;
+        product *= 10;
     }
-    cout << n % 2;
-    cout << endl;
+    cout << binary << endl;
     return 0;
 }
 /* Output:
