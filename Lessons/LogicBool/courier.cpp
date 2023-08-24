@@ -8,7 +8,6 @@
 using namespace std;
 
 int main() {
-    cout << boolalpha;
     cout << "Доставка заказа курьером" << endl;
     bool delivered;
     cout << "Есть ли пробки? ";
