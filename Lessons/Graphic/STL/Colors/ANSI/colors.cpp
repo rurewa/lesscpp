@@ -16,7 +16,7 @@ cyan         36         46
 white        37         47
 */
 
-const auto ANSI_COLOR_RED       = "\033[31m";
+const char ANSI_COLOR_RED[]       = "\033[31m";
 const auto ANSI_COLOR_GREEN     = "\033[32m";
 const auto ANSI_COLOR_YELLOW    = "\033[33m";
 const auto ANSI_COLOR_BLUE      = "\033[34m";
