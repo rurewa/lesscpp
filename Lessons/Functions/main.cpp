@@ -1,70 +1,43 @@
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Рефакторинг программы "Проверка знаний таблицы умножения"
-// Переписываем программу функциями
-// checkMultiTable.cpp
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// Сравнение строк или символов.
+// comparisonString.cpp
 // V 1.0
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include <iostream>
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+#include<iostream>
 using namespace std;
+string myChar();
+void resultOut(bool result);
+bool comparison(string num1, string num2);
 
-int randNum();
-bool comparison(int a, int b);
-int calculate(int a, int b);
-void printResult(bool result);
-int userAnswer();
-
-int main() {
-    cout << "Проверка знаний таблицы умножения\n";
-    char userSelection = 'y';
-    short num1 = 0, num2 = 0;
-    while (userSelection != 'n') {
-        num1 = randNum();
-        num2 = randNum();
-        cout << num1 << 'x' << num2 << '?' << endl;
-        int answer = userAnswer();
-        printResult(comparison(answer, calculate(num1, num2)));
-        cout << "Желаете продолжить? [y/n] ";
-        cin >> userSelection;
-    }
+int main(){
+    cout << "Введите 1-ю строку или символ: ";
+    string myFirstChar;
+    myFirstChar = myChar();
+    cout << "Введите 2-ю строку или символ: ";
+    string mySecondChar;
+    mySecondChar = myChar();
+    //cout << "Результат: " << !myFirstChar.compare(mySecondChar) << endl; // При помощи метода compare
+    resultOut(comparison(myFirstChar, mySecondChar));
+    
     return 0;
 }
-
-int randNum() {
-    srand(time(0));
-    return 1 + (rand() % 10);
+string myChar(){
+    string a;
+    getline(cin, a);
+    return a;
 }
-
-bool comparison(int a, int b) {
-    cout << boolalpha;
-    return a == b ? true : false;
-}
-
-int calculate(int a, int b) {
-    return a * b;
-}
-
-void printResult(bool result) {
+void resultOut(bool result){
     cout << result << endl;
 }
-
-int userAnswer() {
-    int answer = 0;
-    cout << "Ваш ответ ";
-    cin >> answer;
-    return answer;
+bool comparison(string num1, string num2){
+    cout << boolalpha;
+    return num1 == num2 ? true : false;
 }
-// Output
-/*
-Проверка знаний таблицы умножения
-7x7?
-Ваш ответ 49
-true
-Желаете продолжить? [y/n] y
-3x3?
-Ваш ответ 10
-false
-Желаете продолжить? [y/n] n
+/* Output:
+Введите 1-ю строку или символ: 1
+Введите 2-ю строку или символ: 1
+Результат: true
 */
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //

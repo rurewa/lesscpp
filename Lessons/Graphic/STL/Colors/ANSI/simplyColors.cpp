@@ -59,6 +59,11 @@ int main() {
          << '\n' << blue << white << white << white << blue
          << '\n' << blue << blue << blue << blue << blue
          << endl;
+     puts("");
+     puts("\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\n"
+          "\e[46m \e[0m\e[47m \e[0m\e[47m\e[47m \e[0m\e[47m \e[0m\e[46m \e[0m\n"
+          "\e[46m \e[0m\e[47m \e[0m\e[47m\e[47m \e[0m\e[47m \e[0m\e[46m \e[0m\n"
+          "\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\n");
     return 0;
 }
 // Output:
