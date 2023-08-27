@@ -1,14 +1,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Программа подсчёта размера строки
-// lengthStr.cpp
+// lengthStr.cpp Function
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
-
-/* string str(string str) {
-    return str;
-} */
 
 string inputStr() {
     string inStr;
@@ -25,10 +21,8 @@ void printLengthStr(string str) {
 }
 
 int main() {
-    //cout << str("word") << endl;
     cout << "Введите любое слово: " ;
-    string userStr = inputStr();
-    printLengthStr(userStr);
+    printLengthStr(inputStr());
     return 0;
 }
 // Output

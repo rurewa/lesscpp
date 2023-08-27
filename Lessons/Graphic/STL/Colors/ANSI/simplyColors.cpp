@@ -27,44 +27,65 @@ white        37         47
 */
 
 int main() {
-    cout << "\033[31mПривет, Мир!\033[0m" << endl;
-    cout << "\e[31mПривет, Мир!\e[0m" << endl; // Можно вместо \033
-    cout << "\e[1;31mПривет, Мир!\e[0m" << endl; // Высокая яркость цвета
-    cout << "\e[0;91mПривет, Мир!\e[0m" << endl; // Высокая яркость цвета
-    cout << "\e[4;31mПривет, Мир!\e[0m" << endl << endl; // Подчёркивать текст
-    cout << "\e[21;31mПривет, Мир!\e[0m" << endl << endl; // Двойное подчёркивание
-    cout << "\e[41mПривет, Мир!\e[0m" << endl << endl; // Изменения фона текста
-    cout << "\e[0;102mПривет, Мир!\e[0m" << endl << endl; // Высококонтрастный фон текста
-    cout << "\e[31;7mПривет, Мир!\e[0m" << endl << endl; // ;7m - Инвертировать любой цвет
-    cout << "\e[0;102m            \e[0m" << endl << endl; // Просто фон
-    puts("\e[41m \e[0m \e[42m \e[0m \e[43m \e[0m \e[44m \e[0m \e[44m \e[0m \e[45m \e[0m");
-    puts("");
-    puts("\e[46m \e[0m \e[47m \e[0m");
-    puts("");
-    auto blue = "\e[46m \e[0m";
-    auto white = "\e[47m \e[0m";
-    cout << blue << blue << blue << blue << blue
-         << '\n' << blue << '\n' << blue << '\n'
-         << blue << blue << blue << blue << blue
-         << endl;
-    puts("");
-    cout << blue << blue << blue << blue << blue
-         << '\n' << blue << "   " << blue
-         << '\n' << blue << "   " << blue
-         << '\n' << blue << blue << blue << blue << blue
-         << endl;
-    puts("");
-    cout << blue << blue << blue << blue << blue
-         << '\n' << blue << white << white << white << blue
-         << '\n' << blue << white << white << white << blue
-         << '\n' << blue << blue << blue << blue << blue
-         << endl;
+     cout << "\033[31mПривет, Мир!\033[0m" << endl;
+     cout << "\e[31mПривет, Мир!\e[0m" << endl;   // Можно вместо \033
+     cout << "\e[1;31mПривет, Мир!\e[0m" << endl; // Высокая яркость цвета
+     cout << "\e[0;91mПривет, Мир!\e[0m" << endl; // Высокая яркость цвета
+     cout << "\e[4;31mПривет, Мир!\e[0m" << endl
+          << endl; // Подчёркивать текст
+     cout << "\e[21;31mПривет, Мир!\e[0m" << endl
+          << endl; // Двойное подчёркивание
+     cout << "\e[41mПривет, Мир!\e[0m" << endl
+          << endl; // Изменения фона текста
+     cout << "\e[0;102mПривет, Мир!\e[0m" << endl
+          << endl; // Высококонтрастный фон текста
+     cout << "\e[31;7mПривет, Мир!\e[0m" << endl
+          << endl; // ;7m - Инвертировать любой цвет
+     cout << "\e[0;102m            \e[0m" << endl
+          << endl; // Просто фон
+     puts("\e[41m \e[0m \e[42m \e[0m \e[43m \e[0m \e[44m \e[0m \e[44m \e[0m \e[45m \e[0m");
+     puts("");
+     puts("\e[46m \e[0m \e[47m \e[0m");
+     puts("");
+     auto blue = "\e[46m \e[0m";
+     auto white = "\e[47m \e[0m";
+     cout << blue << blue << blue << blue << blue
+          << '\n'
+          << blue << '\n'
+          << blue << '\n'
+          << blue << blue << blue << blue << blue
+          << endl;
+     puts("");
+     cout << blue << blue << blue << blue << blue
+          << '\n'
+          << blue << "   " << blue
+          << '\n'
+          << blue << "   " << blue
+          << '\n'
+          << blue << blue << blue << blue << blue
+          << endl;
+     puts("");
+     cout << blue << blue << blue << blue << blue
+          << '\n'
+          << blue << white << white << white << blue
+          << '\n'
+          << blue << white << white << white << blue
+          << '\n'
+          << blue << blue << blue << blue << blue
+          << endl;
      puts("");
      puts("\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\n"
           "\e[46m \e[0m\e[47m \e[0m\e[47m\e[47m \e[0m\e[47m \e[0m\e[46m \e[0m\n"
           "\e[46m \e[0m\e[47m \e[0m\e[47m\e[47m \e[0m\e[47m \e[0m\e[46m \e[0m\n"
           "\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\n");
-    return 0;
+     puts("");
+     auto backgraund = "\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\n"
+          "\e[46m \e[0m\e[47m \e[0m\e[47m\e[47m \e[0m\e[47m \e[0m\e[46m \e[0m\n"
+          "\e[46m \e[0m\e[47m \e[0m\e[47m\e[47m \e[0m\e[47m \e[0m\e[46m \e[0m\n"
+          "\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\e[46m \e[0m\n";
+     puts(backgraund);
+     cout << backgraund << "25" << endl;
+     return 0;
 }
 // Output:
 /*

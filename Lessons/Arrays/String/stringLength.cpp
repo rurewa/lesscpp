@@ -3,7 +3,6 @@
 // V 0.1 beta
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
-#include<string>
 using namespace std;
 
 int main() {

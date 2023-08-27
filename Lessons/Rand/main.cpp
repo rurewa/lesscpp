@@ -1,41 +1,51 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Проверка знаний таблицы умножения
-// chekMultiplicTable.cpp Rand
+// Игра "Угадай число!". Программа не доделана - не работает цикл
+// guessesFunc.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
+int secret() {
+    srand(time(0));
+    return 1 + (rand() % 5);
+}
+
+int input() {
+    int a = 0;
+    cout << "Угадайте число!\n";
+    cin >> a;
+    return a;
+}
+
+void comparison(int a, int b) {
+    if (a > b) {
+        puts("Слишком большое!");
+    }
+    else if (a < b) {
+        puts("Слишком маленькое!");
+    }
+    else {
+        puts("Угадал!");
+    }
+}
+
 int main() {
-    srand(time(0)); // Инициализация генератора
-    cout << boolalpha;
-    int one = 0, two = 0, min = 1, max = 9, result = 0, answer = 0;
-    const double FRACTION = 1.0 / ((double)(RAND_MAX) + 1.0);
-    one = (int)(rand() * FRACTION * (max - min + 1) + min); // Генерируем 1-е число
-    two = (int)(rand() * FRACTION * (max - min + 1) + min); // Генерируем 2-е число
-    result = one * two;
-    cout << one << " x " << two << endl;
-    cout << "Введите ответ: ";
-    cin >> ws >> answer;
-    cout << (result == answer ? true : false ) << endl;
-    cout << (result == answer ? "✅" : "❌" ) << endl;
-    /* int min = 1, max = 9, result = 0, count = 0;
-    const double FRACTION = 1.0 / ((double)(RAND_MAX) + 1.0);
-    while (true) {
-        result = (int)(rand() * FRACTION * (max - min + 1) + min);
-        ++count;
-        if (result == 9) {
-            cout << result << " from " << count << endl;
-            return 0;
-        }
-    } */
+    int userNum = input(), secretNum = secret();
+    do {
+        comparison(userNum, secretNum);
+        break;
+    } while( userNum != secretNum);
+    //cout << "Количество попыток: " << ++count;
     return 0;
 }
+
+
 // Output:
 /*
-6 x 3
-Введите ответ: 12
-false
+Угадайте число!
+2
+Угадал!
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
