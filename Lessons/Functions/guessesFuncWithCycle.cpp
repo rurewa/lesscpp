@@ -1,10 +1,20 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Игра "Угадай число!".
+// Игра "Угадай число!"
 // guessesFuncWithCycle.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
+
+int secret();
+int input();
+void comparison();
+
+int main() {
+    cout << "\tУгадай моё число!\n\n";
+    comparison();
+    return 0;
+}
 
 int secret() {
     srand(time(0));
@@ -18,27 +28,22 @@ int input() {
     return a;
 }
 
-void comparison(int secret) {
-    int userNum = 0;
+void comparison() {
+    int count = 0;
     while (true) {
-        userNum = input();
-        if (userNum > secret) {
+        ++count;
+        int userNum = input();
+        if (userNum > secret()) {
             puts("Слишком большое!");
         }
-        else if (userNum < secret) {
+        else if (userNum < secret()) {
             puts("Слишком маленькое!");
         }
         else {
-            puts("Угадал!");
+            cout << "Угадал за " << count << " попыток!" << endl;
             exit(0);
         }
     }
-}
-
-int main() {
-    cout << "\tУгадай моё число!\n\n";
-    comparison(secret());
-    return 0;
 }
 // Output:
 /*
