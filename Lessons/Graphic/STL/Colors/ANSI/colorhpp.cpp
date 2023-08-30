@@ -14,6 +14,7 @@ int main() {
     //              background color -- Green
     cout << color::rize(message, "Yellow", "Blue") << endl;
     cout << color::rize("Hello!", "Yellow", "Dark Gray") << endl;
+    cout << color::rize(25, "Yellow", "Dark Gray") << endl;
     return 0;
 }
 
