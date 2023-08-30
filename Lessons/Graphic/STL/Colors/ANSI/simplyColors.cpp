@@ -15,7 +15,7 @@ green        32         42
 yellow       33         43
 blue         34         44
 magenta      35         45 // Пурпурный
-cyan         36         46
+cyan         36         46 // Голубой
 white        37         47
 */
 /*
