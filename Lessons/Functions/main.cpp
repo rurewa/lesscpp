@@ -6,29 +6,30 @@
 #include <iostream>
 using namespace std;
 
-string inputStr() {
-    string inStr;
-    getline(cin, inStr);
-    return inStr;
+string userStr() {
+    puts("Введите строку или символ");
+    string str;
+    getline(cin >> ws, str);
+    return str;
 }
 
 int lengthStr(string str) {
-        return str.length();
+    return str.length();
 }
 
-void printLengthStr(string str) {
+void print(string str) {
     cout << lengthStr(str) << endl;
 }
 
 int main() {
-    cout << "Введите любое слово: " ;
-    printLengthStr(inputStr());
+    print(userStr());
     return 0;
 }
 // Output
 /*
-Введите любое слово: qwe
-3
+Введите строку или символ
+fdsfsda
+7
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
