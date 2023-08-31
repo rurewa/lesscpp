@@ -6,6 +6,7 @@
 #include<iostream>
 using namespace std;
 
+<<<<<<< HEAD
 /*
           foreground background
 black        30         40
@@ -30,6 +31,15 @@ int main() {
     const auto YELLOW = "\e[33m", END_COLOR = "\e[0m";
     cout << YELLOW << value << END_COLOR << endl;
     return 0;
+=======
+//#define RST  "\x1B[0m"
+auto RST[] = "\x1B[0m";
+#define KRED  "\x1B[31m"
+#define FRED(x) KRED x RST
+
+int main() {
+    cout << FRED("25") << endl;
+>>>>>>> 8054344f16b381941a7e3c08c393ac51783bc437
 }
 /*
 [0m - тэг завершения действия цвета
