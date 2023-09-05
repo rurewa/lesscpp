@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Проверка логина и пароля
-// checkPassLog.cpp Bools/
+// checkPassLogIncompleteIf.cpp IFELSE
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #include<iostream>
@@ -15,13 +15,26 @@ int main() {
     cout << "Введите пароль: ";
     int userPassword = 0;
     cin >> ws >> userPassword;
-    cout << boolalpha << ((LOGIN == userLogin && PASSWORD == userPassword) ? true : false) << endl;
+    if (LOGIN != userLogin || PASSWORD != userPassword) {
+        puts("Ошибка! Попробуйте снова.");
+        main();
+    }
+    if (LOGIN == userLogin && PASSWORD == userPassword) {
+        puts("Верно! Пропускаю");
+    }
+    return 0;
 }
 // Output
 /*
 Введите логин: rus
+Введите пароль: 123
+Ошибка! Попробуйте снова.
+Введите логин: rus
+Введите пароль: 1234
+Ошибка! Попробуйте снова.
+Введите логин: rus
 Введите пароль: 12345
-true
+Верно! Пропускаю
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // END FILE
