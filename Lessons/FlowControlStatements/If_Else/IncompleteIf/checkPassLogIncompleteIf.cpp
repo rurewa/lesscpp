@@ -15,11 +15,15 @@ int main() {
     cout << "Введите пароль: ";
     int userPassword = 0;
     cin >> ws >> userPassword;
-    if (LOGIN != userLogin || PASSWORD != userPassword) {
+    /* if (LOGIN != userLogin || PASSWORD != userPassword) {
+        puts("Ошибка! Попробуйте снова.");
+        main();
+    } */
+    if (!(userLogin == LOGIN && userPassword == PASSWORD)) {
         puts("Ошибка! Попробуйте снова.");
         main();
     }
-    if (LOGIN == userLogin && PASSWORD == userPassword) {
+    if (!(LOGIN != userLogin && PASSWORD != userPassword)) {
         puts("Верно! Пропускаю");
     }
     return 0;
