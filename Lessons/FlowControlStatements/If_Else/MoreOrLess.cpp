@@ -8,16 +8,17 @@ using namespace std;
 
 int main() {
     int x = 0;
-    cout << "Введите натуральное число: ";
+    puts("Введите любое натуральное число: ");
     cin >> ws >> x;
-    cout << ((x <= 15) ? "<= 15" : ">= 15") << endl;
-    /* if (x < 15) {
-        cout << "< 15" << endl;
+    if (x > 15)
+        puts("x > 15");
+    if (x < 15) {
+        puts("x < 15");
     }
-    else { // (x > 15)
-        cout << "> 15" << endl;
-    } */
-
+    if (x == 15) {
+        puts("x = 15");
+    }
+    //cout << ((x <= 15) ? "<= 15" : ">= 15") << endl;
     return 0;
 }
 // Output
