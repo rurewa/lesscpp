@@ -7,13 +7,20 @@
 using namespace std;
 
 int main() {
-    
+    int a = 7, b = 5, m = 0;
+    if (a > b) {
+        m = a;
+    }
+    else {
+        m = b;
+    }
+    cout << m << '\n';
     return 0;
 }
 // ДЗ -
 // Output
 /*
-
+7
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
