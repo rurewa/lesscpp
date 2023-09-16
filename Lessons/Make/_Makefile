@@ -2,5 +2,6 @@
 #	<команда #1>
 #	...
 #	<команда #n>
-main: main.cpp
+#MAIN: main.cpp
+	MAIN: main.cpp
 	clang++ -Wall main.cpp -o main.bin
