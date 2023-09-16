@@ -11,6 +11,9 @@ int main() {
     if (a > b) {
         m = a;
     }
+    /* if (a < b) {
+           m = b; 
+       }*/
     else {
         m = b;
     }
