@@ -1,8 +1,9 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Программа нахождения минимального числа из 3-х.
+// ThreeNumsSmallest.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -10,26 +11,21 @@ int main() {
     cout << "Введите три числа по очереди: ";
     int a = 0, b = 0, c = 0;
     cin >> a >> b >> c;
-    static int min = 0;
+    int min = 0;
     if (a > b) {
         if (b > c) {
             min = c;
-        }
-        else if (c > a) {
+        } else if (c > a) {
+            min = b;
+        } else {
             min = b;
         }
-        else {
-            min = b;
-        }
-    }
-    else {
+    } else {
         if (c > b) {
             min = a;
-        }
-        else if (a > c) {
+        } else if (a > c) {
             min = c;
-        }
-        else {
+        } else {
             min = a;
         }
     }
