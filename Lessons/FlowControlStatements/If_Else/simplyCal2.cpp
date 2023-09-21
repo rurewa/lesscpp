@@ -1,5 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Наипростейший арифметический калькулятор с if-ми используя символы
+// ifElseCalc.cpp IFELSE
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -7,16 +8,11 @@ using namespace std;
 
 int main() {
     cout << "Простой арифметический калькулятор" << endl;
-    cout << "Введите первое число: ";
-    double firstNum = 0.0;
-    cin >> firstNum;
-    cout << "Введите символ операции" << endl;
+    cout << "Введите числа: ";
+    double firstNum = 0.0, secondNum = 0.0, result = 0.0;
     char op;
-    cin >> op;
-    cout << "Введите второе число: ";
-    double secondNum = 0.0;
-    cin >> secondNum;
-    double result = 0.0;
+    cin >> firstNum >> op >> secondNum;
+    cout << "Введите символ операции" << endl;
     if (op == '+') {
         result = firstNum + secondNum;
     }
@@ -37,6 +33,7 @@ int main() {
 
     return 0;
 }
+// Д.З. Дописать программу, введя в ней деление, деление по модулю и умножение!
 // Output:
 /*
 Простой арифметичкский калькулятор
