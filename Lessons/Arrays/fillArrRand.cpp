@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     srand(time(0)); // Запускаем генератор
-    int arr[5] = {};
+    int arr[5] = {0};
     int secretNumber;
     for (int i = 0; i <= 4; ++i) {
         secretNumber = (rand() % 15) + 0;      // Устанавливаем диапазон чисел

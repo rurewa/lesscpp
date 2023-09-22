@@ -7,8 +7,8 @@ using namespace std;
 
 int main() {
     int a = 0;
-    int arr[5] = {};
-    cout  << "Содерджимое массива до заполнения\n";
+    int arr[5] = {0}; // Инициализируем новый массив нулями
+    cout  << "Содержимое массива до заполнения\n";
     for (int element  = 0; element <= 4; ++element) {
 		cout << arr[element] << " ";
 	}
