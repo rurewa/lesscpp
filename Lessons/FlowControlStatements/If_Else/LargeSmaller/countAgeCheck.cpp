@@ -10,6 +10,7 @@ using namespace std;
 int counter = 0;
 
 int main() {
+    //static int counter = 0;
     cout << "Сколько вам лет? ";
     int age = 0;
     cin >> age;
@@ -19,7 +20,7 @@ int main() {
         return main();
     }
     else {
-        cout << "Вы можете получить паспорт гражданина! " << counter << endl;
+        cout << "Вы можете получить паспорт гражданина! " << " Неудачных попыток: "<< counter << endl;
     }
     return 0;
 }

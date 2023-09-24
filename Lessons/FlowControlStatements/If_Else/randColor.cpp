@@ -1,5 +1,5 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Выбор цвета
+// Выбор цвета по рандому
 // colorChoice.cpp IFELSE
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
@@ -12,45 +12,32 @@ const auto YELLOW = "\e[43m    \e[0m";
 const auto BLUE = "\e[44m    \e[0m";
 
 int main() {
+    srand(time(0)); // Инициализация генератора
+    const double FRACTION = 1.0 / ((double)(RAND_MAX) + 1.0);
+    int min = 0, max = 3;
+    int secret = (int)(rand() * FRACTION * (max - min + 1) + min);
     puts("Нужно выбрать цвет:красный 0, зелёный 1, желтый 2, синий 3");
-    int userChoice = 0;
-    cin >> ws >> userChoice;
-    static int r_counter = 0, g_counter = 0, y_counter = 0, b_counter = 0;
-    if (userChoice == 0) {
+    if (secret == 0) {
         puts(RED);
-        ++r_counter;
-        main();
     }
-    else if (userChoice == 1) {
+    else if (secret == 1) {
         puts(GREEN);
-        ++g_counter;
-        main();
     }
-    else if (userChoice == 2) {
+    else if (secret == 2) {
         puts(YELLOW);
-        ++y_counter;
-        main();
     }
-    else if (userChoice == 3) {
+    else if (secret == 3) {
         puts(BLUE);
-        ++b_counter;
-        main();
-    }
-    else if (userChoice == -1) {
-        cout << "Красный: " << r_counter << " Зелёный: " << g_counter
-             << " Желтый: " << y_counter << " Синий: " << b_counter << endl;
-        return 0;
     }
     else {
         puts("Неизвестный цвет!");
-        main();
     }
     return 0;
 }
 // ДЗ. Дописать программу, введя в неё пурпурный, голубой и белый цвет
 // Output:
 /*
-
+цвет
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
