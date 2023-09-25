@@ -16,7 +16,6 @@ int main() {
     const double FRACTION = 1.0 / ((double)(RAND_MAX) + 1.0);
     int min = 0, max = 3;
     int secret = (int)(rand() * FRACTION * (max - min + 1) + min);
-    puts("Нужно выбрать цвет:красный 0, зелёный 1, желтый 2, синий 3");
     if (secret == 0) {
         puts(RED);
     }
@@ -26,11 +25,8 @@ int main() {
     else if (secret == 2) {
         puts(YELLOW);
     }
-    else if (secret == 3) {
-        puts(BLUE);
-    }
     else {
-        puts("Неизвестный цвет!");
+        puts(BLUE);
     }
     return 0;
 }

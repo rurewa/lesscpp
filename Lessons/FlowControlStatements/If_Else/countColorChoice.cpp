@@ -12,7 +12,7 @@ const auto YELLOW = "\e[43m    \e[0m";
 const auto BLUE = "\e[44m    \e[0m";
 
 int main() {
-    puts("Нужно выбрать цвет:красный 0, зелёный 1, желтый 2, синий 3");
+    puts("Нужно выбрать цвет:красный 0, зелёный 1, желтый 2, синий 3, или -1 для выхода");
     int userChoice = 0;
     cin >> ws >> userChoice;
     static int r_counter = 0, g_counter = 0, y_counter = 0, b_counter = 0;
