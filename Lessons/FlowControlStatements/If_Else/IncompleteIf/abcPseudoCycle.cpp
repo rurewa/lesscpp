@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Певдоцикл с помощью if.
-// pseudoCycle.cpp
+// Певдоцикл с помощью if с выводом английского алфавита
+// abcPseudoCycle.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -8,19 +8,19 @@
 using namespace std;
 
 int main() {
-    static int up = 0;
+    static int up = 97; // 122
     if (up >= 0) {
         sleep(1);
+        cout << (char)up << '\n';
         ++up;
-        cout << up << endl;
-        if (up >= 15) { return 0; }
+        if (up > 122) { return 0; }
         main();
     }
-    /* if (up <= 15) {
+    /* if (up <= 122) {
         sleep(1);
-        cout << up << endl;
+        cout << (char)up << '\n';
         --up;
-        if (up == 0) { return 0; }
+        if (up < 97) { return 0; }
         main();
     } */
     // Сделать на основе этого псевдоцикла вывод английского алфавита
@@ -29,7 +29,32 @@ int main() {
 // Д.З. Написать новую программу с таким же циклом, но используя декремент
 // Output:
 /*
-
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
