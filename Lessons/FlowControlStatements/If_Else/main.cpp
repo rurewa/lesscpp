@@ -1,30 +1,65 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Игрок 1 и 2
-// players.cpp
+// Программа "Угадай цвет!"
+// guessColor.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
+const auto RED    = "\e[41m    \e[0m";
+const auto GREEN  = "\e[42m    \e[0m";
+const auto YELLOW = "\e[43m    \e[0m";
+const auto BLUE   = "\e[44m    \e[0m";
+
 int main() {
-    int player = 1, choice = 0;
-    bool flag = false;
-    if (!flag) {
-        cout << "Ход игрока " << player << ' ';
-        cin >> ws >> choice;
-        ++player;
-        cout << "Ход игрока " << player << ' ';
-        cin >> ws >> choice;
-        if (choice == 9) { return 0; }
+    srand(time(0));
+    const double FRACTION = 1.0 / ((double)(RAND_MAX) + 1.0);
+    int min = 0, max = 3;
+    int secret = (int)(rand() * FRACTION * (max - min + 1) + min);
+    //cout << FRACTION << '\t' << secret << endl;
+    static int score = 0, health = 100;
+    auto color = "";
+    int guess = 0;
+    puts("Угадайте цвет: красный 0, зелёный 1, желтый - 2, синий 3");
+    cin >> ws >> guess;
+    if (secret == 0) {
+        color = RED;
+        health += 100; // health = health + 100
+    }
+    else if (secret == 1) {
+        color = GREEN;
+        health -= 50;
+    }
+    else if (secret == 2) {
+        color = YELLOW;
+        health -= 50;
+    }
+    else {
+        color = BLUE;
+        health -= 50;
+    }
+    if (guess == secret) {
+        cout << "Угадал " << color << " неудачных попыток "
+             << score << " Здоровье " << health << endl;
+    }
+    else {
+        puts("He угадал");
+        ++score;
         main();
     }
     return 0;
 }
 // Д.З.
+// Обратный отчёт
 // Output:
 /*
-Ход игрока 1 9
-Ход игрока 2 9
+He угадал
+Угадайте цвет: красный 0, зелёный 1, желтый - 2, синий 3
+3
+He угадал
+Угадайте цвет: красный 0, зелёный 1, желтый - 2, синий 3
+3
+Угадал      неудачных попыток 3 Здоровье 200
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
