@@ -7,9 +7,9 @@ using namespace std;
 
 int main() {
     cout << "\nВведите количество протонов\n";
-    int userCount = 0;
-    cin >> userCount;
-    switch (userCount)
+    int userChoice = 0;
+    cin >> userChoice;
+    switch (userChoice)
     {
         case 1:
             cout << "Это Водород\n";

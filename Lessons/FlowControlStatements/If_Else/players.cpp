@@ -13,9 +13,9 @@ int main() {
         cout << "Ход игрока " << player << ' ';
         cin >> ws >> choice;
         ++player;
+        if (choice == 9) { return 0; }
         cout << "Ход игрока " << player << ' ';
         cin >> ws >> choice;
-        if (choice == 9) { return 0; }
         main();
     }
     return 0;
