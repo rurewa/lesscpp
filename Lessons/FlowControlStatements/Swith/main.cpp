@@ -1,40 +1,38 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Калькулятор, созданный с помощью операторов Switch-case
+// Калькулятор на Switch Case
+// calc.cpp SwitchCase
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
-    cout << "Калькулятор. Введите выражение типа 2+2\n";
-    double firstNum = 0, secondNum = 0;
+    puts("Калькулятор. Введите 1-е число, оператор и 2-число через пробелы");
+    double firstNum = 0, secondNum = 0, result = 0;
     char op;
-    cin >> firstNum >> op >> secondNum;
+    cin >> ws >> firstNum >> ws >> op >> ws >> secondNum;
     switch (op)
     {
-        case '+':
-            cout << firstNum + secondNum << endl;
-            break;
-        case '-':
-            cout << firstNum - secondNum << endl;
-            break;
-        case '*':
-            cout << firstNum * secondNum << endl;
-            break;
-        case '/':
-            cout << firstNum / secondNum << endl;
-            break;
-        default:
-            cout << "Введите любой из арифметических операторов!" << endl;
-            break;
+    case '+':
+        result = firstNum + secondNum;
+        break;
+    case '-':
+        result = firstNum - secondNum;
+        break;
+    default:
+        puts("Не понял!");
+        break;
     }
+    cout << "Результат: " << result << '\n';
     return 0;
 }
+// Д.З. Дописать программу, введя в неё умножение и деление
 // Output:
 /*
-Калькулятор. Введите выражение типа 2+2
-11/6
-1.83333
+Калькулятор. Введите 1-е число, оператор и 2-число через пробелы
+1+1
+Результат: 2
+TEXT
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

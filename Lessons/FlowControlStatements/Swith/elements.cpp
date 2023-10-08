@@ -1,28 +1,28 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Программа, определяющаяя название химического элемента
+// elements.cpp SwitchCase
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
-    cout << "\nВведите количество протонов\n";
+    puts("Введите количество протонов");
     int userChoice = 0;
-    cin >> userChoice;
-    switch (userChoice)
-    {
-        case 1:
-            cout << "Это Водород\n";
-            break;
-        case 2:
-            cout << "Это Гелий\n";
-            break;
-        case 3:
-            cout << "Литий\n";
-            break;
-        default:
-            cout << "Такой элемент я ещё не знаю!\n";
-            break;
+    cin >> ws >> userChoice;
+    switch (userChoice) {
+    case 1:
+        puts("Это водород");
+        break;
+    case 2:
+        puts("Это Гелий");
+        break;
+    case 3:
+        puts("Это Литий");
+        break;
+    default:
+        puts("Это что-то другое");
+        break;
     }
     return 0;
 }

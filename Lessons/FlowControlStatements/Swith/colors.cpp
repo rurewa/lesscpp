@@ -1,5 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Программа, выбора цвета по ANSI в терминале
+// colors.cpp SwitchCase
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -24,33 +25,23 @@ const auto COLOR_MAGENTA   = "\033[35m"; // Пурпурный
 const auto COLOR_CYAN      = "\033[36m"; // Бирюзовый
 
 int main() {
-    cout << "Укажите нужный цвет\n";
-    cout << "Красный - a, Зелёный - b, Желтый - c, Синий - d, Пурпурный - i, Бирюзовый - f\n";
+    puts("Укажите нужный цвет: красный - r, зелёный - g, желтый - y");
     char userColour;
-    cin >> userColour;
+    cin >> ws >> userColour;
     switch (userColour)
     {
-        case 'a':
-            cout << COLOR_RED       << "TEXT" << endl;
-            break;
-        case 'b':
-            cout << COLOR_GREEN     << "TEXT" << endl;
-            break;
-        case 'c':
-            cout << COLOR_YELLOW    << "TEXT" << endl;
-            break;
-        case 'd':
-            cout << COLOR_BLUE      << "TEXT" << endl;
-            break;
-        case 'i':
-            cout << COLOR_MAGENTA   << "TEXT" << endl;
-            break;
-        case 'f':
-            cout << COLOR_CYAN      << "TEXT" << endl;
-            break;
-        default:
-             cout << "Вы не выбрали цвет!\n";
-             break;
+    case 'r':
+        cout << COLOR_RED << "TEXT\e[0m\n";
+        break;
+    case 'g':
+        cout << COLOR_GREEN << "TEXT\e[0m\n";
+        break;
+    case 'y':
+        cout << COLOR_YELLOW << "TEXT\e[0m\n";
+        break;
+    default:
+        puts("Вы не выбрали цвет!");
+        break;
     }
     return 0;
 }

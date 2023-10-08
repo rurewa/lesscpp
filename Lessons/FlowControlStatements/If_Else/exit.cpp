@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    cout << "Ввежите число > 5" << endl;
+    cout << "Введите число > 5" << endl;
     int userInput;
     cin >> userInput;
     if (userInput <= 5) {
