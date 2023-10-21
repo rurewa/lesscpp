@@ -1,16 +1,17 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример вложенного счётчика с итерацией символов английского алфавита.
+// EnglishABC.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     cout << "English alhpabet" << endl;
     for (char i = 'a'; i <= 'z'; ++i) {
-        static int count = 0;
-        ++count;
-        cout << '#' << count << ' ' << i << ' ';
+        static int counter = 0;
+        ++counter;
+        cout << '#' << counter << ' ' << i << ' ';
     }
     cout << '\n';
     return 0;
