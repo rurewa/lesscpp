@@ -1,21 +1,21 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// пирамида символов. Алгоритм.
+// Пирамида.
+// pyramid.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
 int main() {
-    const int steps = 5; // Высота и ширина пирамиды
+    const int steps = 5; // Высота пирамиды
     for (int i = 1; i <= steps; ++i) {
-        for (int y = i; y < steps; ++y)
-        {
-            cout << " ";
+        for (int y = i; y < steps; ++y) {
+            cout << ' ';
         }
         for (int x = 1; x < (i * 2); ++x) {
-            cout << "*";
+            cout << '*';
         }
-        cout << "\n";
+        cout << '\n';
     }
     return 0;
 }
