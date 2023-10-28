@@ -4,12 +4,13 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
 int main() {
-    constexpr int N = 8;
+    int N = 8;
     for (int i = 0; i < N; cout << endl, ++i) {
-        for (int k = 0; k < N; ++k) {
+        for (int k = 0; k < N; sleep(1), cout.flush(), ++k) {
             cout << ((i + k) % 2) << ' ';
         }
     }
