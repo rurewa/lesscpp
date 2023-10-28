@@ -1,26 +1,41 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример двойного счётчика
-// countDouble.cpp FOR
+// coutDouble.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
 int main() {
-    for (int row = 0; row < 1; ++row) {
-        for (int b = 9; b >= 0; --b) {
+    for (int row = 0; row < 2; ++row) {
+        for (int a = 9; a >= 0; sleep(1), cout.flush(), --a) {
+            cout << a << ' ';
+        }
+        cout << endl;
+        for (int b = 0; b < 10; ++b) {
             cout << b << ' ';
         }
         cout << endl;
-        for (int a = 0; a < 10; ++a) {
-            cout << a << ' ';
-        }
+    }
+
+    /* for (int a = 9; a >= 0; --a) {
+        cout << a << ' ';
     }
     cout << endl;
+    for (int b = 0; b < 10; ++b) {
+        cout << b << ' ';
+    }
+    cout << endl;
+    */
     return 0;
 }
+// ДЗ. a b c d и добвить задерку в 1 сек. cout.flush()
+//     d c b a
 // Output:
 /*
+9 8 7 6 5 4 3 2 1 0
+0 1 2 3 4 5 6 7 8 9
 9 8 7 6 5 4 3 2 1 0
 0 1 2 3 4 5 6 7 8 9
 */
