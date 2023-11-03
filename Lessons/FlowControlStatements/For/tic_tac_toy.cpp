@@ -3,32 +3,31 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
 int main() {
-    const int ROWS = 3;
-    const int COLUMNS = 3;
+    const int ROWS = 3, COLUMNS = 3;
     char board[ROWS][COLUMNS] = {{'O', 'X', 'O'},
                                  {' ', 'X', 'X'},
                                  {'X', 'O', 'O'}};
 
     cout << "Доска для игры в крестики-нолики:\n";
-    for (int i = 0; i < ROWS; ++i) {
+    for (int i = 0; i < ROWS; cout << endl, ++i) {
         for (int j = 0; j < COLUMNS; ++j) {
             cout << board[i][j];
         }
-        cout << endl;
     }
-
+    for (int i = 10; i != 0; sleep(1), cout.flush(), --i) {
+        cout << i << ' ';
+    }
     cout << "\n'X' перемещается на пустое место\n\n";
     board[1][0] = 'X';
 
-    for (int i = 0; i < ROWS; ++i) {
+    for (int i = 0; i < ROWS; cout << endl, ++i) {
         for (int j = 0; j < COLUMNS; ++j) {
             cout << board[i][j];
         }
-
-        cout << endl;
     }
     cout << "\n'X' победил!\n";
     return 0;
