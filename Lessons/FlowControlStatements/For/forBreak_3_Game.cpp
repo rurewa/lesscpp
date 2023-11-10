@@ -12,14 +12,14 @@ int main() {
     // Выводим английские буквы в алфавитном порядке
     // в столбик по 13 букв
     for (char ch = 'a'; ch <= 'z'; ++ch) {
-        ++con;
-        if (con % 13 == 0) {
+        if (con % 4 == 0) {
             cout << "\n";
         }
+        ++con;
         cout << ch << " ";
     }
 
-    while (true) {
+    for (;;) {
         cout << "\nВведите букву из: ";
         char sm;
         cin >> sm;
@@ -27,10 +27,10 @@ int main() {
             break;
         }
         ++count;
-        cout << sm << "Итерация: " << count << endl; // Номер попытки
+        cout << sm << "\tИтерация: " << count << endl; // Номер попытки
         cout << "Попробуй снова!" << endl;
     }
-    cout << "Сумма итераций: " << count << endl; // Сумма попыток
+    cout << "Сумма неудачных итераций: " << count << endl; // Сумма попыток
 
     return 0;
 }
