@@ -3,9 +3,9 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     int num = 0;
     for (num = 0; num <= 5; ++num) {
         cout << "num: " << num << endl;

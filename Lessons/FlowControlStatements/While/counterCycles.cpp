@@ -1,24 +1,26 @@
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // Счётчик итераций и циклов
+// counterCycles.cpp While
 // V 1.0
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 #include <iostream>
 using namespace std;
+
 int main() {
     cout << "Введите символ z\n";
     char userInput;
     int countTime = 0, countCycles = 1, total = 0;
     while (cin >> userInput) {
-      if (countTime == 3) {
-        countTime = 0;
-        ++countCycles;
-      }
-      cout << "Количество подходов в цикле: "<< ++countTime
-           << " Количество циклов " << countCycles
-           << " Общее количество подходов: " << ++total << '\n';
-      if (countCycles == 3 && countTime == 3) {
-        break;
-      }
+        if (countTime == 3) {
+            countTime = 0;
+            ++countCycles;
+        }
+        cout << "Количество подходов в цикле: " << ++countTime
+             << " Количество циклов " << countCycles
+             << " Общее количество подходов: " << ++total << '\n';
+        if (countCycles == 3 && countTime == 3) {
+            break;
+        }
     }
     return 0;
 }

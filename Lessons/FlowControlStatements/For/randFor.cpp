@@ -10,10 +10,10 @@ using namespace std;
 int main() {
     srand(time(0)); // Инициализация генератора
     const double FRACTION = 1.0 / ((double)(RAND_MAX) + 1.0);
-    int min = 97, max = 122, secretSym = 0;
+    int min = 97, max = 122, randNum = 0;
     for (int i = 97; i <= 122; sleep(1), cout.flush(), ++i) {
-        secretSym = (int)(rand() * FRACTION * (max - min + 1) + min);
-        cout << (char)secretSym << ' ';
+        randNum = (int)(rand() * FRACTION * (max - min + 1) + min);
+        cout << (char)randNum << ' ';
     }
     cout << endl;
     return 0;

@@ -3,9 +3,9 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     int count = 1; // Счётчик и номер строки вывода
     int result = 0; //Сумма всех введённых пользователем чисел
     while (count < 6)

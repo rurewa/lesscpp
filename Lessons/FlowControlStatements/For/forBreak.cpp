@@ -4,9 +4,9 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     int sum = 0;
     // Разрешаем пользователю ввести до 10-и чисел
     for (int count = 0; count < 10; ++count) {
