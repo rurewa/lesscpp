@@ -1,24 +1,23 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример цикла while со счётчиком
+// whileCounter.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
 int main() {
-    int count = 1; // Счётчик и номер строки вывода
+    int counter = 1; // Счётчик и номер строки вывода
     int result = 0; //Сумма всех введённых пользователем чисел
-    while (count < 6)
-    {
+    while (counter < 6) {
         int z; // Создаётся и уничтожается при каждом цикле
-        cout << "Enter integer #" << count << ":";
+        cout << "Введите натуральное число #" << counter << ":";
+        ++counter; // Счётчик внутри цикла
         cin >> z;
         result += z;
-        ++count; // Счётчик внутри цикла
 
     }
-    cout << "The sum of all number entered is: " << result << endl;
-
+    cout << "Сумма всех введённых чисел равна: " << result << endl;
     return 0;
 }
 // Output:

@@ -7,12 +7,43 @@
 using namespace std;
 
 int main() {
-    
+    puts("Прямое перечисление");
+    int x = 0;
+    while (x < 10) {
+        cout << x << endl;
+        ++x;
+    }
+    cout << endl;
+    x = 0;
+    while (x != 10) {
+        cout << x << endl;
+        ++x;
+    }
+    x = 10;
+    puts("Обратное перечисление");
+    while (x > 0) {
+        --x;
+        cout << x << endl;
+    }
+    cout << endl;
+    x = 10;
+    while (x != 0) {
+        --x;
+        cout << x << endl;
+    }
     return 0;
 }
 // Output:
 /*
-
+8
+7
+6
+5
+4
+3
+2
+1
+0
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

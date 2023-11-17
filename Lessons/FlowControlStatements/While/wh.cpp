@@ -4,15 +4,14 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     int emploeeCode = 10;
     while (emploeeCode != 0) {
         --emploeeCode;
         cout << emploeeCode << endl;
     }
-
     return 0;
 }
 // Output:
