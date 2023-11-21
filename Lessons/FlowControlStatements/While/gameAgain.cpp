@@ -14,7 +14,7 @@ int main()
         cin >> again;
     }
 
-    cout << "\nOk, bay!" << endl;
+    cout << "\nOk, bye!" << endl;
 
     return 0;
 }

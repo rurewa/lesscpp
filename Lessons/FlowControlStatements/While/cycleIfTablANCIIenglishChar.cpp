@@ -1,22 +1,22 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Сопоставление букв анг.алфавита с таблицей ANCII. 
 // Цикл с вложенным условием
-// cycleIfTablANCIIenglishChar.cpp While
+// cycleANCIIchar.cpp.cpp While
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     char myChar = 'a';
-    int count = 1; // Порядковая нумерация строк
+    int nums = 1; // Порядковая нумерация строк
     while (myChar <= 'z') {
-        cout << "#" << count << ": " << myChar << "-" << static_cast<int>(myChar) << " ";
+        cout << '#' << nums << ": " << myChar << '-' << (int)(myChar) << ' ';
         ++myChar;
-        if (count % 3 == 0) { // Для переноса на новую строку
+        if (nums % 3 == 0) { // Для переноса на новую строку
             cout << "\n" << endl;
         }
-        ++count;
+        ++nums;
     }
     cout << "\n";
     return 0;
