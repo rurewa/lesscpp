@@ -1,11 +1,12 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // Пример цикла с условием и выбором
+// switchMenu.cpp While
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     char again = 'y';
     while (again == 'y') {
         cout << "Chose menu 1, 2 or 3" << endl;

@@ -1,30 +1,34 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простой пример выполнения чего-либо при достижении определённого значения
 // счётчика
+// counterWhile.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+#include <unistd.h>
+using namespace std;
 
 int main() {
-    using namespace std;
-    int count = 1; // Счётчик
-    while (count <= 50)
+    int counter = 1; // Счётчик
+    while (counter <= 50)
     {
         // Пока < 10 перед каждой цифрой вставляем 0, а после неё - пробел
-        if (count < 10) {
-            cout << "0" << count <<  " ";
+        if (counter < 10) {
+            cout << '0' << counter <<  ' ';
+            cout.flush();
         }
         else {
             // Когда > 10, то вставляем после числа только пробел
-            cout << count << " ";
+            cout << counter << ' ';
+            cout.flush();
         }
         // Если счётчик цикла делится на 10 без остатка, то вставляем новую строку
-        if (count % 10 == 0) {
-            cout << "\n";
+        if (counter % 10 == 0) {
+            cout << '\n';
         }
-        ++count;
+        sleep(1);
+        ++counter;
     }
-
     return 0;
 }
 // Output:

@@ -1,16 +1,16 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Пример, который считает кол-во попыток ввода символа с использованием
-// break;
+// Пример, который считает кол-во попыток ввода символа с использованием break
+// breakBool.cpp While
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
-    int count(0); // Считаем кол-во попыток
+    int count = 0; // Считаем кол-во попыток
     bool exitLoop(false); // Контроль завершения выполнения цикла
     while (!exitLoop) {
-        cout << "Enter 'e' to exit this loop or any other key to continue: ";
+        cout << "Введите 'e' для выхода из цикла или любую другую клавишу для продолжения: ";
         char sm;
         cin >> sm;
 
@@ -18,16 +18,18 @@ int main() {
             break;
         }
         ++count;
-        cout << "We've iterated " << count << " times\n";
+        cout << "Вы сделали " << count << " попыток\n";
     }
 
     return 0;
 }
 // Output:
 /*
-Enter 'e' to exit this loop or any other key to continue: w
-We've iterated 7 times
-Enter 'e' to exit this loop or any other key to continue: e
+Введите 'e' для выхода из цикла или любую другую клавишу для продолжения: j
+Вы сделали 3 попыток
+Введите 'e' для выхода из цикла или любую другую клавишу для продолжения: n
+Вы сделали 4 попыток
+Введите 'e' для выхода из цикла или любую другую клавишу для продолжения: e
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

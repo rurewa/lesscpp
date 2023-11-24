@@ -1,19 +1,20 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Простой пример № 2 вложенного цикла. Полупирамидка из чисел.
-// pyramid.pdf pyramid.dia
+// Второй пример вложенного цикла. Полупирамидка из чисел.
+// 2nestedLoop.cpp pyramid.dia
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
+using namespace std;
 
 int main() {
-    using namespace std;
     int outer = 5;
     while (outer >= 1) {
         int inner = outer;
         while (inner >= 1) {
-            cout << inner-- << " ";
+            cout << inner << ' ';
+            --inner;
         }
-        cout << "\n";
+        cout << '\n';
         --outer;
     }
     return 0;
