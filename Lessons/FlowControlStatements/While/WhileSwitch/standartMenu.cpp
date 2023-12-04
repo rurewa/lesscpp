@@ -9,7 +9,7 @@ using namespace std;
 int main() {
     char again = 'y';
     while (again == 'y') {
-        cout << "Chose menu 1, 2 or 3" << endl;
+        cout << "Choise menu 1, 2 or 3" << endl;
         cout << "Menu one: " << endl;
         cout << "Menu two: " << endl;
         cout << "Menu three: " << endl;
@@ -18,13 +18,13 @@ int main() {
         switch (userMenu)
         {
         case 1:
-            cout << "You chose one" << endl;
+            cout << "You choise one" << endl;
             break;
         case 2:
-            cout << "You chose two" << endl;
+            cout << "You choise two" << endl;
             break;
         case 3:
-            cout << "You chose three" << endl;
+            cout << "You choise three" << endl;
             break;
         default:
             cout << "You have not chosen anything" << endl;
@@ -33,7 +33,7 @@ int main() {
         cout << "Do you want to continue (y/n)?: " << endl;
         cin >> again;
     }
-    cout << "Goodbay!" << endl;
+    cout << "Goodbye!" << endl;
     return 0;
 }
 // Output:

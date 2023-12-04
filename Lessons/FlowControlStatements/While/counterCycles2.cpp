@@ -9,7 +9,9 @@ using namespace std;
 int main() {
     cout << "Введите Enter\n";
     int countTime = 0, countCycles = 1, total = 0;
-    while (getchar() != EOF) {
+    while (getchar() != EOF) { // Символ EOF принимается, когда больше нет 
+      // входных данных, когда достигнут, например, конец файла.
+      // getchar() - считывает символ из стандартного ввода 
       if (countTime == 3) {
         countTime = 0;
         ++countCycles;

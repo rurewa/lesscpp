@@ -1,9 +1,8 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Простой способ итерации значений в диапазоне. Подойдёт для микроконтроллеров (ШИМ)
-// upDown.cpp
-// V 1.0
+// Простой способ итерации значений в диапазоне. Подойдёт для микроконтроллеров
+// (ШИМ) upDown.cpp V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -11,18 +10,16 @@ int main() {
     int max = 255;
     int upDown = 0;
     int steps = 15;
-    int count = 0;
+    int counter = 0;
     int iter = 2 * (max / steps);
-    while (count <= iter)
-    {
-        ++count;
+    while (counter <= iter) {
+        ++counter;
         upDown += steps;
         if (upDown < min || upDown > max) {
             steps = -steps;
         }
         cout << upDown << endl;
     }
-
     return 0;
 }
 // Output

@@ -8,21 +8,18 @@
 using namespace std;
 
 int main() {
-	int sec = 0;
-	int min = 0;
-    int  hour = 0;
+	int sec = 0, min = 0, hour = 0;
 	while (true) {
 		sleep(1);
 		cout << sec << " : " << min << " : " << hour << '\n';
         ++sec;
-		if (sec >= 60) {
-            sec = 0, ++min;
-            ++sec;
-            cout << sec << " : " << min << " : " << hour << '\n';
-			if (min >= 59) {
-                sec = 0, min = 0, ++hour;
-                cout << sec << " : " << min << " : " << hour << '\n';
-				++sec;
+		while (sec >= 60) {
+            sec = 0;
+            cout << ++sec << " : " << ++min << " : " << hour << '\n';
+			while (min > 60) {
+                sec = 0, min = 0;
+                cout << ++sec << " : " << min << " : " << ++hour << '\n';
+				//++sec;
 			}
 		}
 	}
