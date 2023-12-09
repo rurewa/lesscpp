@@ -9,12 +9,14 @@ using namespace std;
 int main() {
   cout << "Программа-калькулятор\n";
   char again = 'y';
-  double num1 = 0, num2 = 0;;
+  double num1 = 0, num2 = 0;
   char op;
   while (again == 'y') {
     while (true) {
       cout << "Введите 1-е число\n";
-      cin >> ws >> num1;
+      cin >> ws >> num1; 
+      /* ws - пропускает пробелы и продолжает чтение из входного потока 
+      до получения значения */
       if (cin.fail()) {          // Включение режима отказа
         cin.clear();             // Возвращаем cin в рабочий режим
         cin.ignore(32767, '\n'); // Удаляем всё, что не числа и символ \n
