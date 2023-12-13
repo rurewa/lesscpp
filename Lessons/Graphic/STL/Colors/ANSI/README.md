@@ -1,5 +1,9 @@
 ## Всё о ANSI
 
+[Bash tips: Colors and formatting (ANSI/VT100 Control sequences)](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
+
 [Терминальная графика](https://habr.com/ru/articles/325082/)
 
-[Bash tips: Colors and formatting (ANSI/VT100 Control sequences)](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
+[Разукрашиваем вывод в консоли: теория и практика](https://habr.com/ru/companies/macloud/articles/558316/)
+
+[Как написать 2D игру на C++ и чистом STL для терминала в Linux](https://habr.com/ru/articles/708486/)
