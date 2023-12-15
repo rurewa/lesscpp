@@ -8,11 +8,11 @@
 using namespace std;
 
 int main() {
-    static int sum = 0;
+    static double sum = 0.0;
     int arrSize = 0;
     int userNum;
     vector<int> arr;
-    puts("");
+    puts("Введите натуральные числа. Для выхода нажмите n");
     // Для ввода числа от пользователя
     while (cin >> userNum) {
         arr.push_back(userNum); // Добавляем в массив числа пользователя
@@ -21,7 +21,6 @@ int main() {
     }
     // Для вычесления суммы всех элементов массива
     for (int i = 0; i <= arrSize; ++i) {
-        //cout << arr[i] << " ";
         sum += arr[i];
     }
     cout << sum/arrSize << endl;
@@ -30,7 +29,12 @@ int main() {
 }
 // Output:
 /*
-
+Введите натуральные числа. Для выхода нажмите n
+33
+размер массива: 1       12
+размер массива: 2       41
+размер массива: 3       n
+28.6667
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

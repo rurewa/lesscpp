@@ -13,7 +13,7 @@ red          31         41
 green        32         42
 yellow       33         43
 blue         34         44
-magenta      35         45 // Пурпурный
+magenta      35         45 // Пурпурный (малиновый)
 cyan         36         46 // Голубой
 white        37         47
 */

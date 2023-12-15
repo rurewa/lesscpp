@@ -23,7 +23,7 @@ enum class Colors {
     WHITE, // 1
     YELLOW, // 2
     BLUE, // 3
-    MAGENTA, // 4 Пурпурный
+    MAGENTA, // 4 V
     CYAN // 5 Голубой
 };
 

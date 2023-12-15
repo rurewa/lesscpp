@@ -21,7 +21,7 @@ const auto COLOR_RED       = "\033[31m";
 const auto COLOR_GREEN     = "\033[32m";
 const auto COLOR_YELLOW    = "\033[33m";
 const auto COLOR_BLUE      = "\033[34m";
-const auto COLOR_MAGENTA   = "\033[35m"; // Пурпурный
+const auto COLOR_MAGENTA   = "\033[35m"; // Пурпурный (малиновый)
 const auto COLOR_CYAN      = "\033[36m"; // Бирюзовый
 
 int main() {

@@ -1,4 +1,5 @@
 ### Lesson
+
 Примеры применения средств диагностики программ на cpp:
 
 1. strace ./твоя-программа.bin (может придётся установить strace в твоей ОС)
@@ -8,6 +9,12 @@
 5. cppcheck --enable=all --suppress=missingIncludeSystem . main.cpp
 6. clang-tidy твоя-программа.cpp -- -Wall -std=c++14 -x c++ (для Ubuntu нужно установить пакет clang-tools-14)
 7. valgrind ./stac.bin
+
+### Дебагинг
+
+[Использование Valgrind для поиска утечек и недопустимого использования памяти](http://cppstudio.com/post/4348/)
+
+[Как пользоваться gdb](https://losst.pro/kak-polzovatsya-gdb)
 
 ### Подробней о clang
 
@@ -20,6 +27,18 @@
 ### Подробней о valgrid
 
 [Использование Valgrind для поиска утечек и недопустимого использования памяти](http://cppstudio.com/post/4348/)
+
+### Онлайн-курсы по программированию
+
+[От Яндекса](https://education.yandex.ru/handbook/cpp/article/branches-and-loops)
+
+### Интересные статьи
+
+[Операторы](https://pvoid.pro/index.php/cpp-tutorial-menu/cpp-tutorial-menu-operators#:~:text=Оператор%20!%20-%20это%20оператор,%3D%3D%205)%20будет%20true%20!)
+
+[Переполнение стека](https://ru.wikipedia.org/wiki/Переполнение_стека)
+
+[Типы struct, union и enum в Modern C++](https://habr.com/ru/articles/334988/)
 
 ### Грамоты и печати
 
