@@ -14,7 +14,7 @@ int main() {
   while (again == 'y') {
     while (true) {
       cout << "Введите 1-е число\n";
-      cin >> ws >> num1; 
+      cin >> noskipws >> num1; 
       /* ws - пропускает пробелы и продолжает чтение из входного потока 
       до получения значения */
       if (cin.fail()) {          // Включение режима отказа
@@ -29,7 +29,8 @@ int main() {
     }
     while (true) {
       cout << "Введите +, -, *, или /\n";
-      cin >> ws >> op;
+      cin >> noskipws >> op;
+      cin.ignore(32767, '\n'); // Чтобы убрать символ новой строки из входного потока
       if (op == '+' || op == '-' || op == '*' || op == '/') {
         break;
       }
@@ -39,7 +40,7 @@ int main() {
     }
     while (true) {
       cout << "Введите 2-е число\n";
-      cin >> ws >> num2;
+      cin >> noskipws >> num2;
       if (cin.fail()) {
         cin.clear(); // Возвращаем cin в рабочий режим
         cin.ignore(32767, '\n');
@@ -68,7 +69,7 @@ int main() {
       break;
     }
     cout << "Нажмите y для повтора или любую клавишу для выхода" << endl;
-    cin >> ws >> again;
+    cin >> again;
   }
   return 0;
 }

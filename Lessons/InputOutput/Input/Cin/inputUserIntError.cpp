@@ -25,7 +25,7 @@ int main() {
     short num2 = 0;
     while (true) {
         cout << "Введите 2-е число\n";
-        cin >> num2;
+        cin >> noskipws >> num2;
         if (cin.fail()) {
             cin.clear(); // Возвращаем cin в рабочий режим
             cin.ignore(32767, '\n');
