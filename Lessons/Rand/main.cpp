@@ -1,16 +1,22 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// 
-// 
+//
+//
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+#include <algorithm>
 #include <iostream>
 using namespace std;
 
 int main() {
-    
+    int randPlanet = 0;
+    int arr[6] = {0, 1, 2, 3, 4, 5};
+    random_shuffle(arr, arr + 6);
+    for (auto i : arr) {
+        randPlanet = arr[i];
+        cout << randPlanet << endl;
+    }
     return 0;
 }
-
 
 // Output:
 /*

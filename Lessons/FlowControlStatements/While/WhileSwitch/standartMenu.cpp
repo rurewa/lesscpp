@@ -43,7 +43,7 @@ Menu 1:
 Menu 2:
 Menu 3:
 2
-Choise 2
+Choice 2
 Do you want to continue (y/n)?:
 n
 Goodbay!

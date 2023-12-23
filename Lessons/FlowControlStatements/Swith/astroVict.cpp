@@ -3,8 +3,8 @@
 // astro.cpp Switch
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include <algorithm>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 enum Planets { SATURN = 146, JUPITER = 92, EARTH = 1, MARS, URANUS = 27, NEPTUNE = 14 };

@@ -12,9 +12,9 @@ int main() {
     cout << "2 - Chrome\n";
     cout << "3 - Edge\n";
     cout << "4 - Opera\n";
-    short userChoise = 0;
-    cin >> userChoise;
-    switch (userChoise)
+    short userChoice = 0;
+    cin >> userChoice;
+    switch (userChoice)
     {
         case 1:
             cout << "Вам нравится FireFox!\n";

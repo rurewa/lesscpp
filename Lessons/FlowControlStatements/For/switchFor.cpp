@@ -13,9 +13,9 @@ int main() {
     puts("2. Обратный счёт");
     puts("3. Только чётные");
     puts("4. Только нечётные");
-    int choise = 0;
-    cin >> choise;
-    switch (choise) {
+    int choice = 0;
+    cin >> choice;
+    switch (choice) {
     case 1:
         for (int i = 0; i != 10; sleep(1), cout.flush(), ++i) {
             cout << i << ' ';
