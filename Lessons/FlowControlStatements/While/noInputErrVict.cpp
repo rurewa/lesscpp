@@ -13,31 +13,40 @@ int main() {
     bool userChoose = false;
     while (again == 'y') {
         trueCount = 0;
-        cout << "Можно ли выучить C++ за один видеоролик 30 мин? 0 - нет, 1 - да\n";
-        cin >> userChoose;
-        if (userChoose != true) {
-            cout << "Верно! C++ не возможно выучить за один ролик!\n";
-            ++trueCount;
+        while (true) {
+            cout << "Можно ли выучить C++ за один видеоролик 30 мин? 0 - нет, 1 - да\n";
+            cin >> userChoose;
+            if (cin.fail()) { // Включение режима отказа
+                cin.clear(); // Возвращаем cin в рабочий режим
+                cin.ignore(32767, '\n'); // Удаляем всё, что не числа и символ \n
+                cout << "Что-то вы не то ввели, попробуйте снова\n";
+            } else {
+                cin.ignore(32767, '\n');
+                if (userChoose != true) {
+                    cout << "Верно! C++ не возможно выучить за один ролик!\n";
+                    ++trueCount;
+                } else {
+                    cout << "Не верно!\n";
+                }
+                break;
+            }
         }
-        else {
-            cout << "Не верно!\n";
-        }
+
         cout << "g++ лучше clang? 0 - нет, 1 - да\n";
         cin >> userChoose;
         if (userChoose != true) {
             cout << "Верно! Clang всегда лучше g++\n";
             ++trueCount;
-        }
-        else {
+        } else {
             cout << "Не верно!\n";
         }
         cout << "Объявление переменной == её инициализации ? 0 - нет, 1 - да\n";
         cin >> userChoose;
         if (userChoose != true) {
-            cout << "Верно! Объявление переменной и её инициализация это разные операции\n";
+            cout << "Верно! Объявление переменной и её инициализация это "
+                    "разные операции\n";
             ++trueCount;
-        }
-        else {
+        } else {
             cout << "Не верно!\n";
         }
         cout << "Ваши баллы: " << trueCount << endl;
