@@ -3,11 +3,11 @@
 // astro.cpp While
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
-enum Planets { SATURN = 146, JUPITER = 92, EARTH = 1, MARS, URANUS = 27, NEPTUNE = 14 };
+enum Planets { SATURN = 146, JUPITER = 92, EARTH = 1, MARS,  URANUS = 27, NEPTUNE = 14 };
 
 int main() {
     srand(time(0));
@@ -16,29 +16,88 @@ int main() {
     int counter = 0;
     char again = 'y';
     int randPlanet = 0;
-    int arr[6] = { 0, 1, 2, 3, 4, 5 };
+    int arr[6] = {0, 1, 2, 3, 4, 5};
     int LENGHT = sizeof(arr) / sizeof(*arr);
     random_shuffle(arr, arr + LENGHT);
     while (counter <= LENGHT) {
         for (auto i : arr) {
             randPlanet = arr[i];
-            switch (randPlanet)
-            {
+            switch (randPlanet) {
             case 0:
                 puts("Сколько спутников у Марса");
                 cin >> guess;
                 if (guess == Planets::MARS) {
                     puts("Поздравляю, вы угадали!");
                     ++score;
-                } else { puts("Вы не угадали"); }
+                } else {
+                    puts("Вы не угадали");
+                }
                 break;
-
+            case 1:
+                puts("Сколько спутников у Юпитера?");
+                cin >> guess;
+                if (guess == Planets::JUPITER) {
+                    puts("Поздравляю, вы угадали!");
+                    ++score;
+                } else {
+                    puts("Вы не угадали");
+                }
+            case 2:
+                puts("Сколько спутников у Земли?");
+                cin >> guess;
+                if (guess == Planets::EARTH) {
+                    puts("Поздравляю, вы угадали!");
+                    ++score;
+                } else {
+                    puts("Вы не угадали");
+                }
+                break;
+            case 3:
+                puts("Сколько спутников у Сатурна?");
+                cin >> guess;
+                if (guess == Planets::SATURN) {
+                    puts("Поздравляю, вы угадали!");
+                    ++score;
+                } else {
+                    puts("Вы не угадали");
+                }
+                break;
+            case 4:
+                puts("Сколько спутников у Урана?");
+                cin >> guess;
+                if (guess == Planets::URANUS) {
+                    puts("Поздравляю, вы угадали!");
+                    ++score;
+                } else {
+                    puts("Вы не угадали");
+                }
+                break;
+            case 5:
+                puts("Сколько спутников у Нептуна");
+                cin >> guess;
+                if (guess == Planets::NEPTUNE) {
+                    puts("Поздравляю, вы угадали!");
+                    ++score;
+                } else {
+                    puts("Вы не угадали");
+                }
+                break;
             default:
                 puts("Нет такой планеты в списке");
                 break;
             }
         }
+        cout << "Ваш счёт " << score << "\nЖелаете попробовать снова? [y/N]" << endl;
+        cin >> again;
+        if (again == 'y') {
+            counter = 0;
+            score = 0;
+        } else {
+            puts("До свидания!");
+            break;
+        }
     }
+    ++counter;
     return 0;
 }
 // Output:

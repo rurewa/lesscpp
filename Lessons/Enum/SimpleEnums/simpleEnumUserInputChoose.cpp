@@ -16,7 +16,7 @@ int main() {
     cout << "Choose a color:\n yellow\t - 0,\n white\t - 1,\n orange\t - 2,\n green\t - 3\n";
     cout << "Enter num: " << endl;
     int userNum;
-    cin >> ws >> userNum;
+    cin >> userNum;
     Colors color(static_cast<Colors>(userNum));
     if (color == YELLOW) {
         cout << "White" << endl;

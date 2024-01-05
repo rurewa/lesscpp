@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Варианты доступа к элементам перечислений enum по выбору пользователя
-// seasonsEnum.cpp
+// seasonsEnum.cpp SimpleEnums
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -10,16 +10,16 @@ enum Seasons { SPRING, AUTUMN, SUMMER, WINTER };
 
 int main() {
     bool exit = true; // Выбор пользователя - продолжить или выйти
-    /* while (cin >> ws >> exit) {
+    /* while (cin >> exit) {
         cout << "Нужно выбрать время года: весна - 0, осень - 1, лето - 2, зима - 3\n";
         int yourSeasons = 0;
-        cin >> ws >> yourSeasons;
+        cin >> yourSeasons;
         Seasons season = static_cast<Seasons>(yourSeasons);
         switch (season)
         {
             case SPRING:
                 cout << "Природа оживает!\n";
-                break;int
+                break;
             case AUTUMN:
                 cout << "Листья опадают!\n";
                 break;
@@ -34,12 +34,12 @@ int main() {
                 break;
             }
         cout << "Чтобы снова смотреть времена года, нажмите 1\n";
-        cin >> ws >> exit;
+        cin >> exit;
     } */
     do {
         cout << "Нужно выбрать время года: весна - 0, осень - 1, лето - 2, зима - 3\n";
         int yourSeasons = 0;
-        cin >> ws >> yourSeasons;
+        cin >> yourSeasons;
         //Seasons season = static_cast<Seasons>(yourSeasons); // Сначала так!
         Seasons season = Seasons(yourSeasons);
         switch (season)
@@ -61,7 +61,7 @@ int main() {
                 break;
             }
         cout << "Чтобы снова смотреть времена года, нажмите 1\n";
-        cin >> ws >> exit;
+        cin >> exit;
     } while (exit);
     return 0;
 }

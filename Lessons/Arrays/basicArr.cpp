@@ -2,12 +2,12 @@
 // Массивы. Начало.
 // baseArr.cpp в папке Arrays
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-#include<iostream>
+#include <iostream>
 using namespace std;
 // 1,0,100,25,3 - коллекция
 // {0, 1, 2} - счёт начинается с нуля
 int main() {
-    short arr[3]; // Объявили фиксированный массив
+    short arr[3];  // Объявили фиксированный массив
     arr[0] = {10}; //
     arr[1] = {20};
     arr[2] = {30};
@@ -18,6 +18,11 @@ int main() {
     // Размер массива в байтах
     int arrSize = sizeof(arr);
     cout << "Размер массива в байтах: " << arrSize << endl;
+    int array[5] = {0}; // Инициализация массива нулями
+    for (auto i : arr) {
+        cout << i << ' ';
+    }
+    cout << '\n';
     const short ARR_INDEX[] = {5, 4, 3, -2, 1};
     for (auto i = 0; i <= 4; ++i) {
         cout << ARR_INDEX[i] << ' ';
