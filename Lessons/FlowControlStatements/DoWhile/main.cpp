@@ -1,26 +1,38 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Пример цикла с постусловием
-// doWhile.cpp DoWhile
+// Игра "Угадайка" с циклом с постусловием
+// guessNum.cpp DoWhile
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
 int main() {
-    int counter = 0;
+    short guess = 5;
+    puts("Угадай цифру!");
+    char again = 'y';
     do {
-        ++counter;
-        cout << "хотя бы " << counter << " раз...\n";
-    } while (counter < 0);
-    while (counter < 0) {
-        ++counter;
-        cout << counter << '\n';
-    }
+        puts("Введите своё число");
+        short getUserNum{0};
+        cin >> getUserNum;
+        while (guess != getUserNum) {
+            puts("Try again!");
+            break;
+        }
+        while (guess == getUserNum) {
+            puts("Excelent!");
+            break;
+        }
+        puts("Enter Y for continue or N for exit");
+        cin >> again;
+    } while (again != 'n');
     return 0;
 }
+//
 // Output:
 /*
-- хотя бы 1 раз...
+Угадал!
+Enter Y for continue or N for exit
+n
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

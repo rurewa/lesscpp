@@ -7,17 +7,16 @@
 using namespace std;
 
 int main() {
-    int count = 0;
+    int counter = 0;
     do {
-        ++count;
-        cout << count << " - хотя бы один раз..." << "\n";
-    } while (count < 0);
-   /*
-    while (count < 0) {
-        ++count;
-        cout << count << "\n";
+        ++counter;
+        cout << counter << " - хотя бы один раз..." << "\n";
+    } while (counter < 0);
+
+    while (counter < 0) {
+        ++counter;
+        cout << counter << "\n";
     }
-    */
     return 0;
 }
 // Output:

@@ -18,8 +18,8 @@ int main() {
     int randPlanet = 0;
     int arr[6] = {0, 1, 2, 3, 4, 5};
     int LENGHT = sizeof(arr) / sizeof(*arr);
-    random_shuffle(arr, arr + LENGHT);
     while (counter <= LENGHT) {
+        random_shuffle(arr, arr + LENGHT);
         for (auto i : arr) {
             randPlanet = arr[i];
             switch (randPlanet) {
@@ -42,6 +42,7 @@ int main() {
                 } else {
                     puts("Вы не угадали");
                 }
+                break;
             case 2:
                 puts("Сколько спутников у Земли?");
                 cin >> guess;

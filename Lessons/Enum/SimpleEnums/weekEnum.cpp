@@ -11,8 +11,9 @@ enum Week { MONDAY = 1, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY }
 int main() {
     cout << "Нужно выбрать день недели\n";
     int yourDay = 0;
-    cin >> ws >> yourDay;
-    Week day = static_cast<Week>(yourDay);
+    cin >> yourDay;
+    //Week day = static_cast<Week>(yourDay);
+    Week day = (Week)(yourDay);
     switch (day)
     {
     case MONDAY:
@@ -25,7 +26,7 @@ int main() {
         cout << "Среда - не трогайте меня!\n";
         break;
     case THURSDAY:
-        cout << "Четверг - жизнь немного немного возраждается.\n";
+        cout << "Четверг - жизнь немного налаживается!\n";
         break;
     case FRIDAY:
         cout << "Почти праздник! Вечером можно ни в чём себе не отказывать...\n";
