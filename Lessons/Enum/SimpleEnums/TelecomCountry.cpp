@@ -17,7 +17,6 @@ int main() {
     Telecom rus = RUSSIA, jap = JAPAN, chi = CHINA, tur = TURKEY;
     cout << "Россия " << rus << " Япония " << jap << endl;
     cout << "Китай " << chi << " Турция " << tur << endl;
-
     return 0;
 }
 /* Output:
