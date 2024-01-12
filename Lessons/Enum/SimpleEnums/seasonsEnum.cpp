@@ -14,7 +14,8 @@ int main() {
         cout << "Нужно выбрать время года: весна - 0, осень - 1, лето - 2, зима - 3\n";
         int yourSeasons = 0;
         cin >> yourSeasons;
-        Seasons season = static_cast<Seasons>(yourSeasons);
+        //Seasons season = static_cast<Seasons>(yourSeasons);
+        Seasons season = Seasons(yourSeasons);
         switch (season)
         {
             case SPRING:

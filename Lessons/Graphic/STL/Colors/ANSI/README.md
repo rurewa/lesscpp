@@ -9,3 +9,5 @@
 [Как написать 2D игру на C++ и чистом STL для терминала в Linux](https://habr.com/ru/articles/708486/)
 
 [How do I print coloured characters to a Linux terminal that supports it?](https://stackoverflow.com/questions/2616906/how-do-i-output-coloured-text-to-a-linux-terminal)
+
+[ANSI escape code generator](https://ansi.gabebanks.net/)

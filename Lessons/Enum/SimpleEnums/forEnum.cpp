@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Перечисление и счётчик for
-// forEnum.cpp
+// forEnum.cpp Enums
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -24,7 +24,8 @@ enum Digit {
 
 int main() {
     for (int nums = ZERO; nums != SEVEN; ++nums) {
-        Digit digits = static_cast<Digit>(nums);
+        //Digit digits = static_cast<Digit>(nums);
+        Digit digits = (Digit)(nums);
         cout << digits << ' ';
     }
     cout << endl;
@@ -36,6 +37,7 @@ int main() {
     return 0;
 }
 /* Output:
+0 1 2 3 4 5 6
 0 1 2 3 4 5 6
 */
 // Задание

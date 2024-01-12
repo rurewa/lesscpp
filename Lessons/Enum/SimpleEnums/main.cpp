@@ -1,54 +1,29 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// Интерактивное описание каждого дня недели
-// weekDays.cpp Enums
+// Перечисление и for
+// enumFor.cpp Enums
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #include<iostream>
 using namespace std;
 
-enum Week { MONDAY = 1, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY };
+enum ROWS_COLOMNS { ROWS = 5, COLUMNS = 3 };
 
 int main() {
-    puts("Нужно выбрать день");
-    int yourDay = 0;
-    cin >> yourDay;
-    //Week day = static_cast<Week>(yourDay);
-    Week day = (Week)(yourDay);
-    switch (day)
-    {
-    case MONDAY:
-        puts("Трудный день!");
-        break;
-    case TUESDAY:
-        puts("Боже! Помоги мне пережить этот день!");
-        break;
-    case WEDNESDAY:
-        puts("Среда - не трогайте меня!");
-        break;
-    case THURSDAY:
-        puts("Четверг - жизнь немного налаживается!");
-        break;
-    case FRIDAY:
-        puts("Почти праздник! Вечером можно себе ни в чём не отказывать");
-        break;
-    case SATURDAY:
-        puts("Полдня сплю ... Затем снова развлекаюсь!");
-        break;
-    case SUNDAY:
-        puts("Отдыхаю от развлечений. Стараюсь не думать о завтра...");
-        break;
-    default:
-        puts("Всего 7 суток в неделе!");
-        break;
+    for (int i = 0; i < ROWS; cout << endl, ++i) {
+        for (int k = 0; k < COLUMNS; ++k) {
+            cout << i << ',' << k << ' ';
+        }
     }
     return 0;
 }
 //
 // Output
 /*
-Нужно выбрать день
-7
-Отдыхаю от развлечений. Стараюсь не думать о завтра...
+0,0 0,1 0,2
+1,0 1,1 1,2
+2,0 2,1 2,2
+3,0 3,1 3,2
+4,0 4,1 4,2
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // END FILE
