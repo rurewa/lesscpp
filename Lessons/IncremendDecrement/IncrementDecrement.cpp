@@ -7,6 +7,15 @@ using namespace std;
 
 int main() {
     int i = 5;
+    // Преинкремент - лучший вариант
+    cout << ++i << endl; // Инкремент это - увеличение значения на 1
+    cout << ++i << endl; // i = i + 1
+    cout << ++i << endl;
+    cout << --i << endl; // Декремент - это уменьшение на 1
+    cout << --i << endl; // i = i - 1
+    // Постинкремент
+    cout << i++ << endl; // Постинкремент
+    cout << i-- << endl; // Постдекремент
     ++i;
     cout << "i: " << i << endl;
     int x = 6;
