@@ -23,7 +23,19 @@ enum Digit {
 };
 
 int main() {
-    for (int nums = ZERO; nums != SEVEN; ++nums) {
+    puts("1 способ итерации через конвертацию типов");
+    for (int nums = Digit::ZERO; nums != Digit::SEVEN; ++nums) {
+        //Digit digits = static_cast<Digit>(nums);
+        Digit digits = (Digit)(nums);
+        cout << digits << ' ';
+    }
+    cout << endl;
+    puts("2 способ итерации через доступ к перечислениям по ссылке");
+    for (Digit nums = Digit::ZERO; nums != Digit::SEVEN; ++(int&)nums) {
+        cout << nums << ' ';
+    }
+    cout << endl;
+    /* for (int nums = ZERO; nums != SEVEN; ++nums) {
         //Digit digits = static_cast<Digit>(nums);
         Digit digits = (Digit)(nums);
         cout << digits << ' ';
@@ -32,12 +44,13 @@ int main() {
     for (Digit nums = ZERO; nums != SEVEN; ++(int&)nums) {
         cout << nums << ' ';
     }
-    cout << endl;
-
+    cout << endl;*/
     return 0;
 }
 /* Output:
+1 способ итерации
 0 1 2 3 4 5 6
+2 способ итерации
 0 1 2 3 4 5 6
 */
 // Задание

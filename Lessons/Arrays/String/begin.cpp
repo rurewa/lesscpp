@@ -3,9 +3,11 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #include <iostream>
-#include <string>
 #include <cstring>
 #include <algorithm>
+
+// Строка - это последовательность символов
+
 using namespace std;
 int main(){
     char mystring[] = "String"; // C-style способю Его нежелательно использовать!

@@ -1,15 +1,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Варианты доступа к элементам перечислений enum по выбору пользователя
-// ifInputEnum.cpp /Enum
+// switchUserInputEnum.cpp Enums
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
-
-/*
-Перечисления - это множество целочисленных констант
-Все перечислители enum находятся в едином пространстве имён
-*/
 
 enum Colors {
     YELLOW,
@@ -22,20 +17,21 @@ int main() {
     cout << "Нужно выбрать цвет:\n желтый\t - 0,\n белый\t - 1,\n оранжевый\t - 2,\n зелёный\t - 3\n";
     cout << "Введите ваше число:\n";
     int userInput;
-    cin >> ws >> userInput;
-    Colors color = static_cast<Colors>(userInput);
+    cin >> userInput;
+    //Colors color = static_cast<Colors>(userInput);
+    Colors color = (Colors)(userInput);
     switch (color)
     {
-    case YELLOW:
+    case Colors::YELLOW:
         cout << "Желтый\n";
         break;
-    case WHITE:
+    case Colors::WHITE:
         cout << "Белый\n";
         break;
-    case ORANGE:
+    case Colors::ORANGE:
         cout << "Оранжевый\n";
     break;
-    case GREEN:
+    case Colors::GREEN:
         cout << "Зелёный\n";
         break;
     default:

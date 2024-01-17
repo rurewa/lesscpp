@@ -40,6 +40,14 @@
 
 [Типы struct, union и enum в Modern C++](https://habr.com/ru/articles/334988/)
 
+### Визуализатор кода для разных языков
+
+[Visualized with pythontutor.com](https://pythontutor.com/cpp.html#mode=edit)
+
+### Видео
+
+[Тематические видео материалы](https://gitflic.ru/project/rurewa/cpp/blob?file=content%2Fvideo.md&branch=master)
+
 ### Грамоты и печати
 
 [Простой редактор дипломов и благодарностей](https://prostograf.ru/redaktor-diplomov-gramot-blagodarnostey)

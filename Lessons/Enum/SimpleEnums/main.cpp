@@ -9,8 +9,8 @@ using namespace std;
 enum ROWS_COLOMNS { ROWS = 5, COLUMNS = 3 };
 
 int main() {
-    for (int i = 0; i < ROWS; cout << endl, ++i) {
-        for (int k = 0; k < COLUMNS; ++k) {
+    for (int i = 0; i < ROWS_COLOMNS::ROWS; cout << endl, ++i) {
+        for (int k = 0; k < ROWS_COLOMNS::COLUMNS; ++k) {
             cout << i << ',' << k << ' ';
         }
     }

@@ -18,26 +18,28 @@ enum Digit {
 };
 
 int main() {
-    Digit dig = ONE;
+    puts("Введите числа от 0 до 7");
+    int getUserNum = 0;
+    cin >> getUserNum;
+    Digit dig = (Digit)(getUserNum);
     switch (dig)
     {
-    case ZERO:
-        cout << ZERO << '\n';
+    case Digit::ZERO:
+        cout << Digit::ZERO << '\n';
         break;
-    case ONE:
-        cout  << ONE << '\n';
+    case Digit::ONE:
+        cout  << Digit::ONE << '\n';
         break;
     default:
+        puts("What?");
         break;
     }
-
     return 0;
 }
+// Задание: дописать эту программу
 /* Output:
 1
 */
-// Задание
-/* Предложить ребятем дописать программу */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
