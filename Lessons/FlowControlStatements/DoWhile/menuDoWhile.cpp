@@ -7,17 +7,17 @@
 using namespace std;
 
 int main() {
-    int choose = 1;
+    int choice = 1;
     do {
         cout << "Пожалуйста, выберите нужный пункт меню: \n";
         cout << "1) Сложение\n";
         cout << "2) Вычитание\n";
         cout << "3) Произведение\n";
         cout << "4) Деление\n";
-        cin >> choose;
+        cin >> choice;
     }
-    while (choose != 1 && choose != 2 && choose != 3 && choose != 4);
-    cout << "Вы выбрали: " << choose << endl;
+    while (choice != 1 && choice != 2 && choice != 3 && choice != 4);
+    cout << "Вы выбрали: " << choice << endl;
     return 0;
 }
 // Output:

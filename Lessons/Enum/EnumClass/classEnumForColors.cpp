@@ -10,13 +10,12 @@ enum class Colors { RED, WHITE, YELLOW, BLUE, MAGENTA, CYAN };
 
 int main() {
     /* for (Colors col = Colors::RED; col != Colors::CYAN; cout << endl,
-    ++(int&)col) { cout << (int)col << ' ';
-    } */
+    ++(int&)col) { cout << (int)col << ' '; } */
     for (Colors col = Colors::RED; col != Colors::CYAN;
          cout << endl, ++(int &)col) {
         cout << (int)col << ' ';
         switch (col) {
-        case Colors(0):
+        case Colors(0): // Colors::RED:
             puts("\e[0;41m            \e[0m");
             break;
         case Colors(1):
@@ -35,6 +34,7 @@ int main() {
             puts("\e[0;46m            \e[0m");
             break;
         default:
+            puts("What?");
             break;
         }
     }

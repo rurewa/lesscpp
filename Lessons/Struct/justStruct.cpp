@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Простая структура и виды инициализации
-// Struct justStruct.cpp
+// justStruct.cpp Struct
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -13,9 +13,8 @@ struct AxisesOne // Сначала делаем это
     double x;
     double y;
     double z;
-    // x, y, z - члены (поля) структуры
+    // x, y, z - поля структуры
 };
-
 // Затем это
 struct AxisesTwo // Инициализация членов структур
 {
@@ -23,7 +22,7 @@ struct AxisesTwo // Инициализация членов структур
     double y = 3.1;
     double z = 4.8;
 };
-
+// Затем это
 struct AxisesThree
 {
     double x;
@@ -31,28 +30,22 @@ struct AxisesThree
     double z;
 };
 
-struct Person
+struct Person // Структура с переменными разных типов
 {
     string name;
     short age;
-    double growth;
+    double growth; // Рост
 };
-
-struct Worker
-{
-    int id;
-    string name;
-    string position;
-    double salary;
-};
-
-
 
 int main() {
     cout << "Виды инициализации структур\nИнициализация с помощью списка\n";
-    AxisesOne axOne {35.13, 1.39, 83.3}; // Инициализация с помощью списка
+    AxisesOne axOne {35.13, 1.39, 83.3}; // Инициализация с помощью списка.
     cout << axOne.x << ' ' << axOne.y << ' ' << axOne.z << endl;
-    cout << "Инициализация членов структур\n";
+    cout << "Инициализация с помощью переменных\n";
+    double X = 50.1, Y = 2.45, Z = 0.1;
+    AxisesOne xyz {X, Y, Z};
+    cout << xyz.x << ' ' << xyz.y << ' ' << xyz.z << '\n';
+    cout << "Инициализация полей структур\n";
     AxisesTwo axTwo;
     cout << axTwo.x << ' ' << axTwo.y << ' ' << axTwo.z << endl;
     cout << "Инициализация пользовательским вводом\n";
@@ -69,16 +62,6 @@ int main() {
     Person man {"Alex", 46, 170.5}, woman {"Mary", 12, 140.36};
     cout << man.name << ' ' << man.age << ' ' << man.growth << '\n';
     cout << woman.name << ' ' << woman.age << ' ' << woman.growth << '\n';
-    cout << "Введите id работника\n";
-    Worker person;
-    cin >> ws >> person.id;
-    cout << "Введите имя работника\n";
-    getline(cin >> ws, person.name);
-    cout << "Введите должность работника\n";
-    getline(cin >> ws, person.position);
-    cout << "Введите зарплату работника\n";
-    cin >> ws >> person.salary;
-    cout << person.id << ' ' << person.name << ' ' << person.position << ' ' << person.salary << '\n';
     return 0;
 }
 // Output
@@ -94,13 +77,6 @@ int main() {
 5
 7
 2 5 7
-Введите имя работника
-Alex
-Введите должность работника
-am programmer
-Введите зарплату работника
-120000
-111 Alex am programmer 120000
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE

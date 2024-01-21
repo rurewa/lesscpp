@@ -18,7 +18,7 @@ enum class Colors {
 int main() {
     cout << "Enter num: " << endl;
     int userNum;
-    cin >> ws >> userNum;
+    cin >> userNum;
     Colors color = static_cast<Colors>(userNum);
     switch (color)
     {

@@ -29,7 +29,7 @@ enum class Colors {
 int main() {
     cout << "Enter num: " << endl;
     int userNum;
-    cin >> ws >> userNum;
+    cin >> userNum;
     Colors color = static_cast<Colors>(userNum);
     if (color == Colors::RED)   {
         cout << "\e[0;41m            \e[0m\n";
