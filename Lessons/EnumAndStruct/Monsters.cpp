@@ -7,7 +7,7 @@
 using namespace std;
 
 enum class MonsterType {
-    ORGE,
+    OGRE,
     GOBLIN,
     SCELETON,
     ORC,

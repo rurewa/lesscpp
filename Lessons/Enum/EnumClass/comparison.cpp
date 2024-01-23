@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Сравнение enum и enum class
-// comparison.cpp EnumsClass
+// enunClass.cpp EnumsClass
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -22,8 +22,8 @@ enum class CppEditors { CODE_BLOCKS, ECLIPSE, VISUAL_STUDIO_CODE, QT_CREATOR };
 
 int main() {
     //cout << VIM; // Прямой доступ к перечислителям enum class запрещён!
-    Lagre_Vehicle car = CAR;
-    if (car == CAR) {
+    Lagre_Vehicle car = Lagre_Vehicle car::CAR;
+    if (car == Lagre_Vehicle car::CAR) {
         cout << "A car: " << car << endl;
     }
     CppEditors vs = CppEditors::VISUAL_STUDIO_CODE;
