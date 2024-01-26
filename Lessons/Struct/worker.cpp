@@ -16,13 +16,13 @@ struct Worker {
 int main() {
     cout << "Введите id работника\n";
     Worker person;
-    cin >> ws >> person.id;
+    cin >> person.id;
     cout << "Введите имя работника\n";
     getline(cin >> ws, person.name);
     cout << "Введите должность работника\n";
     getline(cin >> ws, person.position);
     cout << "Введите зарплату работника\n";
-    cin >> ws >> person.salary;
+    cin >> person.salary;
     cout << person.id << ' ' << person.name << ' ' << person.position << ' '
          << person.salary << '\n';
     return 0;

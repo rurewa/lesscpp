@@ -6,80 +6,66 @@
 #include <iostream>
 using namespace std;
 
-/* Структура - произвольный тип данных. Под неё, как и enum не выделяется память
-Структура позволяет сгруппировать переменные разных типов
-в единое целое.
+/*
+Структура - произвольный тип данных. Для неё, как и для enum не выделяется память.
+Структура позволяет сгруппировать переменные разных типов в единое целое.
 */
 
-struct AxisesOne // Сначала делаем это
+struct Person // Структура с полями разных типов
 {
-    double x;
-    double y;
-    double z;
-    // x, y, z - поля структуры
-};
-// Затем это
-struct AxisesTwo // Инициализация членов структур
-{
-    double x = 2.4;
-    double y = 3.1;
-    double z = 4.8;
-};
-// Затем это
-struct AxisesThree
-{
-    double x;
-    double y;
-    double z;
+    string name; // Поле для строк
+    short age; // Поле для натуральных чисел
+    double growth; // Поле для вещественных чисел. Рост
 };
 
-struct Person // Структура с переменными разных типов
+struct Card
 {
+    int id;
     string name;
     short age;
-    double growth; // Рост
+    char classRoom;
 };
 
 int main() {
-    cout << "Виды инициализации структур\nИнициализация с помощью списка\n";
-    AxisesOne axOne {35.13, 1.39, 83.3}; // Инициализация с помощью списка.
-    cout << axOne.x << ' ' << axOne.y << ' ' << axOne.z << endl;
-    cout << "Инициализация с помощью переменных\n";
-    double X = 50.1, Y = 2.45, Z = 0.1;
-    AxisesOne xyz {X, Y, Z};
-    cout << xyz.x << ' ' << xyz.y << ' ' << xyz.z << '\n';
-    cout << "Инициализация полей структур\n";
-    AxisesTwo axTwo;
-    cout << axTwo.x << ' ' << axTwo.y << ' ' << axTwo.z << endl;
-    cout << "Инициализация пользовательским вводом\n";
-    double numX, numY, numZ;
-    cout << "Введите 3 значения - x, y и z \n";
-    cin >> numX >> numY >> numZ;
-    AxisesThree axThree {numX, numY, numZ};
-    cout << axThree.x << ' ' << axThree.y << ' ' << axThree.z << endl;
-    cout << "Повторное использование структуры\n";
-    AxisesOne axRepl {numX, numY, numZ};
-    cin >> numX >> numY >> numZ;
-    cout << "Содержимое структуры AxisesTwo - " << axRepl.x << ' ' << axRepl.y << ' ' << axRepl.z << '\n';
+    cout << "Виды инициализации полей структур\nИнициализация с помощью списка\n";
     cout << "Структура с разными типами данных внутри\n";
-    Person man {"Alex", 46, 170.5}, woman {"Mary", 12, 140.36};
+    Person man {"Alex", 46, 170.5};
+    Person woman {"Mary", 12, 140.36};
     cout << man.name << ' ' << man.age << ' ' << man.growth << '\n';
     cout << woman.name << ' ' << woman.age << ' ' << woman.growth << '\n';
+    cout << "Инициализация полей структуры с помощью переменных\n";
+    int id = 1;
+    string firtsName = "Alex";
+    short old = 18;
+    char clRoom = 'a';
+    Card student {id, firtsName, old, clRoom};
+    cout << student.id << ' ' << student.name << ' ' << student.age << ' ' << student.classRoom << endl;
+    cout << "Инициализация полей структуры с пользовательским вводом\n";
+    puts("Введите id школьника и возраст и букву класса по порядку через пробел");
+    id = 0, old = 0;
+    cin >> id >> old >> clRoom;
+    puts("Введите имя школьника");
+    getline(cin >> ws, firtsName);
+    Card schoolboy {id, firtsName, old, clRoom};
+    cout << schoolboy.id << ' ' << firtsName << ' ' << schoolboy.age << ' ' << schoolboy.classRoom << endl;
     return 0;
 }
 // Output
 /*
-Виды инициализации структур
+Виды инициализации полей структур
 Инициализация с помощью списка
-35.13 1.39 83.3
-Инициализация членов структур
-2.4 3.1 4.8
-Инициализация пользовательским вводом
-Введите 3 значения - x, y и z
-2
-5
-7
-2 5 7
+Структура с разными типами данных внутри
+Alex 46 170.5
+Mary 12 140.36
+Инициализация полей структуры с помощью переменных
+1 Alex 18 a
+Введите id школьника и возраст и букву класса по порядку через пробел
+9
+14
+g
+Введите имя школьника
+Alex
+9 Alex 14 g
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE

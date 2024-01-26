@@ -1,9 +1,9 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Пример использования перечислений, пользовательского ввода и структуры
+// inputUserInStruct.cpp Struct
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
-#include<string>
 using namespace std;
 
 enum class Position{ // Position
@@ -23,14 +23,12 @@ int main() {
     cout << "Enter id: ";
     int id;
     cin >> id;
-    cin.ignore(32767, '\n');
     cout << "Enter user name: ";
     string userName;
-    getline(cin, userName);
+    getline(cin >> ws, userName);
     cout << "Enter age: ";
     int age;
-    cin >> ws >> age;
-    cin.ignore(32767, '\n');
+    cin >> age;
     tempUserInputEnumStruct alex = {id, userName, age};
     cout << "id: "<< alex.id << " name: " << alex.userName << ", age: " << alex.age << endl;
 
