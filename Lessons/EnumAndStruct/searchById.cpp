@@ -1,5 +1,5 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Структуры и перечисление
+// Структура и перечисление
 // searchById.cpp Struct
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
@@ -8,7 +8,7 @@ using namespace std;
 
 enum class Position
 { // Используется как список наименований должностей
-    manager,
+    manager, // 0 по умолчанию
     programmer,
     director
 };
@@ -22,31 +22,30 @@ struct Person
 };
 
 int main() {
-    /* cout << "Введите id для поиска работника\n";
-    //Person alex {0, "Alex", 23, Position::manager};
+    cout << "Введите id для поиска работника\n";
     Person alex {0, "Alex", 23, Position::manager};
     Person gleb {1, "Gleb", 20, Position::programmer};
     Person andry {2, "Andry", 21, Position::director};
     int idPerson = 0;
     string personPosition;
-    cin >> ws >> idPerson;
+    cin >> idPerson;
     if (idPerson == alex.id) {
         personPosition = "Manager";
-        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' ' << personPosition << ' ' << (int)alex.pos << endl;
+        cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' ' << personPosition << " id должности " << (int)alex.pos << endl;
     }
     else if (idPerson == gleb.id) {
         personPosition = "Programmer";
-        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << ' ' << (int)gleb.pos << endl;
+        cout << gleb.id << ' ' << gleb.name << ' ' << gleb.age << ' ' << personPosition << " id должности " << (int)gleb.pos << endl;
     }
     else if (idPerson == andry.id) {
         personPosition = "Director";
-        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << ' ' << (int)andry.pos << endl;
+        cout << andry.id << ' ' << andry.name << ' ' << andry.age << ' ' << personPosition << " id должности " << (int)andry.pos << endl;
     }
     else {
         personPosition = "Unknow";
         cout << personPosition << '\n';
-    } */
-    bool exit = false;
+    }
+    /* bool exit = false;
     int idPosition = 0;
     string personPosition;
     Person alex {0, "Alex", 46, Position::manager};
@@ -54,7 +53,7 @@ int main() {
     Person andry {2, "Andry", 36, Position::director};
     do {
         cout << "Введите id для поиска: ";
-        cin >> ws >> idPosition;
+        cin >> idPosition;
         switch (idPosition)
         {
         case 0:
@@ -78,8 +77,8 @@ int main() {
             break;
         }
         cout << "Продолжить поиск? 1 - да, 0 - нет\n";
-        cin >> ws >> exit;
-    } while (exit);
+        cin >> exit;
+    } while (exit); */
     
     return 0;
 }

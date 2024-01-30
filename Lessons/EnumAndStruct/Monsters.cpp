@@ -1,9 +1,9 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// 
+// Игровой пример стуктуры
+// gameStruct.cpp
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
-#include<string>
 using namespace std;
 
 enum class MonsterType {
@@ -27,6 +27,7 @@ int main() {
     cout << "Monster type: " << monsterName << ", name: " << monster.name << ", health: " << monster.health << endl;
     return 0;
 }
+// Д.З. Дописать эту программу, обработав остальных монстров из перечисления
 // Output
 /*
 Monster type: Goblin, name: Bern, health: 37.7
