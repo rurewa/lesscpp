@@ -9,7 +9,7 @@ int main() {
 	cout << "Pi: " << pi << '\n';
 	// Сложение
 	result = a + b;
-	cout << "Сложение: " << result << '\n';
+	cout << "Сложение: " << showpos << result << '\n';
 	// Вычитание
 	result = 0;
 	result = a - b;

@@ -13,6 +13,6 @@ int main() {
     cout << (c /= d) << endl; // a = a / b
     cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl;
     int n = -1;
-    cout << (n - -2) << "\n";
+    cout << showpos << (n - -2) << "\n";
     return 0;
 }

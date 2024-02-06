@@ -1,22 +1,27 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Примеры практического применения структуры
-// arithmComparStruct.cpp Struct
+// Перечисление и структура
+// searchById.cpp Struct
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-struct Employee { // Сотрудник
+enum class Position
+{
+    manager, programmer, director
+};
+
+struct Person
+{
+    int id;
     string name;
-    short id;
-    int age;
-    double salary;
+    short age;
+    Position pos;
 };
 
 int main() {
-    // Инициализируем поля структуры списком
-    Employee ivan { "Ivan", 0, 27, 75353.17 };
-    // Задание - дописать эту программу, создав ещё несколько Petr и Igor
+    
+    
     return 0;
 }
 // Д.З.
