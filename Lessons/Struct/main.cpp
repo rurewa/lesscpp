@@ -1,26 +1,25 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Перечисление и структура
-// searchById.cpp Struct
+// weatherStat.cpp Struct
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-enum class Position
-{
-    manager, programmer, director
+enum class Month {
+    JAN = 1, FEB, MAR
 };
 
-struct Person
+struct Weather
 {
-    int id;
-    string name;
-    short age;
-    Position pos;
+    int hiTemp;
+    int loTemp;
+    float actualRainfall;
+    float recordRainfall;
 };
 
 int main() {
-    
+    Weather weatherList[12];
     
     return 0;
 }
