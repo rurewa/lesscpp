@@ -22,13 +22,13 @@ struct Person
 };
 
 int main() {
-    cout << "Введите id для поиска работника\n";
+    //cout << "Введите id для поиска работника\n";
     Person alex {0, "Alex", 23, Position::manager};
     Person gleb {1, "Gleb", 20, Position::programmer};
     Person andry {2, "Andry", 21, Position::director};
     int idPerson = 0;
     string personPosition;
-    cin >> idPerson;
+    /*cin >> idPerson;
     if (idPerson == alex.id) {
         personPosition = "Manager";
         cout << alex.id << ' ' << alex.name << ' ' << alex.age << ' ' << personPosition << " id должности " << (int)alex.pos << endl;
@@ -44,17 +44,18 @@ int main() {
     else {
         personPosition = "Unknow";
         cout << personPosition << '\n';
-    }
-    /* bool exit = false;
+    } */
+    /*
     int idPosition = 0;
     string personPosition;
     Person alex {0, "Alex", 46, Position::manager};
     Person gleb {1, "Gleb", 26, Position::programmer};
-    Person andry {2, "Andry", 36, Position::director};
+    Person andry {2, "Andry", 36, Position::director}; */
+    bool exit = false;
     do {
         cout << "Введите id для поиска: ";
-        cin >> idPosition;
-        switch (idPosition)
+        cin >> idPerson;
+        switch (idPerson)
         {
         case 0:
             personPosition = "Manager";
@@ -78,8 +79,8 @@ int main() {
         }
         cout << "Продолжить поиск? 1 - да, 0 - нет\n";
         cin >> exit;
-    } while (exit); */
-    
+    } while (exit);
+
     return 0;
 }
 // Задание 1

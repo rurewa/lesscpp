@@ -1,79 +1,83 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Перечисление и вложенные структуры
-// workers.cpp
+// Структура и перечисление
+// 2searchById.cpp Struct
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-enum class Type { secretary, manager, labourer };
-
-struct Date
-{
-    int day;
-    int month;
-    int year;
+enum class Position { // Используется как список наименований должностей
+    manager,          // 0 по умолчанию
+    programmer,
+    director
 };
 
-struct Emploee
-{
+struct Person { // Используется как свойства персоны в базе данных
     int id;
-    float salary;
-    Type worker;
-    Date date;
+    string name;
+    short age;
+    Position pos;
 };
 
 int main() {
-    Emploee job1;
-    cout << "Введите id сотрудника ";
-    cin >> ws >> job1.id;
-    cout << "Введите 1-ю букву должности работника ";
-    char typJob;
-    cin >> typJob;
-    switch (typJob)
-    {
-    case 's':
-        job1.worker = Type::secretary;
-        break;
-    case 'm':
-        job1.worker = Type::manager;
-        break;
-    case 'l':
-        job1.worker = Type::labourer;
-        break;
-    default:
-        break;
-    }
-    string post;
-    switch (job1.worker)
-    {
-    case Type::secretary:
-        post = "Секретарь";
-        break;
-    case Type::manager:
-        post = "Менеджер";
-        break;
-    case Type::labourer:
-        post = "Рабочий";
-        break;
-    default:
-        break;
-    }
-    cout << "Укажите зарплату работника ";
-    cin >> ws >> job1.salary;
-    cout << "Укажите дату приёма на работу ";
-    cin >> job1.date.day >> job1.date.month >> job1.date.year;
-    cout << "id работника: " << job1.id << ", должность: " << post
-         << ", зарплата: " << job1.salary << ", принят на работу: "
-         << job1.date.day << '.' << job1.date.month << '.'
-         << job1.date.year << endl;
+    Person alex{0, "Alex", 23, Position::manager};
+    Person gleb{1, "Gleb", 20, Position::programmer};
+    Person andry{2, "Andry", 21, Position::director};
+    int idPerson = 0;
+    string personPosition;
+    bool exit = false;
+    do {
+        puts("Введите id для поиска:");
+        cin >> ws >> idPerson;
+        switch (idPerson)
+        {
+        case 0:
+            personPosition = "Manager";
+            cout << alex.id << ' ' << alex.name << ' '
+                 << alex.age << ' ' << personPosition << '\n';
+            break;
+        case 1:
+            personPosition = "Programmer";
+            cout << gleb.id << ' ' << gleb.name << ' '
+                 << gleb.age << ' ' << personPosition << '\n';
+            break;
+        case 2:
+            personPosition = "Director";
+            cout << andry.id << ' ' << andry.name << ' '
+                 << andry.age << ' ' << personPosition << '\n';
+            break;
+        default:
+            personPosition = "Unknown";
+            cout << personPosition << '\n';
+            break;
+        }
+        puts("Желаете продолжить поиск? 1 - да, 0 - нет");
+        cin >> exit; // close
+    } while (exit);
+    return 0;
 }
 // Output:
 /*
-Введите id сотрудника 0
-Введите 1-ю букву должности работника m
-Укажите зарплату работника 70000
-id работника: 0, должность: Менеджер, зарплата: 70000
+Введите id для поиска:
+0
+0 Alex 23 Manager
+Желаете продолжить поиск? 1 - да, 0 - нет
+1
+Введите id для поиска:
+1
+1 Gleb 20 Programmer
+Желаете продолжить поиск? 1 - да, 0 - нет
+1
+Введите id для поиска:
+2
+2 Andry 21 Director
+Желаете продолжить поиск? 1 - да, 0 - нет
+1
+Введите id для поиска:
+3
+Uniknown
+Желаете продолжить поиск? 1 - да, 0 - нет
+0
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
