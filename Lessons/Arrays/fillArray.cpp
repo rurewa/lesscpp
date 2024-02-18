@@ -10,17 +10,17 @@ int main() {
     int arr[5] = {0}; // Инициализируем новый массив нулями
     cout  << "Содержимое массива до заполнения\n";
     for (int element  = 0; element <= 4; ++element) {
-		cout << arr[element] << " ";
+		cout << arr[element] << ' ';
 	}
 	cout  << "\nСодерджимое массива после заполнения\n";
     for (int i = 0; i <= 4; ++i) {
         arr[i] = ++a;
-        cout << arr[i] << " ";
+        cout << arr[i] << ' ';
     }
     cout << "Содерджимое массива в обратном порядке\n";
     int b = 5;
     for (int i = 4; i >= 0; --i) {
-        cout << arr[i] << " ";
+        cout << arr[i] << ' ' ;
         arr[i] = --b;
     }
     return 0;
