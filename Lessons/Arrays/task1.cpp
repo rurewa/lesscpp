@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     const int arr[] = {45, 35, 45, 98};
     for (int index = 0; index <= 3; ++index) {
-        cout << arr[index] << " ";
+        cout << arr[index] << ' ';
     }
     cout << endl;
     int foo[3] = {};
@@ -20,7 +20,11 @@ int main() {
 }
 // Output:
 /*
-1 2 3 4 5
+45 35 45 98
+25
+0
+0
+0x7fffadcbb390
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

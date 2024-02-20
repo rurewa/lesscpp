@@ -11,17 +11,18 @@ int main(){
   // Средний бал учеников
   int arr[] {25, 33, 70, 100, 11};
   const short INDEX = sizeof(arr) / sizeof(*arr);
-  int sum = 0;
+  double sum = 0;
   for (int a = 0; a < INDEX; ++a) {
     sum += arr[a];
   }
-  int average = sum / INDEX;
+  double average = sum / INDEX;
   cout << average << endl;
   return 0;
 }
+// Д.З. На основе этой программы сделать новую, только с ручным вводом значений элементов массива
 //Output
 /*
-47
+47.8
 */
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //End file

@@ -7,24 +7,15 @@
 using namespace std;
 
 int main() {
-    puts("Реверс значений массива 1-й способ");
-    int array[] = {1, 2, 3, 4, 5};
-    const int SIZE = sizeof(array) / sizeof(*array);
-    int k = 0, reverse[SIZE];
-    for (int i = SIZE - 1; i >= 0; --i) { // - 1, потому, что нам нужен последний индекс саммива
-        reverse[k] = array[i];
-        ++k;
-    }
-    for (auto i : reverse) {
-        cout << i;
-    }
-    cout << endl;
-    puts("Реверс значений массива 2-й способ");
+   long newArr[5];
+   for (int a = 0; a != 5; ++a) { newArr[a] = a + 1; }
+   for (auto i : newArr) { cout << showpos << i << ' '; }
+   cout <<  endl;
+    
     return 0;
 }
 /* Output:
-5 4 3 2 1
-54321
+
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE

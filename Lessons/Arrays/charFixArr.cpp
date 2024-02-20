@@ -1,11 +1,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // Пример базовых операций с фиксированными одномерными массивами
-// moreFixArr.cpp Arrays
+// charFixArr.cpp Arrays
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <iostream>
 using namespace std;
-
 // Строки в C++ являются массивами
 
 int main() {
@@ -23,14 +22,16 @@ int main() {
     int sizeWord = sizeof(word);
     cout << sizeWord << '\n'; // 6, потому, что автоматически вставляется
                               // 0-терминатор для конца строки
-    char myCharArr[] {'T', 'o', 't', 'a',
+    char myCharArr[]{'T', 'o', 't', 'a',
                      'l'}; // Юниформ инициализация - без оператора '=',
                            // является предпочтительной
     // В современных версиях C++ равно '=' можно не указывать.
     puts(myCharArr); /* Так как mySharArr является строкой, а все строки в C++
     есть массивы, такие переменные можно вызывать в puts(); */
     puts("Содержимое символьного массива с помощью цикла");
-    for (auto i : myCharArr) { cout << i; }
+    for (auto i : myCharArr) {
+        cout << i;
+    }
     cout << '\n';
     puts("Изменить один элемент символьного массива");
     myCharArr[0] = '8';
@@ -39,14 +40,19 @@ int main() {
     const int LENGHT = sizeof(myCharArr);
     int change = 76;
     for (int i = 0; i != LENGHT; ++i) {
-      myCharArr[i] = ++change;
+        myCharArr[i] = ++change;
     }
     cout << myCharArr << '\n';
     puts("Изменение всех элементов символьного массива с интересным эффектом");
     for (int i = 0; i != LENGHT; ++i) {
-      myCharArr[i] = ++change;
-      cout << myCharArr << ' ';
+        myCharArr[i] = ++change;
+        cout << myCharArr << ' '; // Печатаю на экране массив 5 раз
     }
+    cout << '\n';
+    puts("Интерпретация значени1 целочисленного массива в строку");
+    const int HELLO[]{72, 101, 108, 108, 111, 44, 32,
+                      87, 111, 114, 108, 100, 33};
+    for (auto i : HELLO) { cout << (char)i; }
     cout << '\n';
     return 0;
 }
