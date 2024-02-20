@@ -14,12 +14,14 @@ int main() {
     }
     for (auto i : alphabet) { cout << i; }
     cout << endl;
-    for (int i = 26; i >= 0; --i) {
+    /* for (int i = 26; i >= 0; --i) {
         cout << alphabet[i];
     }
-    cout << endl;
+    cout << endl; */
     return 0;
 }
+// Д.З. Дописать эту программу так, чтобы она напечатала из массива на экран буквы 
+// англ.алф. в обратном порядке
 /* Output:
 abcdefghijklmnopqrstuvwxyz
 zyxwvutsrqponmlkjihgfedcba

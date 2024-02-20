@@ -5,11 +5,11 @@
 #include <iostream>
 using namespace std;
 
-enum StudentNamesJust { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };
+enum /*class*/ StudentNamesJust { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };
 // Enum class
-namespace StudentNames {
+/* namespace StudentNames {
 enum StudentNames { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };
-};
+}; */
 
 int main() {
   //int testScores[MAX_SUDENTS]; // В качестве размера массива используется
@@ -17,12 +17,12 @@ int main() {
   //testScores[TIMON] = 12;
   //cout << testScores[TIMON] << endl;
   // Enum class
-  int testScores[StudentNames::MAX_SUDENTS]; // В качестве размера массива
+  int testScores[StudentNamesJust::MAX_SUDENTS]; // В качестве размера массива
                                              // используется последний элемент
                                              // перечисления!
-  testScores[StudentNames::TIMON] = 12;
-  cout << testScores[4] << endl;
-
+  testScores[StudentNamesJust::TIMON] = 12;
+  //cout << testScores[4] << endl;
+  cout << testScores[StudentNamesJust::TIMON] << endl;
   return 0;
 }
 

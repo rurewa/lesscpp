@@ -6,27 +6,30 @@
 using namespace std;
 
 int main() {
-  string S, t;
-  int k; // Величина сдвига
-  cout << "Введите ключ\n"; // k = 3
-  cin >> k;
-  cout << "Введите сообщение\n";
-  cin >> S;
-  for (int i = 0; i < S.size(); ++i) {
-    t += (S[i] - 'a' + k) % 127 + 'a';
+  string word, code, decode;
+  int shift = 0; // Величина сдвига
+  puts("Введите ключ от 3-х до 7-и");
+  cin >> shift;
+  puts("Введите сообщение");
+  getline(cin >> ws, word);
+  for (int i = 0; i < word.size(); ++i) {
+    code += (word[i] - 'a' + shift) % 127 + 'a';
   }
-  cout << "\n\nЗашифрованное сообщение:  " << t << '\n';
+  cout << "\nЗашифрованное сообщение:  " << code << '\n';
+  for (int i = 0; i < word.size(); ++i) {
+    decode += (code[i] - 'a' - shift) % 127 + 'a';
+  }
+  cout << "\nРашифрованное сообщение:  " << decode << '\n';
   return 0;
 }
 // Output:
 /*
-Введите ключ
-3
 Введите сообщение
-Hello
+root
 
+Зашифрованное сообщение:  |yy~
 
-Зашифрованное сообщение:  Khoor
+Рашифрованное сообщение:  root
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
