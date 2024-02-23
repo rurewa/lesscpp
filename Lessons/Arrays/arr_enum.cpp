@@ -1,29 +1,30 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
-// Пример базовых операций с фиксированными одномерными массивами и перечислениями
-// V 1.0
+// Пример базовых операций с фиксированными одномерными массивами и
+// перечислениями V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <iostream>
 using namespace std;
 
-enum /*class*/ StudentNamesJust { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };
+// enum /*class*/ StudentNamesJust { PASHA, ALEXEY, IVAN, ALEX, TIMON,
+// MAX_SUDENTS };
 // Enum class
-/* namespace StudentNames {
-enum StudentNames { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };
-}; */
+namespace StudentNames {
+  enum StudentNames { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };
+};
 
 int main() {
-  //int testScores[MAX_SUDENTS]; // В качестве размера массива используется
-                               // последний элемент перечисления!
-  //testScores[TIMON] = 12;
-  //cout << testScores[TIMON] << endl;
-  // Enum class
-  int testScores[StudentNamesJust::MAX_SUDENTS]; // В качестве размера массива
-                                             // используется последний элемент
-                                             // перечисления!
-  testScores[StudentNamesJust::TIMON] = 12;
-  //cout << testScores[4] << endl;
-  cout << testScores[StudentNamesJust::TIMON] << endl;
-  return 0;
+    // int testScores[MAX_SUDENTS]; // В качестве размера массива используется
+    // последний элемент перечисления!
+    // testScores[TIMON] = 12;
+    // cout << testScores[TIMON] << endl;
+    // Enum class
+    int testScores[StudentNames::MAX_SUDENTS]; // В качестве размера массива
+                                               // используется последний элемент
+                                               // перечисления!
+    testScores[StudentNames::TIMON] = 12;
+    // cout << testScores[4] << endl;
+    cout << testScores[StudentNames::TIMON] << endl;
+    return 0;
 }
 
 // Output

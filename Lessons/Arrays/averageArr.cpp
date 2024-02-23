@@ -7,7 +7,7 @@
 #include<iostream>
 using namespace std;
 
-int main(){
+int main() {
   // Средний бал учеников
   int arr[] {25, 33, 70, 100, 11};
   const short INDEX = sizeof(arr) / sizeof(*arr);
