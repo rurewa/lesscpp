@@ -5,7 +5,7 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <iostream>
-#include<iomanip>
+#include <iomanip>
 using namespace std;
 
 int main() {
