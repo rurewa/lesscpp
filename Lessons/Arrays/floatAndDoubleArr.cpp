@@ -5,9 +5,11 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 #include <iostream>
+#include<iomanip>
 using namespace std;
 
 int main() {
+   cout << setprecision(5);
     puts("Массив вещественных чисел");
     const int SIZE = 4; // Размер будущего массива
     float farr[SIZE] {0}; // Заполняем элементы массива нулями

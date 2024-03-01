@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-    static double sum = 0.0;
+    static double s_sum = 0.0;
     int arrSize = 0;
     int userNum;
     vector<int> arr;
@@ -21,9 +21,9 @@ int main() {
     }
     // Для вычесления суммы всех элементов массива
     for (int i = 0; i <= arrSize; ++i) {
-        sum += arr[i];
+        s_sum += arr[i];
     }
-    cout << sum/arrSize << endl;
+    cout << s_sum/arrSize << endl;
 
     return 0;
 }

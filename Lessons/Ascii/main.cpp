@@ -8,12 +8,12 @@ using namespace std;
 
 int main() {
     cout << "value\tcharacter" << endl;
-    static int ascii = 32;
+    static int s_ascii = 32;
     for (int i = 1; i <= 10; ++i) {
         for (int k = 1; k <= 10; ++k) {
-            ++ascii;
-            cout << ascii << ' ' << (char)ascii << '\t';
-            if (ascii >= 127) {
+            ++s_ascii;
+            cout << s_ascii << ' ' << (char)s_ascii << '\t';
+            if (s_ascii >= 127) {
                 cout << endl;
                 return 0;
             }

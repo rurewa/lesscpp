@@ -8,11 +8,7 @@
 using namespace std;
 
 int main() {
-    string sarr[] {"❌", "☔", "🚿"};
-    for (auto i : sarr) {
-        cout << i << ' ';
-    }
-    cout << endl;
+    char arr[] {'a', 'b'};
     return 0;
 }
 // Д.З.

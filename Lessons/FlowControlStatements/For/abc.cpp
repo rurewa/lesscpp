@@ -19,9 +19,9 @@ int main() {
     cout << '\n';
     puts("С порядковой нумерацией");
     for (char abc = 'a'; abc <= 'z'; ++abc) {
-        static int counter = 0;
-        ++counter;
-        cout << '#' << counter << ' ' << abc << ' ';
+        static int s_counter = 0;
+        ++s_counter;
+        cout << '#' << s_counter << ' ' << abc << ' ';
     }
     cout << '\n';
     /* puts("Английский алфавит в обратном порядке");
