@@ -8,12 +8,6 @@
 using namespace std;
 
 int main() {
-    cout << 1 << ' ' << endl;
-    sleep(1);
-    cout << 2 << ' ' << endl;
-    sleep(1);
-    cout << 3 << ' ' << endl;
-
     cout << 1 << ' ';
     cout.flush();
     sleep(1);
@@ -24,11 +18,19 @@ int main() {
     cout.flush();
     sleep(1);
     cout << endl;
+
+    /* cout << 1 << ' ';
+    sleep(1);
+    cout.flush() << 2 << ' ';
+    sleep(1);
+    cout.flush() << 3 << ' ';
+    sleep(1);
+    cout << endl; */
     return 0;
 }
 // Output:
 /*
-
+1 2 3
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE

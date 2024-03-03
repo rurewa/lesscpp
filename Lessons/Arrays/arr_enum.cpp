@@ -5,8 +5,7 @@
 #include <iostream>
 using namespace std;
 
-// enum /*class*/ StudentNamesJust { PASHA, ALEXEY, IVAN, ALEX, TIMON,
-// MAX_SUDENTS };
+enum class StudentNamesJust { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };
 // Enum class
 namespace StudentNames {
   enum StudentNames { PASHA, ALEXEY, IVAN, ALEX, TIMON, MAX_SUDENTS };

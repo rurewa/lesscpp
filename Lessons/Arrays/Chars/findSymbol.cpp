@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Поиск в символьном массиве
-// findSubSim.cpp Arrays
+// Поиск символа в символьном массиве
+// findSymbol.cpp Arrays
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     char arr_char[] = {'H', 'e', 'l', 'l', 'o'};
-    const char *SUB_SIM = "o";
+    const char *SUB_SIM = "z";
     string char_arr_str = arr_char;
     if (char_arr_str.find(SUB_SIM) != string::npos) {
         cout << SUB_SIM

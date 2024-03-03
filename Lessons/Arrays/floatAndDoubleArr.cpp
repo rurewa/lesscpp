@@ -9,13 +9,13 @@
 using namespace std;
 
 int main() {
-   cout << setprecision(5);
+    cout << setprecision(5);
     puts("Массив вещественных чисел");
     const int SIZE = 4; // Размер будущего массива
-    float farr[SIZE] {0}; // Заполняем элементы массива нулями
+    float farr[SIZE]{0}; // Заполняем элементы массива нулями
     float ff = 0;
     for (int f = 0; f != SIZE; ++f) { // Показать ребятам cppcheck <=
-       cout << (farr[f] = {ff += 0.1}) << ' ';
+        cout << (farr[f] = {ff += 0.1}) << ' ';
     }
     cout << '\n';
     double darr[SIZE];
