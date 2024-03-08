@@ -31,31 +31,9 @@ int main() {
     cout << "Адрес 1-го элемента массива: " << &arr[0] << '\n';
     cout << "Адрес 1-го элемента массива: " << *arr << '\n';
     cout << &arr[1] << '\n'; // Адрес 2-го элемента массива (index 1)
-    cout << arr+1 << '\n'; // Адрес указателя на массив + 1 (index 1)
+    cout << arr + 1 << '\n'; // Адрес указателя на массив + 1 (index 1)
     cout << arr[1] << '\n'; // Будет 8 - значение 2-го элемента массива
     cout << *(arr + 1) << '\n'; // Тоже будет 8, так как это тоже самое, что и array[1]
-    const int ARRAY_LENGHT = 9;
-    char name[ARRAY_LENGHT] = "Jonathan";
-    int numLowers = 0;
-    for (char *ptr = name; ptr != name + ARRAY_LENGHT; ++ptr) {
-        switch (*ptr)
-        {
-            case 'A':
-            case 'a':
-            case 'E':
-            case 'e':
-            case 'I':
-            case 'i':
-            case 'O':
-            case 'o':
-            case 'U':
-            case 'u':
-            ++numLowers;
-        }
-    }
-    cout << name << " имеет " << numLowers << " гласных.\n";
-    auto val = name + ARRAY_LENGHT; // Тут 8 элементов
-    cout << val << name << '\n';
     return 0;
 }
 // Output

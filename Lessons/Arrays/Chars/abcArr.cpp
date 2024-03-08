@@ -14,13 +14,20 @@ int main() {
     }
     for (auto i : alphabet) { cout << i; }
     cout << endl;
-    /* for (int i = 26; i >= 0; --i) {
+    /* puts("В обратном порядке способ 1");
+    for (int i = 26; i >= 0; --i) {
         cout << alphabet[i];
+    }
+    cout << endl;
+    i = 0;
+    puts("В обратном порядке способ 2");
+    for (char abc = 'z'; abc >= 'a'; --abc, ++i) {
+        cout << (alphabet[i] = abc);
     }
     cout << endl; */
     return 0;
 }
-// Д.З. Дописать эту программу так, чтобы она напечатала из массива на экран буквы 
+// Д.З. Дописать эту программу так, чтобы она напечатала из массива на экран буквы
 // англ.алф. в обратном порядке
 /* Output:
 abcdefghijklmnopqrstuvwxyz

@@ -23,34 +23,38 @@ d - остаток
 
 int main() {
     int a = 15 % 2; // 7 * 2 + 1 = 15
-    cout << a << endl;
+    cout << "15 % 2 = " << a << endl;
     a = 19 % 2;
-    cout << a << endl;
+    cout << "19 % 2 = " << a << endl;
     a = 19 % 3;
-    cout << a << endl;
+    cout << "19 % 3 = " << a << endl;
     a = 19 % 4; // 19 : 2 = 18 + 1
-    cout << a << endl;
+    cout << "19 % 4 = " << a << endl;
     a = 19 % 5;
-    cout << a << endl;
+    cout << "19 % 5 = "<< a << endl;
     // Программа для нахождения последнего цифры в числе
     int num = 123456460;
-    cout << num % 10 << '\n';
+    cout << "Последняя цифра в числе: " << num % 10 << '\n';
     int x = 6, y = 5;
-    cout << boolalpha << ((x == y) ? true : false) << endl;
-    cout << boolalpha << ((x % 2 == 0) ? true : false) << endl;
+    cout << "x равно  y ? " << boolalpha << ((x == y) ? true : false) << endl;
+    cout << "x делится без остатка? " << boolalpha << ((x % 2 == 0) ? true : false) << endl;
     srand(time(0));
     int secret = 1 + (rand() % 5);
-    cout << secret << endl;
-
+    cout << "Случайное число: " << secret << endl;
     return 0;
 }
+// Д.З. Найти остаток от деления чисел 17, 13, 23
 // OUTPUT
 /*
-1
-1
-1
-3
-4
+15 % 2 = 1
+19 % 2 = 1
+19 % 3 = 1
+19 % 4 = 3
+19 % 5 = 4
+Последняя цифра в числе: 0
+x равно  y ? false
+x делится без остатка? true
+Случайное число: 2
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
