@@ -9,8 +9,9 @@ int main() {
     char name[] = "Jonathan";
     int numLowers = 0;
     for (char *ptr = name; ptr != name + sizeof(name); ++ptr) {
-        // name + sizeof(name) - осталось не понятным, зачем нужно 18 ?
-        switch (*ptr)
+        // name + sizeof(name) - это sizeof(*ptr) = 1. Получается, что 1+9 = 10.
+        /* присвоив name для ptr, сам ptr стал указывать на первый элемент массива. */
+        switch (*ptr) // Каждый элемент массива разыменовывается с помощью switch
         { // Тут перечисленны все гласные алфавита
             case 'A':
             case 'a':

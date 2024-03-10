@@ -9,6 +9,8 @@ using namespace std;
 int main() {
     char arr_char[] = {'H', 'e', 'l', 'l', 'o'};
     const char *SUB_SIM = "z"; // Искомый подсимвол
+    /* Язык C++ поддерживает еще один способ создания символьных констант строк C-
+       style — через указатели */
     string char_arr_str = arr_char;
     if (char_arr_str.find(SUB_SIM) != string::npos) {
         cout << SUB_SIM

@@ -3,7 +3,6 @@
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
-#include<string>
 using namespace std;
 
 string str(string);
