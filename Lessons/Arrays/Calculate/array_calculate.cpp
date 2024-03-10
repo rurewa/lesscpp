@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
   int sum = 0;
-  int arr[5] = {1, 10, 3, 5, 6};
+  int arr[] = {1, 10, 3, 5, 6};
   int LENGHT = sizeof(arr) / sizeof(*arr);
   for (int i = 0; i != LENGHT ; ++i) {
     sum += arr[i];

@@ -9,14 +9,20 @@ using namespace std;
 int main() {
     srand(time(0));
     const int LENGHT = 10;
-    int arr[LENGHT] {0};
+    int arr[LENGHT]{0};
     cout << "Массив до рандома:    ";
-    for (auto i : arr) { cout << i; } cout << '\n'; // Печатаю на экран весь массив
+    for (auto i : arr) {
+        cout << i;
+    }
+    cout << '\n'; // Печатаю на экран весь массив
     for (int a = 0; a != LENGHT; ++a) {
         arr[a] = (rand() % 9); // Заполняю массива рандомными числами
     }
     cout << "Массив после рандома: ";
-    for (auto i : arr) { cout << i; } cout << '\n'; // Печатаю на экран весь массив
+    for (auto i : arr) {
+        cout << i;
+    }
+    cout << '\n'; // Печатаю на экран весь массив
     int find = 0;
     cout << "Дубликаты: "; // Это можно потом
     for (int i = 0; i < LENGHT; ++i) {
@@ -26,6 +32,9 @@ int main() {
                     if (arr[k] == arr[n])
                         ++find;
                 }
+                /* в случае попадания, проверяет не было ли подобного попадания ранее
+                ( что исключает вероятность того что одно и тоже число будет выведено несколько раз )
+                 */
                 if (find == 1) {
                     cout << arr[i] << ' '; // Печатаю на экран дубликаты
                 }
