@@ -91,14 +91,14 @@ int check(char a[3][3], char inp) {
                                 if (draw(a))
                                     {
                                         cout << "nntttMatch Drawn !!n";
-                                        break;
+                                        break; // Прыжок из цикла
                                     }
                                 ch = turn[(++count) % 2];
                                 cout << "nnttt" << ch << "'s Turnnn";
                             }
                         else
                             cout << "nnttt" << winner << " Won !!n";
-                        break;
+                        break; // Прыжок из цикла
                     }
                 }
         }

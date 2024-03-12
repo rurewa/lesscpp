@@ -23,7 +23,7 @@ int main() {
         if (cin.fail()) { // Проверка ввода числа
             cin.clear(); // Сброс состояния
             cout << "Insert the number!" << endl;
-            break;
+            break; // Прыжок из цикла
         }
         else {
             const bool answer{false}; // Для вывода результата
@@ -37,8 +37,8 @@ int main() {
             cout << "Press (y) to replay or any other key to exit" << endl;
             cin >> userSelection;
             // Проверка корректности ввода символа
-            if (userSelection == 'y') { continue; }
-            else { break; }
+            if (userSelection == 'y') { continue; } // Прыжок из цикла
+            else { break; } // Прыжок из цикла
         }
     }
     computation(allTry, allFalse);

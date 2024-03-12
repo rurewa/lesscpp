@@ -24,7 +24,7 @@ int main() {
         char sm;
         cin >> sm;
         if (sm == 'e') {
-            break;
+            break;  // Прыжок из цикла
         }
         ++count;
         cout << sm << "Iteration: " << count << endl; // Номер попытки

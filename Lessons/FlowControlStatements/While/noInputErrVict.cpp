@@ -28,7 +28,7 @@ int main() {
                 } else {
                     cout << "Не верно!\n";
                 }
-                break;
+                break; // Прыжок из цикла
             }
         }
 

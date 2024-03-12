@@ -19,7 +19,7 @@ int main() {
            << " Количество циклов " << countCycles
            << " Общее количество подходов: " << ++total << '\n';
       if (countCycles == 3 && countTime == 3) {
-        break;
+        break; // Прыжок из цикла
       }
     }
     /* cout << "Введите Enter\n";
@@ -33,7 +33,7 @@ int main() {
            << " Количество циклов " << countCycles
            << " Общее количество подходов: " << ++total << '\n';
       if (countCycles == 3 && countTime == 3) {
-        break;
+        break; // Прыжок из цикла
       }
     } */
     return 0;

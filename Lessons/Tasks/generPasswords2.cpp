@@ -20,7 +20,7 @@ int main() {
                 secret = 0 + (rand() % wishUser);
                 cout << secret;
             }
-            break;
+            break; // Прыжок из цикла
             cout << endl;
         }
         if (wishUser < 3 || wishUser > 10) {

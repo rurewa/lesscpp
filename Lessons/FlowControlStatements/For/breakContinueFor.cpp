@@ -9,12 +9,12 @@ using namespace std;
 
 int main() {
     for (int i = 0; i != 10; sleep(1), cout.flush(), ++i) {
-        if (i == 7) { continue; }
+        if (i == 7) { continue; } // Прыжок из цикла
         cout << i << ' ';
     }
     cout << endl;
     for (int i = 0; i != 10; sleep(1), cout.flush(), ++i) {
-        if (i == 7) { break; }
+        if (i == 7) { break; } // Прыжок из цикла
         cout << i << ' ';
     }
     cout << endl;

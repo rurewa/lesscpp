@@ -30,7 +30,7 @@ int main() {
             cout << "You have not chosen anything" << endl;
             break;
         }
-        cout << "Do you want to continue (y/n)?: " << endl;
+        cout << "Do you want to  (y/n)?: " << endl;
         cin >> again;
     }
     cout << "Goodbye!" << endl;

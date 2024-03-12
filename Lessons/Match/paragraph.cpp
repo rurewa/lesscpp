@@ -28,7 +28,7 @@ int main() {
             if (dp[j] + 1 == dp[i]) {
                 ans.push_back(text.substr(i, j - i));
                 i = j;
-                break;
+                break; // Прыжок из цикла
             }
         }
     }

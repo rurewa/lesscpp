@@ -15,7 +15,7 @@ int main() {
         cin >> sm;
 
         if (sm == 'e') {
-            break;
+            break; // Прыжок из цикла
         }
         ++count;
         cout << "Вы сделали " << count << " попыток\n";

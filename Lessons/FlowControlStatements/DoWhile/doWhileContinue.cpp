@@ -11,6 +11,7 @@ int main() {
     do {
         if (count == 5) {
             continue; // Пропускаем 5
+            // Прыжок из цикла
         }
         cout << count << " ";
     } while (++count < 10); // Выполняем 10 итераций

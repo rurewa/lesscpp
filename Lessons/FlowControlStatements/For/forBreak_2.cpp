@@ -10,6 +10,7 @@ int main() {
     for (num = 0; num <= 5; ++num) {
         cout << "num: " << num << endl;
         if (num == 3) { break; } // Прерывание цикла
+        // Прыжок из цикла
     }
     cout << "Прерванный цикл на: " << num << endl;
     return 0;

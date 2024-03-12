@@ -16,11 +16,11 @@ int main() {
         cin >> getUserNum;
         while (guess != getUserNum) {
             puts("Try again!");
-            break;
+            break;  // Прыжок из цикла
         }
         while (guess == getUserNum) {
             puts("Excelent!");
-            break;
+            break;  // Прыжок из цикла
         }
         puts("Enter Y for continue or N for exit");
         cin >> again;

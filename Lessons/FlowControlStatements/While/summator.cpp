@@ -12,7 +12,7 @@ int main() {
         sum += value; // Тоже самое, что и sum = sum + value
 	    cout << "Сума равна: " << sum << endl;
         if (value == 0) { // Завершение программы по условию
-            break;
+            break; // Прыжок из цикла
         }
     }
     	return 0;

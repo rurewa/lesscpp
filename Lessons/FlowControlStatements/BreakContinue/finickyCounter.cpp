@@ -12,10 +12,11 @@ int main() {
     while (true) {
         ++count;
         if (count > 10) { // Доходим до 10
-            break;  // И выходим
+            break;  // И выходим (прыжок из цикла)
         }
         if (count == 5) {
-            continue; // Пропускаем число 5
+            continue; // Пропускаем число 5 (прыжок из цикла)
+            // Прыжок из цикла
         }
         cout << count << endl;
     }

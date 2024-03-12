@@ -23,7 +23,7 @@ int main() {
         char sm;
         cin >> sm;
         if (sm == 'e') {
-            break;
+            break; // Прыжок из цикла
         }
         ++counter;
         cout << sm << "\tИтерация: " << counter << endl;

@@ -28,7 +28,7 @@ int main()
     cout << "Для повтора нажмите (y), для выхода (n)" << endl;
     cin >> userInput;
     if (userInput == 'y') { return main(); }
-    else { break; }
+    else { break; } // Прыжок из цикла
   }
   return 0;
 }

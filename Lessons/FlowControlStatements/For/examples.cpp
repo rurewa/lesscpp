@@ -48,7 +48,8 @@ int main() {
     int num = 0;
     for (num = 0; num <= 5; ++num) {
         cout << "num: " << num << endl;
-        if (num == 3) { break; } // Прерывание цикла
+        if (num == 3) { break; } // Прерывание цикла.
+        // Прыжок из цикла
     }
     cout << "Цикл прервался на: " << num << '\n';
     return 0;

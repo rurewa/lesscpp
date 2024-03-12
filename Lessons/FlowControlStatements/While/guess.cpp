@@ -20,7 +20,7 @@ int main() {
         cout << "\nВведите анг.букву: ";
         char sm;
         cin >> sm;
-        if (sm == 'e') { break; }
+        if (sm == 'e') { break; } // Прыжок из цикла
         ++attempts;
         cout << sm << "\tИтерации: " << attempts << endl; // Номер попытки
         puts("Попробуйте снова!");

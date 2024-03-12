@@ -16,11 +16,11 @@ int main() {
         cin >> userNum;
         while (i != userNum) {
             cout << "Try again!" << endl;
-            break;
+            break;  // Прыжок из цикла
         }
         while (i == userNum) {
             cout << "Угадал!" << endl;
-            break;
+            break; // Прыжок из цикла
         }
         cout << "Enter y for continue or n for exit" << endl;
         cin >> ch;

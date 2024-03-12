@@ -11,7 +11,7 @@ int main() {
         int userNum;
         cin >> userNum;
         if (userNum == 0) {
-            break;
+            break; // Прыжок из цикла
         }
     }
     cout << "We're out!" << endl;

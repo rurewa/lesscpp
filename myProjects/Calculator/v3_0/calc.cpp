@@ -19,12 +19,12 @@ Token getToken(const char*& ptr)
         ++ptr;
 
         if (c == ' ')
-            continue;
+            continue; // Прыжок из цикла
 
         switch (c)
         {
         case ' ':
-            continue;
+            continue; // Прыжок из цикла
         case '-':
             return Token::Minus;
         case '+':

@@ -19,7 +19,7 @@ int main() {
         }
         else {
             cin.ignore(32767, '\n');
-            break;
+            break; // Прыжок из цикла
         }
     }
     short num2 = 0;
@@ -33,7 +33,7 @@ int main() {
         }
         else {
             cin.ignore(32767, '\n');
-            break;
+            break; // Прыжок из цикла
         }
     }
     cout << "Вы ввели: " << num1 << " и " << num2 << '\n';

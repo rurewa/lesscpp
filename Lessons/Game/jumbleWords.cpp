@@ -63,7 +63,7 @@ int main() {
                 else if (playAgain == 'y' || playAgain == 'Y') {
                     hintPenalty = 3;
                     score_cur_word = 0;
-                    continue;
+                    continue; // Прыжок из цикла
                 }
                 else {
                     cout << "Вы ввели не правильно символ!" << endl;
@@ -89,7 +89,7 @@ int main() {
         }
         else if (playAgain == 'y' || playAgain == 'Y') {
             system("clear");
-            continue;
+            continue; // Прыжок из цикла
         }
         else {
             cout << "Вы ввели не правильно символ!" << endl;

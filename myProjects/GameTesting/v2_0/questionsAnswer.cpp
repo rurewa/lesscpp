@@ -49,7 +49,7 @@ int main() {
             return main();
         }
         else {
-            break;
+            break; // Прыжок из цикла
         }
     }
     return 0;

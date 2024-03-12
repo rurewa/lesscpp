@@ -28,7 +28,7 @@ int main() {
             }
             else {
                 cin.ignore(32767, '\n');
-                break;
+                break; // Прыжок из цикла
             }
         }
         while (login == inputUser && password == inputPassword) {
