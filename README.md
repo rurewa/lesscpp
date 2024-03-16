@@ -3,14 +3,16 @@
 Примеры применения средств диагностики программ на cpp:
 
 1. strace ./твоя-программа.bin (может придётся установить strace в твоей ОС)
-2. cppcheck -q --enable=all ./твоя-программа.cpp (может придётся установить cppcheck в твоей ОС)
-3. cppcheck -q --enable=all --inconclusive ./твоя-программа.cpp
-4. cppcheck -q -j4 --enable=all --suppress=variableScope ./твоя-программа.cpp
-5. cppcheck --enable=all --suppress=missingIncludeSystem . main.cpp
-6. clang-tidy твоя-программа.cpp -- -Wall -std=c++14 -x c++ (для Ubuntu нужно установить пакет clang-tools-14). Эта команда реально хорошо работает!
-7. valgrind ./stac.bin
-8. valgrind --track-origins=yes ./trash.bin (Показать, откуда беруться неинициализированные значения)
-9. valgrind -s ./trash.bin (Для получения списка обнаруженных ошибок)
+1. cppcheck -q --enable=all ./твоя-программа.cpp (может придётся установить cppcheck в твоей ОС)
+1. cppcheck -q --enable=all --inconclusive ./твоя-программа.cpp
+1. cppcheck -q -j4 --enable=all --suppress=variableScope ./твоя-программа.cpp
+1. cppcheck --enable=all --suppress=missingIncludeSystem . main.cpp
+1. clang-tidy твоя-программа.cpp -- -Wall -std=c++14 -x c++ (для Ubuntu нужно установить пакет clang-tools-14). Эта команда реально хорошо работает!
+1. valgrind --leak-check=full ./main.bin
+1. valgrind ./stac.bin
+1. valgrind --track-origins=yes ./trash.bin (Показать, откуда беруться неинициализированные значения)
+1. valgrind -s ./trash.bin (Для получения списка обнаруженных ошибок)
+
 
 ### Дебагинг
 
