@@ -25,9 +25,9 @@ int main() {
         cin >> WeatherListType[(int&)i].avgHiTemp;
         cout << "Низкая температура : ";
         cin >> WeatherListType[(int&)i].avgLoTepm;
-        cout << "Actual Rain : ";
+        cout << "Средние осадки : ";
         cin >> WeatherListType[(int&)i].acturlRainfall;
-        cout << "Record Rain : ";
+        cout << "Рекордные осадки : ";
         cin >> WeatherListType[(int&)i].recordRainfall;
     }
     cout<<"\n Month \t HiTemp\t LoTemp\t ActualRain\t RecordRain\n";

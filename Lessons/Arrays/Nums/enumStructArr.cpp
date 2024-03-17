@@ -1,39 +1,34 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Перечисление, структура и фиксированные массив
-// enumStructArr.cpp
+// enumStructArr.cpp Arrays
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
-enum class Month { JAN = 1, FEB, MAR };
+enum class Month { JAN, FEB, MAR };
 
 struct Type {
-    float range = 2.5;
-    string name = "Range";
+    float num = 2.5;
+    string name = "Число";
 };
 
 int main() {
-    Type List[5];
+    Type List[3]; // Размер по количеству перечислителей в enum или с учётом их значений
     for (Month i = Month::JAN; i <= Month::MAR; ++(int&)i) {
-        cout << '#' << (int&)i << endl;
-        cout << List[(int&)i].range << endl;
-        cout << List[(int&)i].name <<  endl;
+        // Здесь ссылка используется для доступа к вложенным элементам
+        cout << '#' << (int&)i;
+        cout << ' ' << List[(int&)i].name;
+        cout << ' ' << List[(int&)i].num << endl;
     }
     return 0;
 }
 // Д.З.
 // Output:
 /*
-1
-2.5
-Month
-2
-2.5
-Month
-3
-2.5
-Month
+#0 Число 2.5
+#1 Число 2.5
+#2 Число 2.5
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // END FILE
