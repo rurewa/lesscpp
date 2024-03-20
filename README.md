@@ -1,5 +1,7 @@
 ### Lesson
 
+[План курса изучения C++](https://gitflic.ru/project/rurewa/cpp)
+
 [Книга](/book/)
 
 [Проекты](/myProjects/)

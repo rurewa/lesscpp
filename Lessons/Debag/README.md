@@ -21,6 +21,10 @@
 
 [Как пользоваться gdb](https://losst.pro/kak-polzovatsya-gdb)
 
+[Справка по gdb на английском](https://github.com/gnebbia/gdb_tutorial)
+
+[Ещё](https://freecoder.dev/debug-c-program-using-gdb/)
+
 ### Подробней о clang
 
 [clang - Man Page](https://www.mankier.com/1/clang#Examples_(TL;DR))
