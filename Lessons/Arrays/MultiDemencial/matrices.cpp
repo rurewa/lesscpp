@@ -1,38 +1,38 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Построение матриц чисел и символов
-// matrices.cpp Arrays/MultiDem
+// Построение матриц чисел и символов из многомерных массивов
+// matrices.cpp Arrays
 // V 1.0
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include <iostream>
 using namespace std;
 
 int main() {
-    const int N = 4, M = 4;
-    int a[N][M];
+    const int ROW = 4, COL = 4;
+    int a[ROW][COL];
     cout << "1-й вариант\n";
-    for (int i = 0; i < N; cout << endl, ++i) {
-        for (int j = 0; j < M; ++j) {
+    for (int i = 0; i < ROW; cout << endl, ++i) {
+        for (int j = 0; j < COL; ++j) {
             a[i][j] = 0; // Заполняем матрицу 0-ми
             cout << a[i][j] << ' '; // Показываем матрицу
         }
     }
     cout << "2-й вариант\n";
-    for (int i = 0; i < N; cout << endl, ++i) {
-        for (int j = 0; j < M; ++j) {
+    for (int i = 0; i < ROW; cout << endl, ++i) {
+        for (int j = 0; j < COL; ++j) {
             a[i][j] = i + 1;
             cout << a[i][j] << ' ';
         }
     }
     cout << "3-й вариант\n";
-    for (int i = 0; i < N; cout << endl, ++i) {
-        for (int j = 0; j < M; ++j) {
+    for (int i = 0; i < ROW; cout << endl, ++i) {
+        for (int j = 0; j < COL; ++j) {
             a[i][j] = i + j;
             cout << a[i][j] << ' ';
         }
     }
     cout << "4-й вариант\n";
-    for (int i = 1; i <= N; cout << endl, ++i) {
-        for (int j = 0; j < M; ++j) {
+    for (int i = 1; i <= ROW; cout << endl, ++i) {
+        for (int j = 0; j < COL; ++j) {
             a[i][j] = i + j;
             cout << a[i][j] << ' ';
         }

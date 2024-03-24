@@ -12,11 +12,11 @@ int main() {
 
     int arr[s][r][c]; // Трёхмерный массив
     /*Заполняем трёхмерный массив значениями*/
-    int count = 1; // число для заполнения
+    int counter = 1; // число для заполнения
     for (int i = 0; i < s; ++i) {
         for (int j = 0; j < r; ++j) {
             for (int k = 0; k < c; ++k) {
-                arr[i][j][k] = ++count;
+                arr[i][j][k] = ++counter;
             }
         }
     }

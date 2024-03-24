@@ -62,6 +62,8 @@
 
 ```&var``` - для инициализации указателя
 
+```&ref = other.something.value``` - доступ к полям структуры
+
 ## Учебные материалы по ссылкам и указателям
 
 [Ссылки, указатели, константность](https://education.yandex.ru/handbook/cpp/article/references-pointers-const)
