@@ -64,6 +64,8 @@
 
 ```&ref = other.something.value``` - доступ к полям структуры
 
+```void printIt(const int &a)``` - в качестве параметров функции, во избежание затратного с т.з. процессора копирования аргументов
+
 ## Учебные материалы по ссылкам и указателям
 
 [Ссылки, указатели, константность](https://education.yandex.ru/handbook/cpp/article/references-pointers-const)
