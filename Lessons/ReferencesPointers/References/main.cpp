@@ -1,46 +1,34 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Константные ссылки и функции
-// constFuncRef.cpp
+//
+// .cpp
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 #include<iostream>
 using namespace std;
 
-void somefcn() {
-    const int &ref = 3 + 4; // r-value выражение
-    cout << "somefcn: " << ref << '\n';
-    /*Обычно r-value имеет область видимости выражения,
-    но благодаря константной ссылке область видимости продлевается до
-    этой точки*/
-}
-
-/* void changeN(const int &ref) {
-    ref = 8; // Так нельзя, ref - это константа
-} */
-
-void printIt(const int &a) {
-    cout << "printIt: " << a << '\n';
-    /*Константная ссылка в качестве параметра позволяет
-    передавать неконстантный аргумент l-value, константный аргумент l-value,
-    литерал или результат выражения*/
-}
-
 int main() {
-    somefcn();
-    int x = 3;
-    printIt(x); // Неконстантное l-value
-    const int y = 4;
-    printIt(y); // Константное l-value
-    printIt(5); // Литерал в качестве r-value
-    printIt(3+y); // Выражение в качестве r-value
+    int ival = 1024;
+    int &refVal = ival;
+    cout << refVal << '\n';
+    //int &noRef = 50; // Так нельзя. Ссылка может быть связана только с объектом, а не с литералом
+    const int &twoRef = 1024; // Так можно. Это r-value
+    cout << twoRef << '\n';
+    refVal = 2; // Присваивает значение ссылаемому объекту - ival
+    int ii = refVal; // Присваивает значение ссылаемого объекта
+    cout << ival << '\t' << ii << '\n';
+    double dval = 3.14;
+    //int &rVal = dval; // Так нельзя. Типы ссылки и связываемого оъекта должны быть одинаковыми
+    double &rDval = dval;
+    cout << rDval << '\n';
+    int i = 0, &r = i; // Ок
+    cout << i << '\t' << r << '\n';
+    int iii, &ri = iii;
+    i = 5, ri = 10;
+    cout << "iii - "<< iii << '\t' << "ri - " << ri << '\n';
     return 0;
 }
 // Output
 /*
-somefcn: 7
-printIt: 3
-printIt: 4
-printIt: 5
-printIt: 7
+
 */
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- //
 // END FILE

@@ -16,7 +16,7 @@ int main() {
     const int b = 9;
     //aref = 20; // Так нельзя. Это константа
     const int &bref = b; // Это константное l-value
-    const int &cref = 5; // 5 - это r-value
+    const int &cref = 5; // 5 - это r-value. Новый стандарт C++ это позволяет. Нужно в Классах
     cout << "a: " << a << " aref: " << aref << " b: " << b << " bref: "
          << bref << " cref: " << cref << '\n';
     //bref = 11; // Так нельзя. Это константа

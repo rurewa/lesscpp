@@ -21,7 +21,7 @@ int main() {
 }
 /*
 Проверить потенциальные угрозы утечки памяти и висячие указатели можно командами:
-1. clang-tidy main.cpp -- -Wall -std=c++14 -x c++
+1. clang-tidy main.cpp -- -Wall -std=c++17 -x c++
 2. valgrind --leak-check=full ./main.bin
 3. cppcheck main.cpp
 */
